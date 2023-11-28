@@ -7,3 +7,4 @@ manifest.mf
 
 build/classes/login/UserControlFrame.form
 *.form
+*.form

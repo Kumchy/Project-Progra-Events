@@ -5,6 +5,4 @@ manifest.mf
 /test/
 manifest.mf
 
-build/classes/login/UserControlFrame.form
-*.form
-*.form
+*.properties

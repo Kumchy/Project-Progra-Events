@@ -30,7 +30,7 @@ public class ConsultarFrm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(98, 57, 179));
+        jPanel1.setBackground(new java.awt.Color(52, 17, 87));
 
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,18 +63,19 @@ public class ConsultarFrm extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(209, 186, 255));
+        jPanel2.setBackground(new java.awt.Color(133, 77, 191));
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo:");
 
-        jTextField2.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nombre:");
 
         jbBuscar.setBackground(new java.awt.Color(98, 57, 179));
@@ -89,19 +90,21 @@ public class ConsultarFrm extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(98, 57, 179));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Cant stock:");
 
-        jTextField4.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Proveedor:");
 
-        jTextField5.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
 
         jbRegresar.setBackground(new java.awt.Color(98, 57, 179));
         jbRegresar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -123,16 +126,18 @@ public class ConsultarFrm extends javax.swing.JFrame {
             }
         });
 
-        jTextField6.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
         jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Precio:");
 
-        jTextField7.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
         jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField7.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

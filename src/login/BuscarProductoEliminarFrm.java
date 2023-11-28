@@ -37,9 +37,9 @@ public class BuscarProductoEliminarFrm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(209, 186, 255));
+        jPanel1.setBackground(new java.awt.Color(133, 77, 191));
 
-        jPanel2.setBackground(new java.awt.Color(98, 57, 179));
+        jPanel2.setBackground(new java.awt.Color(52, 17, 87));
 
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -67,12 +67,13 @@ public class BuscarProductoEliminarFrm extends javax.swing.JFrame {
                     .addContainerGap(9, Short.MAX_VALUE)))
         );
 
-        jTextField2.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Código:");
 
         jbCancelar.setBackground(new java.awt.Color(98, 57, 179));

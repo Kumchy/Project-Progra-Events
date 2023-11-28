@@ -35,9 +35,9 @@ public class EliminarFrrm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(209, 186, 255));
+        jPanel1.setBackground(new java.awt.Color(133, 77, 191));
 
-        jPanel2.setBackground(new java.awt.Color(98, 57, 179));
+        jPanel2.setBackground(new java.awt.Color(52, 17, 87));
 
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,7 +65,7 @@ public class EliminarFrrm extends javax.swing.JFrame {
                     .addContainerGap(7, Short.MAX_VALUE)))
         );
 
-        jTable1.setBackground(new java.awt.Color(98, 57, 179));
+        jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},

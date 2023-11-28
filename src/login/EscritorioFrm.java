@@ -1,8 +1,8 @@
 package login;
 
-public class EscritorioFrame extends javax.swing.JFrame {
+public class EscritorioFrm extends javax.swing.JFrame {
 
-    public EscritorioFrame() {
+    public EscritorioFrm() {
         initComponents();
     }
 
@@ -34,8 +34,6 @@ public class EscritorioFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(52, 17, 87));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\thech\\OneDrive\\Documents\\NetBeansProjects\\Login\\src\\img\\pngimg.com - pokemon_logo_PNG12.png")); // NOI18N
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -53,6 +51,8 @@ public class EscritorioFrame extends javax.swing.JFrame {
                 .addContainerGap(215, Short.MAX_VALUE))
         );
 
+        jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
+        jMenuBar1.setForeground(new java.awt.Color(98, 57, 179));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jMenu1.setText("Cuenta");
@@ -78,6 +78,11 @@ public class EscritorioFrame extends javax.swing.JFrame {
         jMenu2.setText("Gestion");
 
         jMenuItem3.setText("Stock por Categoria");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Inventario Total");
@@ -95,6 +100,11 @@ public class EscritorioFrame extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Crear Informe");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem7);
 
         jMenuItem8.setText("Buscar Informes");
@@ -102,18 +112,23 @@ public class EscritorioFrame extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("jMenu3");
+        jMenu3.setText("Productos");
 
-        jMenuItem9.setText("jMenuItem9");
+        jMenuItem9.setText("Consultar");
         jMenu3.add(jMenuItem9);
 
-        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.setText("Registrar");
         jMenu3.add(jMenuItem10);
 
-        jMenuItem11.setText("jMenuItem11");
+        jMenuItem11.setText("Modificar");
         jMenu3.add(jMenuItem11);
 
-        jMenuItem12.setText("jMenuItem12");
+        jMenuItem12.setText("Eliminar");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem12);
 
         jMenuBar1.add(jMenu3);
@@ -147,12 +162,24 @@ public class EscritorioFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        UserControlFrame UserControl = new UserControlFrame();
+        AdministradorUsuariosFrm UserControl = new AdministradorUsuariosFrm();
         UserControl.setVisible(true);
         UserControl.pack();
         UserControl.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
 
     public static void main(String args[]) {
@@ -169,20 +196,21 @@ public class EscritorioFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EscritorioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscritorioFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EscritorioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscritorioFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EscritorioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscritorioFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EscritorioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EscritorioFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EscritorioFrame().setVisible(true);
+                new EscritorioFrm().setVisible(true);
             }
         });
     }

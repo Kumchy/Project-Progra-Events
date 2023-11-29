@@ -1,5 +1,5 @@
 package login;
-
+//NEPE PRIETO
 public class EscritorioFrm extends javax.swing.JFrame {
 
     public EscritorioFrm() {

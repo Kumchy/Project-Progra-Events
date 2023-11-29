@@ -1,5 +1,5 @@
 package login;
-
+//NEPE PRIETO
 public class AdministradorUsuariosFrm extends javax.swing.JFrame {
 
     public AdministradorUsuariosFrm() {

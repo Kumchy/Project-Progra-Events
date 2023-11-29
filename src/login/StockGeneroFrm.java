@@ -1,18 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package login;
 
-/**
- *
- * @author crist
- */
+
 public class StockGeneroFrm extends javax.swing.JFrame {
 
-    /**
-     * Creates new form StockGeneroFrm
-     */
+    public javax.swing.JTable getTabla() {
+        return jTable1;
+    }
+    
     public StockGeneroFrm() {
         initComponents();
     }
@@ -72,7 +67,8 @@ public class StockGeneroFrm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(133, 77, 191));
 
-        jbRegresar.setBackground(new java.awt.Color(98, 57, 179));
+        jbRegresar.setBackground(new java.awt.Color(204, 204, 255));
+        jbRegresar.setForeground(new java.awt.Color(51, 0, 102));
         jbRegresar.setText("Regresar");
         jbRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +76,7 @@ public class StockGeneroFrm extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setBackground(new java.awt.Color(204, 204, 255));
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,7 +87,7 @@ public class StockGeneroFrm extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Código:", "Nombre:", "Cant. Stock:", "Proveedor:", "Precio:"
+                "Nombre:", "Demanda:", "Descripción:", "IDCategoria:", "Disponibilidad:"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -138,7 +134,10 @@ public class StockGeneroFrm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        // TODO add your handling code here:
+    EscritorioFrm escritorio = new EscritorioFrm();
+    escritorio.setVisible(true);
+    escritorio.setLocationRelativeTo(null);
+    this.dispose();
     }//GEN-LAST:event_jbRegresarActionPerformed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked

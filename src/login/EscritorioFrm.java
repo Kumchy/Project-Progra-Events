@@ -17,15 +17,15 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jmiStockCategoría = new javax.swing.JMenuItem();
+        jmiInventarioTotal = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        jmiRegistrar = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
 
@@ -77,16 +77,21 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu2.setText("Gestion");
 
-        jMenuItem3.setText("Stock por Categoria");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmiStockCategoría.setText("Stock por Categoria");
+        jmiStockCategoría.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmiStockCategoríaActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(jmiStockCategoría);
 
-        jMenuItem4.setText("Inventario Total");
-        jMenu2.add(jMenuItem4);
+        jmiInventarioTotal.setText("Inventario Total");
+        jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiInventarioTotalActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmiInventarioTotal);
 
         jMenuItem5.setText("Lista de Proveedores");
         jMenu2.add(jMenuItem5);
@@ -117,8 +122,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenuItem9.setText("Consultar");
         jMenu3.add(jMenuItem9);
 
-        jMenuItem10.setText("Registrar");
-        jMenu3.add(jMenuItem10);
+        jmiRegistrar.setText("Registrar");
+        jmiRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiRegistrarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiRegistrar);
 
         jMenuItem11.setText("Modificar");
         jMenu3.add(jMenuItem11);
@@ -173,13 +183,33 @@ public class EscritorioFrm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void jmiStockCategoríaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiStockCategoríaActionPerformed
+        BuscadorStockFrm StockCategoria = new BuscadorStockFrm();
+        StockCategoria.setVisible(true);
+        StockCategoria.pack();
+        StockCategoria.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jmiStockCategoríaActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
+        InventarioTotalFrm InventarioTotal = new InventarioTotalFrm();
+        InventarioTotal.setVisible(true);
+        InventarioTotal.pack();
+        InventarioTotal.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jmiInventarioTotalActionPerformed
+
+    private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
+        RegistrarFrm Registrar = new RegistrarFrm();
+        Registrar.setVisible(true);
+        Registrar.pack();
+        Registrar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jmiRegistrarActionPerformed
 
 
     public static void main(String args[]) {
@@ -222,17 +252,17 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem jmiInventarioTotal;
+    private javax.swing.JMenuItem jmiRegistrar;
+    private javax.swing.JMenuItem jmiStockCategoría;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,34 +1,41 @@
 package login;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class RegistrarFrm extends javax.swing.JFrame {
 
+    private ListaProductos listaProductos = new ListaProductos();
+    private InventarioTotalFrm inventarioTotal;
+    
     public RegistrarFrm() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtfCodigo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jbRegresar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfProveedor = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jtfPrecio = new javax.swing.JTextField();
         jbEliminar = new javax.swing.JButton();
         jbRegistrar = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
+        jtfNombre = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jrbSmart = new javax.swing.JRadioButton();
+        jrbLaptop = new javax.swing.JRadioButton();
+        jrbAccesorios = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,9 +79,9 @@ public class RegistrarFrm extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo:");
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,18 +102,18 @@ public class RegistrarFrm extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Proveedor:");
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
+        jtfProveedor.setBackground(new java.awt.Color(255, 255, 255));
+        jtfProveedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Precio:");
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
+        jtfPrecio.setBackground(new java.awt.Color(255, 255, 255));
+        jtfPrecio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfPrecio.setForeground(new java.awt.Color(0, 0, 0));
 
         jbEliminar.setBackground(new java.awt.Color(98, 57, 179));
         jbEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -128,26 +135,29 @@ public class RegistrarFrm extends javax.swing.JFrame {
             }
         });
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Categoría:");
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Smartphones");
+        buttonGroup1.add(jrbSmart);
+        jrbSmart.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jrbSmart.setForeground(new java.awt.Color(255, 255, 255));
+        jrbSmart.setText("Smartphones");
 
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Laptops");
+        buttonGroup1.add(jrbLaptop);
+        jrbLaptop.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jrbLaptop.setForeground(new java.awt.Color(255, 255, 255));
+        jrbLaptop.setText("Laptops");
 
-        jRadioButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Accesorios");
+        buttonGroup1.add(jrbAccesorios);
+        jrbAccesorios.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jrbAccesorios.setForeground(new java.awt.Color(255, 255, 255));
+        jrbAccesorios.setText("Accesorios");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -160,7 +170,7 @@ public class RegistrarFrm extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(127, 127, 127)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -174,13 +184,13 @@ public class RegistrarFrm extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton1)
+                                    .addComponent(jrbSmart)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton3)))))
+                                        .addComponent(jtfNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtfProveedor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtfPrecio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jrbLaptop)
+                                    .addComponent(jrbAccesorios)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,27 +206,27 @@ public class RegistrarFrm extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addComponent(jrbSmart)
                 .addGap(9, 9, 9)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2))
+                    .addComponent(jrbLaptop))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(jrbAccesorios)
                 .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -243,7 +253,12 @@ public class RegistrarFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+     public void setInventarioTotal(InventarioTotalFrm inventarioTotal) {
+        this.inventarioTotal = inventarioTotal;
+    }
+    
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        RegistrarFrm registrarFrm = new RegistrarFrm();
         EscritorioFrm Escritorio = new EscritorioFrm();
         Escritorio.setVisible(true);
         Escritorio.pack();
@@ -252,7 +267,10 @@ public class RegistrarFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        // TODO add your handling code here:
+    EscritorioFrm escritorio = new EscritorioFrm();
+    escritorio.setVisible(true);
+    escritorio.setLocationRelativeTo(null);
+    this.dispose();
     }//GEN-LAST:event_jbRegresarActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
@@ -260,7 +278,53 @@ public class RegistrarFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jbEliminarActionPerformed
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        // TODO add your handling code here:
+    String nombre = jtfNombre.getText();
+    String proveedor = jtfProveedor.getText();
+    int codigo = 0;
+    double precio = 0;
+
+    try {
+        codigo = Integer.parseInt(jtfCodigo.getText());
+        precio = Double.parseDouble(jtfPrecio.getText());
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        return; 
+    }
+
+    String categoria = "";
+    if (jrbSmart.isSelected()) {
+        categoria = "Smartphones";
+    } else if (jrbLaptop.isSelected()) {
+        categoria = "Laptops";
+    } else if (jrbAccesorios.isSelected()) {
+        categoria = "Accesorios";
+    }
+    
+    ProductoElectrónico nuevoProducto = new ProductoElectrónico(nombre, proveedor, codigo, precio, categoria);
+
+        // Agregar el producto a la lista de productos
+    listaProductos.agregarProducto(nuevoProducto);
+
+    // Actualizar la tabla en la interfaz InventarioTotalFrm
+    if (inventarioTotal != null) {
+        inventarioTotal.actualizarTabla();
+    }
+    
+    listaProductos.agregarProducto(nuevoProducto);
+
+    System.out.println("Producto registrado:");
+    System.out.println("Nombre: " + nuevoProducto.getNombre());
+    System.out.println("Proveedor: " + nuevoProducto.getProveedor());
+    System.out.println("Código: " + nuevoProducto.getCodigo());
+    System.out.println("Precio: " + nuevoProducto.getPrecio());
+    System.out.println("Categoría: " + nuevoProducto.getCategoria());
+
+    jtfNombre.setText("");
+    jtfProveedor.setText("");
+    jtfCodigo.setText("");
+    jtfPrecio.setText("");
+
+    JOptionPane.showMessageDialog(this, "Producto registrado exitosamente.", "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
     /**
@@ -314,6 +378,7 @@ public class RegistrarFrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -323,15 +388,15 @@ public class RegistrarFrm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JButton jbEliminar;
     private javax.swing.JButton jbRegistrar;
     private javax.swing.JButton jbRegresar;
+    private javax.swing.JRadioButton jrbAccesorios;
+    private javax.swing.JRadioButton jrbLaptop;
+    private javax.swing.JRadioButton jrbSmart;
+    private javax.swing.JTextField jtfCodigo;
+    private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtfPrecio;
+    private javax.swing.JTextField jtfProveedor;
     // End of variables declaration//GEN-END:variables
 }

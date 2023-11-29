@@ -1,21 +1,20 @@
-
 package login;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 
-public class InventarioTotalFrm extends javax.swing.JFrame {
+public class InventarioTotalIFrm extends javax.swing.JInternalFrame {
 
     private DefaultTableModel modeloTabla;
     private ListaProductos listaProductos;
     
-    public InventarioTotalFrm() {
+    public InventarioTotalIFrm() {
         initComponents();
         modeloTabla = (DefaultTableModel) jTableProductos.getModel();
         listaProductos = new ListaProductos(); // Crea una instancia de ListaProductos
         actualizarTabla();
     }
-
+    
     public void actualizarTabla() {
         List<ProductoElectrónico> productos = listaProductos.getProductos();
 
@@ -34,7 +33,7 @@ public class InventarioTotalFrm extends javax.swing.JFrame {
             modeloTabla.addRow(rowData);
         }
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -49,7 +48,9 @@ public class InventarioTotalFrm extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setIconifiable(true);
+        setTitle("Inventario Total");
 
         jPanel1.setBackground(new java.awt.Color(52, 17, 87));
 
@@ -125,7 +126,7 @@ public class InventarioTotalFrm extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
@@ -168,7 +169,6 @@ public class InventarioTotalFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         EscritorioFrm Escritorio = new EscritorioFrm();
         Escritorio.setVisible(true);
@@ -178,61 +178,12 @@ public class InventarioTotalFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-    EscritorioFrm escritorio = new EscritorioFrm();
-    escritorio.setVisible(true);
-    escritorio.setLocationRelativeTo(null);
-    this.dispose();
+        EscritorioFrm escritorio = new EscritorioFrm();
+        escritorio.setVisible(true);
+        escritorio.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jbRegresarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InventarioTotalFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InventarioTotalFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InventarioTotalFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InventarioTotalFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InventarioTotalFrm().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

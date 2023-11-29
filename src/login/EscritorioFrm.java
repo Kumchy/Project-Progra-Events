@@ -13,20 +13,21 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jdpEscritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jmiCerrarSesion = new javax.swing.JMenuItem();
+        jmiControlDeUsuarios = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jmiCrearInfrm = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        jmiStockPorCategoria = new javax.swing.JMenuItem();
+        jmiInventarioTotal = new javax.swing.JMenuItem();
+        jmiListaDeProveedores = new javax.swing.JMenuItem();
+        jmiAgregarProveedores = new javax.swing.JMenuItem();
+        jmiCrearInforme = new javax.swing.JMenuItem();
+        jmiBuscarInformes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
+        jmiConsultar = new javax.swing.JMenuItem();
+        jmiRegistrar = new javax.swing.JMenuItem();
+        jmiModificar = new javax.swing.JMenuItem();
+        jmiEliminar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,7 +50,23 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu1.setText("Cuenta");
 
-        jMenuItem1.setText("Cerrar Sesion");
+        jmiCerrarSesion.setText("Cerrar Sesion");
+        jmiCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCerrarSesionActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmiCerrarSesion);
+
+        jmiControlDeUsuarios.setText("Administrador de usuarios");
+        jmiControlDeUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiControlDeUsuariosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmiControlDeUsuarios);
+
+        jMenuItem1.setText("Control de Usuarios");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -57,71 +74,93 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("Control De Usuarios");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Gestion");
 
-        jMenuItem3.setText("Stock por Categoria");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmiStockPorCategoria.setText("Stock por Categoria");
+        jmiStockPorCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmiStockPorCategoriaActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(jmiStockPorCategoria);
 
-        jMenuItem4.setText("Inventario Total");
-        jMenu2.add(jMenuItem4);
-
-        jMenuItem5.setText("Lista de Proveedores");
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setText("Agregar Proveedores");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jmiInventarioTotal.setText("Inventario Total");
+        jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jmiInventarioTotalActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu2.add(jmiInventarioTotal);
 
-        jmiCrearInfrm.setText("Crear Informe");
-        jmiCrearInfrm.addActionListener(new java.awt.event.ActionListener() {
+        jmiListaDeProveedores.setText("Lista de Proveedores");
+        jmiListaDeProveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiCrearInfrmActionPerformed(evt);
+                jmiListaDeProveedoresActionPerformed(evt);
             }
         });
-        jMenu2.add(jmiCrearInfrm);
+        jMenu2.add(jmiListaDeProveedores);
 
-        jMenuItem8.setText("Buscar Informes");
-        jMenu2.add(jMenuItem8);
+        jmiAgregarProveedores.setText("Agregar Proveedores");
+        jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiAgregarProveedoresActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmiAgregarProveedores);
+
+        jmiCrearInforme.setText("Crear Informe");
+        jmiCrearInforme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCrearInformeActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmiCrearInforme);
+
+        jmiBuscarInformes.setText("Buscar Informes");
+        jmiBuscarInformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiBuscarInformesActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmiBuscarInformes);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Productos");
 
-        jMenuItem9.setText("Consultar");
-        jMenu3.add(jMenuItem9);
-
-        jMenuItem10.setText("Registrar");
-        jMenu3.add(jMenuItem10);
-
-        jMenuItem11.setText("Modificar");
-        jMenu3.add(jMenuItem11);
-
-        jMenuItem12.setText("Eliminar");
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+        jmiConsultar.setText("Consultar");
+        jmiConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
+                jmiConsultarActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem12);
+        jMenu3.add(jmiConsultar);
+
+        jmiRegistrar.setText("Registrar");
+        jmiRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiRegistrarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiRegistrar);
+
+        jmiModificar.setText("Modificar");
+        jmiModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiModificarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiModificar);
+
+        jmiEliminar.setText("Eliminar");
+        jmiEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiEliminarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiEliminar);
 
         jMenuBar1.add(jMenu3);
 
@@ -141,39 +180,89 @@ public class EscritorioFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jmiCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCerrarSesionActionPerformed
         LoginFrame Login = new LoginFrame();
         Login.setVisible(true);
         Login.pack();
         Login.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmiCerrarSesionActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
+        AgregarProveedorIFrm agregarProveedor = new AgregarProveedorIFrm();
+        jdpEscritorio.add(agregarProveedor);
+        agregarProveedor.show();
+    }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        AdministradorUsuariosFrm UserControl = new AdministradorUsuariosFrm();
-        UserControl.setVisible(true);
-        UserControl.pack();
-        UserControl.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void jmiControlDeUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiControlDeUsuariosActionPerformed
+        AdministradorUsuariosIFrm administrarUsuarios = new AdministradorUsuariosIFrm();
+        jdpEscritorio.add(administrarUsuarios);
+        administrarUsuarios.show();
+    }//GEN-LAST:event_jmiControlDeUsuariosActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
+    private void jmiEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiEliminarActionPerformed
+        BuscarProductoEliminarIFrm eliminar = new BuscarProductoEliminarIFrm();
+        jdpEscritorio.add(eliminar);
+        eliminar.show();
+    }//GEN-LAST:event_jmiEliminarActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void jmiCrearInfrmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInfrmActionPerformed
+    private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
         CrearInformeIFrm crearInforme = new CrearInformeIFrm();
         jdpEscritorio.add(crearInforme);
         crearInforme.show();
-    }//GEN-LAST:event_jmiCrearInfrmActionPerformed
+    }//GEN-LAST:event_jmiCrearInformeActionPerformed
+
+    private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed
+        ListaProveedoresIFrm listaProveedores = new ListaProveedoresIFrm();
+        jdpEscritorio.add(listaProveedores);
+        listaProveedores.show();
+    }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
+
+    private void jmiBuscarInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBuscarInformesActionPerformed
+        BuscarInformeIFrm buscarInforme = new BuscarInformeIFrm();
+        jdpEscritorio.add(buscarInforme);
+        buscarInforme.show();
+    }//GEN-LAST:event_jmiBuscarInformesActionPerformed
+
+    private void jmiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultarActionPerformed
+        ConsultarIFrm consultar = new ConsultarIFrm();
+        jdpEscritorio.add(consultar);
+        consultar.show();
+    }//GEN-LAST:event_jmiConsultarActionPerformed
+
+    private void jmiModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiModificarActionPerformed
+        BuscarProductoModificacionIFrm modificar = new BuscarProductoModificacionIFrm();
+        jdpEscritorio.add(modificar);
+        modificar.show();
+    }//GEN-LAST:event_jmiModificarActionPerformed
+
+    private void jmiStockPorCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiStockPorCategoriaActionPerformed
+        BuscadorStockIFrm stockCategorias = new BuscadorStockIFrm();
+        jdpEscritorio.add(stockCategorias);
+        stockCategorias.show();
+    }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
+
+    private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
+        InventarioTotalIFrm inventarioTotal = new InventarioTotalIFrm();
+        jdpEscritorio.add(inventarioTotal);
+        inventarioTotal.show();
+    }//GEN-LAST:event_jmiInventarioTotalActionPerformed
+
+    private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
+        RegistrarIFrm registrar = new RegistrarIFrm();
+        jdpEscritorio.add(registrar);
+        registrar.show();
+    }//GEN-LAST:event_jmiRegistrarActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ControlUsuariosIFrm control = new ControlUsuariosIFrm();
+        jdpEscritorio.add(control);
+        control.show();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
 
     public static void main(String args[]) {
@@ -215,17 +304,18 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     public static javax.swing.JDesktopPane jdpEscritorio;
-    private javax.swing.JMenuItem jmiCrearInfrm;
+    private javax.swing.JMenuItem jmiAgregarProveedores;
+    private javax.swing.JMenuItem jmiBuscarInformes;
+    private javax.swing.JMenuItem jmiCerrarSesion;
+    private javax.swing.JMenuItem jmiConsultar;
+    private javax.swing.JMenuItem jmiControlDeUsuarios;
+    private javax.swing.JMenuItem jmiCrearInforme;
+    private javax.swing.JMenuItem jmiEliminar;
+    private javax.swing.JMenuItem jmiInventarioTotal;
+    private javax.swing.JMenuItem jmiListaDeProveedores;
+    private javax.swing.JMenuItem jmiModificar;
+    private javax.swing.JMenuItem jmiRegistrar;
+    private javax.swing.JMenuItem jmiStockPorCategoria;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,15 +1,9 @@
 package login;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
-public class BuscadorStockFrm extends javax.swing.JFrame {
+public class BuscarProductoEliminarIFrm extends javax.swing.JInternalFrame {
 
-    private List<CategoriaProductos> listaCategorias;
-
-    public BuscadorStockFrm() {
+    public BuscarProductoEliminarIFrm() {
         initComponents();
-        inicializarProductos();
     }
 
     @SuppressWarnings("unchecked")
@@ -21,11 +15,13 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jbRegresar = new javax.swing.JButton();
+        jbCancelar = new javax.swing.JButton();
         jbBuscar = new javax.swing.JButton();
         jbLimpiar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setIconifiable(true);
+        setTitle("Buscar Producto a Eliminar");
 
         jPanel1.setBackground(new java.awt.Color(133, 77, 191));
 
@@ -34,7 +30,7 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Stock por Categoría");
+        jLabel1.setText("Buscar producto a eliminar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -61,22 +57,20 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setBackground(new java.awt.Color(52, 17, 87));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(98, 57, 179));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Categoría:");
+        jLabel2.setText("Código:");
 
-        jbRegresar.setBackground(new java.awt.Color(204, 204, 255));
-        jbRegresar.setForeground(new java.awt.Color(51, 0, 102));
-        jbRegresar.setText("Regresar");
-        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
+        jbCancelar.setBackground(new java.awt.Color(98, 57, 179));
+        jbCancelar.setText("Regresar");
+        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarActionPerformed(evt);
+                jbCancelarActionPerformed(evt);
             }
         });
 
-        jbBuscar.setBackground(new java.awt.Color(204, 204, 255));
-        jbBuscar.setForeground(new java.awt.Color(51, 0, 102));
+        jbBuscar.setBackground(new java.awt.Color(98, 57, 179));
         jbBuscar.setText("Buscar");
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,8 +78,7 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
             }
         });
 
-        jbLimpiar.setBackground(new java.awt.Color(204, 204, 255));
-        jbLimpiar.setForeground(new java.awt.Color(51, 0, 102));
+        jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
         jbLimpiar.setText("Limpiar");
         jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,8 +98,8 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -124,7 +117,7 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
@@ -143,85 +136,18 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-        private void inicializarProductos() {
-        listaCategorias = new ArrayList<>();
-        listaCategorias.add(new CategoriaProductos("Smartphones", "Alta", "Smartphones calidad precio.", 1, true));
-        listaCategorias.add(new CategoriaProductos("Laptops", "Media", "Laptops de alta gama.", 2, true));
-            listaCategorias.add(new CategoriaProductos("Accesorios", "Alta", "Accesorios de celular y computo.", 3, true));
-    }
-    
-    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-    EscritorioFrm escritorio = new EscritorioFrm();
-    escritorio.setVisible(true);
-    escritorio.setLocationRelativeTo(null);
-    this.dispose();
-    }//GEN-LAST:event_jbRegresarActionPerformed
+    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCancelarActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-    String categoriaBuscada = jTextField2.getText().trim();
-
-    if (!categoriaBuscada.isEmpty()) {
-        List<CategoriaProductos> productosEncontrados = listaCategorias.stream()
-                .filter(cat -> cat.getNombre().equalsIgnoreCase(categoriaBuscada))
-                .collect(Collectors.toList());
-
-        if (!productosEncontrados.isEmpty()) {
-            StockGeneroFrm stockGeneroFrm = new StockGeneroFrm();
-            stockGeneroFrm.setVisible(true);
-
-            javax.swing.table.DefaultTableModel modelo = (javax.swing.table.DefaultTableModel) stockGeneroFrm.getTabla().getModel();
-
-            modelo.setRowCount(0);
-
-            for (CategoriaProductos producto : productosEncontrados) {
-                modelo.addRow(new Object[]{producto.getDemanda(), producto.getNombre(), producto.getDescripcion(), producto.getIDCategoria(), producto.getDisponibilidad()});
-            }
-        } else {
-            System.out.println("No se encontraron productos para la categoría ingresada.");
-        }
-    } else {
-        System.out.println("Ingrese una categoría para buscar productos.");
-        }
+        // TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarActionPerformed
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        jTextField2.setText("");
+        // TODO add your handling code here:
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BuscadorStockFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BuscadorStockFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BuscadorStockFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BuscadorStockFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BuscadorStockFrm().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -230,7 +156,7 @@ public class BuscadorStockFrm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton jbBuscar;
+    private javax.swing.JButton jbCancelar;
     private javax.swing.JButton jbLimpiar;
-    private javax.swing.JButton jbRegresar;
     // End of variables declaration//GEN-END:variables
 }

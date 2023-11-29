@@ -27,7 +27,6 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setResizable(true);
         setTitle("Informe [crear]");
 
         jPanel1.setBackground(new java.awt.Color(98, 57, 179));

@@ -3,20 +3,19 @@ package login;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class RegistrarFrm extends javax.swing.JFrame {
+public class RegistrarIFrm extends javax.swing.JInternalFrame {
 
     private ListaProductos listaProductos = new ListaProductos();
-    private InventarioTotalFrm inventarioTotal;
+    private InventarioTotalIFrm inventarioTotal;
     
-    public RegistrarFrm() {
+    public RegistrarIFrm() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -37,7 +36,9 @@ public class RegistrarFrm extends javax.swing.JFrame {
         jrbLaptop = new javax.swing.JRadioButton();
         jrbAccesorios = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setIconifiable(true);
+        setTitle("Registrar Producto");
 
         jPanel1.setBackground(new java.awt.Color(52, 17, 87));
 
@@ -144,17 +145,14 @@ public class RegistrarFrm extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Categoría:");
 
-        buttonGroup1.add(jrbSmart);
         jrbSmart.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jrbSmart.setForeground(new java.awt.Color(255, 255, 255));
         jrbSmart.setText("Smartphones");
 
-        buttonGroup1.add(jrbLaptop);
         jrbLaptop.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jrbLaptop.setForeground(new java.awt.Color(255, 255, 255));
         jrbLaptop.setText("Laptops");
 
-        buttonGroup1.add(jrbAccesorios);
         jrbAccesorios.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jrbAccesorios.setForeground(new java.awt.Color(255, 255, 255));
         jrbAccesorios.setText("Accesorios");
@@ -195,7 +193,7 @@ public class RegistrarFrm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jbEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                        .addComponent(jbEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -253,12 +251,12 @@ public class RegistrarFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-     public void setInventarioTotal(InventarioTotalFrm inventarioTotal) {
+    public void setInventarioTotal(InventarioTotalIFrm inventarioTotal) {
         this.inventarioTotal = inventarioTotal;
     }
     
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        RegistrarFrm registrarFrm = new RegistrarFrm();
+        RegistrarIFrm registrarFrm = new RegistrarIFrm();
         EscritorioFrm Escritorio = new EscritorioFrm();
         Escritorio.setVisible(true);
         Escritorio.pack();
@@ -267,10 +265,10 @@ public class RegistrarFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-    EscritorioFrm escritorio = new EscritorioFrm();
-    escritorio.setVisible(true);
-    escritorio.setLocationRelativeTo(null);
-    this.dispose();
+        EscritorioFrm escritorio = new EscritorioFrm();
+        escritorio.setVisible(true);
+        escritorio.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jbRegresarActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
@@ -278,107 +276,57 @@ public class RegistrarFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jbEliminarActionPerformed
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-    String nombre = jtfNombre.getText();
-    String proveedor = jtfProveedor.getText();
-    int codigo = 0;
-    double precio = 0;
+        String nombre = jtfNombre.getText();
+        String proveedor = jtfProveedor.getText();
+        int codigo = 0;
+        double precio = 0;
 
-    try {
-        codigo = Integer.parseInt(jtfCodigo.getText());
-        precio = Double.parseDouble(jtfPrecio.getText());
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
-        return; 
-    }
+        try {
+            codigo = Integer.parseInt(jtfCodigo.getText());
+            precio = Double.parseDouble(jtfPrecio.getText());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-    String categoria = "";
-    if (jrbSmart.isSelected()) {
-        categoria = "Smartphones";
-    } else if (jrbLaptop.isSelected()) {
-        categoria = "Laptops";
-    } else if (jrbAccesorios.isSelected()) {
-        categoria = "Accesorios";
-    }
-    
-    ProductoElectrónico nuevoProducto = new ProductoElectrónico(nombre, proveedor, codigo, precio, categoria);
+        String categoria = "";
+        if (jrbSmart.isSelected()) {
+            categoria = "Smartphones";
+        } else if (jrbLaptop.isSelected()) {
+            categoria = "Laptops";
+        } else if (jrbAccesorios.isSelected()) {
+            categoria = "Accesorios";
+        }
+
+        ProductoElectrónico nuevoProducto = new ProductoElectrónico(nombre, proveedor, codigo, precio, categoria);
 
         // Agregar el producto a la lista de productos
-    listaProductos.agregarProducto(nuevoProducto);
+        listaProductos.agregarProducto(nuevoProducto);
 
-    // Actualizar la tabla en la interfaz InventarioTotalFrm
-    if (inventarioTotal != null) {
-        inventarioTotal.actualizarTabla();
-    }
-    
-    listaProductos.agregarProducto(nuevoProducto);
+        // Actualizar la tabla en la interfaz InventarioTotalFrm
+        if (inventarioTotal != null) {
+            inventarioTotal.actualizarTabla();
+        }
 
-    System.out.println("Producto registrado:");
-    System.out.println("Nombre: " + nuevoProducto.getNombre());
-    System.out.println("Proveedor: " + nuevoProducto.getProveedor());
-    System.out.println("Código: " + nuevoProducto.getCodigo());
-    System.out.println("Precio: " + nuevoProducto.getPrecio());
-    System.out.println("Categoría: " + nuevoProducto.getCategoria());
+        listaProductos.agregarProducto(nuevoProducto);
 
-    jtfNombre.setText("");
-    jtfProveedor.setText("");
-    jtfCodigo.setText("");
-    jtfPrecio.setText("");
+        System.out.println("Producto registrado:");
+        System.out.println("Nombre: " + nuevoProducto.getNombre());
+        System.out.println("Proveedor: " + nuevoProducto.getProveedor());
+        System.out.println("Código: " + nuevoProducto.getCodigo());
+        System.out.println("Precio: " + nuevoProducto.getPrecio());
+        System.out.println("Categoría: " + nuevoProducto.getCategoria());
 
-    JOptionPane.showMessageDialog(this, "Producto registrado exitosamente.", "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
+        jtfNombre.setText("");
+        jtfProveedor.setText("");
+        jtfCodigo.setText("");
+        jtfPrecio.setText("");
+
+        JOptionPane.showMessageDialog(this, "Producto registrado exitosamente.", "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrarFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrarFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrarFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrarFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistrarFrm().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

@@ -2,8 +2,11 @@ package login;
 
 public class AgregarProveedorFrm extends javax.swing.JFrame {
 
+    private ListaEnlazadaProveedor listaProveedores;
+    
     public AgregarProveedorFrm() {
         initComponents();
+        listaProveedores = new ListaEnlazadaProveedor();
     }
 
     @SuppressWarnings("unchecked")
@@ -15,20 +18,20 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtfNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jbRegresar = new javax.swing.JButton();
+        jcbContacto = new javax.swing.JComboBox<>();
+        jbnRegistrar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfTelefono = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jtfCorreoElectronico = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jbLimpiar = new javax.swing.JButton();
-        jbCancelar = new javax.swing.JButton();
+        c = new javax.swing.JRadioButton();
+        jrbOpcion2 = new javax.swing.JRadioButton();
+        jrbOpcion3 = new javax.swing.JRadioButton();
+        jbnLimpiar = new javax.swing.JButton();
+        jbnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,23 +75,23 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre:");
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Contacto:");
 
-        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Persona Moral", "Persona física" }));
+        jcbContacto.setBackground(new java.awt.Color(255, 255, 255));
+        jcbContacto.setForeground(new java.awt.Color(0, 0, 0));
+        jcbContacto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Persona Moral", "Persona física" }));
 
-        jbRegresar.setBackground(new java.awt.Color(98, 57, 179));
-        jbRegresar.setText("Regresar");
-        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
+        jbnRegistrar.setBackground(new java.awt.Color(98, 57, 179));
+        jbnRegistrar.setText("Registrar");
+        jbnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarActionPerformed(evt);
+                jbnRegistrarActionPerformed(evt);
             }
         });
 
@@ -97,51 +100,51 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Teléfono:");
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
+        jtfTelefono.setBackground(new java.awt.Color(255, 255, 255));
+        jtfTelefono.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfTelefono.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Correo electrónico:");
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
+        jtfCorreoElectronico.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCorreoElectronico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCorreoElectronico.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel10.setBackground(new java.awt.Color(98, 57, 179));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tipo de producto:");
 
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Smartphones");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        c.setForeground(new java.awt.Color(255, 255, 255));
+        c.setText("Smartphones");
+        c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                cActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Laptops");
+        jrbOpcion2.setForeground(new java.awt.Color(255, 255, 255));
+        jrbOpcion2.setText("Laptops");
 
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Accesorios");
+        jrbOpcion3.setForeground(new java.awt.Color(255, 255, 255));
+        jrbOpcion3.setText("Accesorios");
 
-        jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
-        jbLimpiar.setText("Limpiar");
-        jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
+        jbnLimpiar.setBackground(new java.awt.Color(98, 57, 179));
+        jbnLimpiar.setText("Limpiar");
+        jbnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLimpiarActionPerformed(evt);
+                jbnLimpiarActionPerformed(evt);
             }
         });
 
-        jbCancelar.setBackground(new java.awt.Color(98, 57, 179));
-        jbCancelar.setText("Cancelar");
-        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jbnCancelar.setBackground(new java.awt.Color(98, 57, 179));
+        jbnCancelar.setText("Cancelar");
+        jbnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCancelarActionPerformed(evt);
+                jbnCancelarActionPerformed(evt);
             }
         });
 
@@ -150,43 +153,43 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jRadioButton3)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(jbLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel2)
-                                .addGap(74, 74, 74)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jrbOpcion2)
+                            .addComponent(c)
+                            .addComponent(jrbOpcion3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(4, 17, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(74, 74, 74)
+                        .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(74, 74, 74)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addGap(74, 74, 74)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jtfCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jbnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -195,33 +198,33 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
-                .addComponent(jRadioButton1)
+                .addComponent(c)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2))
+                    .addComponent(jrbOpcion2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
-                .addGap(39, 39, 39)
+                .addComponent(jrbOpcion3)
+                .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54))
+                    .addComponent(jbnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -250,21 +253,56 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
-    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbRegresarActionPerformed
+    private void jbnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegistrarActionPerformed
+        String nombreProveedor = jtfNombre.getText();
+        String contacto = jcbContacto.getSelectedItem().toString();
+        int telefono = Integer.parseInt(jtfTelefono.getText());
+        String correoElectronico = jtfCorreoElectronico.getText();
+        String productosSuministrados = obtenerProductosSeleccionados();
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+        // Crear un nuevo proveedor
+        Proveedor nuevoProveedor = new Proveedor(nombreProveedor, contacto, telefono, correoElectronico, productosSuministrados);
 
-    private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbLimpiarActionPerformed
+        // Agregar el proveedor a la lista enlazada
+        listaProveedores.agregarProveedor(nuevoProveedor);
 
-    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
+        // Limpiar los campos después de registrar
+        limpiarCampos();
+    }//GEN-LAST:event_jbnRegistrarActionPerformed
+    
+    private String obtenerProductosSeleccionados() {
+        if (c.isSelected()) {
+            return "Smartphones";
+        } else if (jrbOpcion2.isSelected()) {
+            return "Laptops";
+        } else if (jrbOpcion3.isSelected()) {
+            return "Accesorios";
+        } else {
+            return ""; // Manejar el caso en que no se haya seleccionado nada
+        }
+    }
+    
+    private void limpiarCampos() {
+        jtfNombre.setText("");
+        jtfTelefono.setText("");
+        jtfCorreoElectronico.setText("");
+        jcbContacto.setSelectedIndex(0); // Puedes ajustar esto según tus necesidades
+        c.setSelected(false);
+        jrbOpcion2.setSelected(false);
+        jrbOpcion3.setSelected(false);
+    }
+    
+    private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbCancelarActionPerformed
+    }//GEN-LAST:event_cActionPerformed
+
+    private void jbnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnLimpiarActionPerformed
+        limpiarCampos();
+    }//GEN-LAST:event_jbnLimpiarActionPerformed
+
+    private void jbnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,7 +343,7 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JRadioButton c;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -315,14 +353,14 @@ public class AgregarProveedorFrm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JButton jbCancelar;
-    private javax.swing.JButton jbLimpiar;
-    private javax.swing.JButton jbRegresar;
+    private javax.swing.JButton jbnCancelar;
+    private javax.swing.JButton jbnLimpiar;
+    private javax.swing.JButton jbnRegistrar;
+    private javax.swing.JComboBox<String> jcbContacto;
+    private javax.swing.JRadioButton jrbOpcion2;
+    private javax.swing.JRadioButton jrbOpcion3;
+    private javax.swing.JTextField jtfCorreoElectronico;
+    private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtfTelefono;
     // End of variables declaration//GEN-END:variables
 }

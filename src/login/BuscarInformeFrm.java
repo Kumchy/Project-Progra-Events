@@ -43,7 +43,7 @@ public class BuscarInformeFrm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(98, 57, 179));
+        jPanel1.setBackground(new java.awt.Color(52, 17, 87));
 
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,7 +79,7 @@ public class BuscarInformeFrm extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(209, 186, 255));
+        jPanel2.setBackground(new java.awt.Color(133, 77, 191));
 
         jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
         jbLimpiar.setForeground(new java.awt.Color(204, 204, 255));
@@ -90,26 +90,26 @@ public class BuscarInformeFrm extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setBackground(new java.awt.Color(98, 57, 179));
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(204, 204, 255));
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fecha:");
 
         jLabel3.setBackground(new java.awt.Color(98, 57, 179));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Código:");
 
         jLabel4.setBackground(new java.awt.Color(98, 57, 179));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(98, 57, 179));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Informe:");
 
-        jTextArea1.setBackground(new java.awt.Color(98, 57, 179));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setForeground(new java.awt.Color(204, 204, 255));
         jTextArea1.setRows(5);
@@ -133,7 +133,7 @@ public class BuscarInformeFrm extends javax.swing.JFrame {
             }
         });
 
-        jTextArea2.setBackground(new java.awt.Color(98, 57, 179));
+        jTextArea2.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea2.setColumns(20);
         jTextArea2.setForeground(new java.awt.Color(204, 204, 255));
         jTextArea2.setRows(5);

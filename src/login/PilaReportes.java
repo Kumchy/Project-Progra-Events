@@ -36,4 +36,8 @@ public class PilaReportes {
             System.out.println("Primer elemento eliminado. "); 
         }//else 
     }
+    
+    public void buscar(){
+        
+    }
 }

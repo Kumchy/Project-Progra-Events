@@ -1,20 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package login;
 
-/**
- *
- * @author crist
- */
-public class ListaProveedoresFrm extends javax.swing.JFrame {
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
-    /**
-     * Creates new form StockGeneroFrm
-     */
-    public ListaProveedoresFrm() {
+public class ListaProveedoresFrm extends javax.swing.JFrame {
+    private ListaEnlazadaProveedor listaProveedores;
+    
+    public ListaProveedoresFrm(ListaEnlazadaProveedor listaProveedores) {
         initComponents();
+        this.listaProveedores = listaProveedores;
     }
 
     /**
@@ -65,7 +59,7 @@ public class ListaProveedoresFrm extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(133, 77, 191));
@@ -99,7 +93,7 @@ public class ListaProveedoresFrm extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(218, 218, 218)
@@ -125,15 +119,16 @@ public class ListaProveedoresFrm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         EscritorioFrm Escritorio = new EscritorioFrm();
         Escritorio.setVisible(true);
@@ -194,3 +189,4 @@ public class ListaProveedoresFrm extends javax.swing.JFrame {
     private javax.swing.JButton jbRegresar;
     // End of variables declaration//GEN-END:variables
 }
+

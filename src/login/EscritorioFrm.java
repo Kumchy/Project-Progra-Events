@@ -1,7 +1,8 @@
 package login;
 
 public class EscritorioFrm extends javax.swing.JFrame {
-
+    private ListaEnlazadaProveedor listaProveedores;
+     
     public EscritorioFrm() {
         initComponents();
     }
@@ -14,13 +15,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jmiCerrarSesion = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jmiStockPorCategoria = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        jmiInventarioTotal = new javax.swing.JMenuItem();
+        jmiListaProveedor = new javax.swing.JMenuItem();
+        jmiAgregarProveedores = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
@@ -51,19 +52,19 @@ public class EscritorioFrm extends javax.swing.JFrame {
                 .addContainerGap(215, Short.MAX_VALUE))
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
+        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setForeground(new java.awt.Color(98, 57, 179));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jMenu1.setText("Cuenta");
 
-        jMenuItem1.setText("Cerrar Sesion");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmiCerrarSesion.setText("Cerrar Sesion");
+        jmiCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmiCerrarSesionActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jmiCerrarSesion);
 
         jMenuItem2.setText("Control De Usuarios");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +76,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Gestion");
+        jmiStockPorCategoria.setText("Gestion");
 
         jMenuItem3.setText("Stock por Categoria");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -83,21 +84,26 @@ public class EscritorioFrm extends javax.swing.JFrame {
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jmiStockPorCategoria.add(jMenuItem3);
 
-        jMenuItem4.setText("Inventario Total");
-        jMenu2.add(jMenuItem4);
+        jmiInventarioTotal.setText("Inventario Total");
+        jmiStockPorCategoria.add(jmiInventarioTotal);
 
-        jMenuItem5.setText("Lista de Proveedores");
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setText("Agregar Proveedores");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jmiListaProveedor.setText("Lista de Proveedores");
+        jmiListaProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jmiListaProveedorActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jmiStockPorCategoria.add(jmiListaProveedor);
+
+        jmiAgregarProveedores.setText("Agregar Proveedores");
+        jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiAgregarProveedoresActionPerformed(evt);
+            }
+        });
+        jmiStockPorCategoria.add(jmiAgregarProveedores);
 
         jMenuItem7.setText("Crear Informe");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -105,12 +111,12 @@ public class EscritorioFrm extends javax.swing.JFrame {
                 jMenuItem7ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem7);
+        jmiStockPorCategoria.add(jMenuItem7);
 
         jMenuItem8.setText("Buscar Informes");
-        jMenu2.add(jMenuItem8);
+        jmiStockPorCategoria.add(jMenuItem8);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jmiStockPorCategoria);
 
         jMenu3.setText("Productos");
 
@@ -149,17 +155,25 @@ public class EscritorioFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jmiCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCerrarSesionActionPerformed
         LoginFrame Login = new LoginFrame();
         Login.setVisible(true);
         Login.pack();
         Login.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmiCerrarSesionActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
+        AgregarProveedorFrm agregarProveedor = new AgregarProveedorFrm();
+
+        // Mostrar el formulario AgregarProveedorFrm
+        agregarProveedor.setVisible(true);
+        agregarProveedor.pack();
+        agregarProveedor.setLocationRelativeTo(null);
+
+        // Cerrar el formulario actual (EscritorioFrm)
+        this.dispose();
+    }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         AdministradorUsuariosFrm UserControl = new AdministradorUsuariosFrm();
@@ -180,6 +194,18 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jmiListaProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaProveedorActionPerformed
+        ListaProveedoresFrm listaProveedoresForm = new ListaProveedoresFrm(listaProveedores);
+
+        // Mostrar el formulario ListaProveedoresFrm
+        listaProveedoresForm.setVisible(true);
+        listaProveedoresForm.pack();
+        listaProveedoresForm.setLocationRelativeTo(null);
+
+        // Cerrar el formulario actual (EscritorioFrm)
+        this.dispose();
+    }//GEN-LAST:event_jmiListaProveedorActionPerformed
 
 
     public static void main(String args[]) {
@@ -218,21 +244,21 @@ public class EscritorioFrm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem jmiAgregarProveedores;
+    private javax.swing.JMenuItem jmiCerrarSesion;
+    private javax.swing.JMenuItem jmiInventarioTotal;
+    private javax.swing.JMenuItem jmiListaProveedor;
+    private javax.swing.JMenu jmiStockPorCategoria;
     // End of variables declaration//GEN-END:variables
 }

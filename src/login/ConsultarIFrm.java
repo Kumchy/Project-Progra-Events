@@ -80,6 +80,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jTextField2.setBackground(new java.awt.Color(51, 51, 51));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setBorder(null);
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 23, 250, 25));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -107,6 +108,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jTextField4.setBackground(new java.awt.Color(51, 51, 51));
         jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField4.setBorder(null);
         jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 108, 250, 25));
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
@@ -118,6 +120,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jTextField5.setBackground(new java.awt.Color(51, 51, 51));
         jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField5.setBorder(null);
         jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 151, 250, 25));
 
         jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
@@ -134,6 +137,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jTextField6.setBackground(new java.awt.Color(51, 51, 51));
         jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField6.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField6.setBorder(null);
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 66, 250, 25));
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));
@@ -145,6 +149,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jTextField7.setBackground(new java.awt.Color(51, 51, 51));
         jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField7.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField7.setBorder(null);
         jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 194, 250, 25));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -158,8 +163,8 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                .addGap(1, 1, 1)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE))
         );
 
         pack();

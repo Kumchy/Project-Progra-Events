@@ -16,24 +16,27 @@ public class BuscadorStockIFrm extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jbRegresar = new javax.swing.JButton();
-        jbBuscar = new javax.swing.JButton();
-        jbLimpiar = new javax.swing.JButton();
+        jbLimpiar2 = new javax.swing.JButton();
+        jbLimpiar3 = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Buscar Stock por Categoria");
 
-        jPanel1.setBackground(new java.awt.Color(133, 77, 191));
+        jPanel1.setBackground(new java.awt.Color(52, 17, 87));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(52, 17, 87));
+        jPanel2.setBackground(new java.awt.Color(133, 77, 191));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Stock por Categoría");
@@ -42,94 +45,54 @@ public class BuscadorStockIFrm extends javax.swing.JInternalFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(111, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(9, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 40));
+
+        jTextField2.setBackground(new java.awt.Color(51, 51, 51));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setBorder(null);
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 62, 270, 25));
 
         jLabel2.setBackground(new java.awt.Color(52, 17, 87));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Categoría:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 62, -1, -1));
 
-        jbRegresar.setBackground(new java.awt.Color(204, 204, 255));
-        jbRegresar.setForeground(new java.awt.Color(51, 0, 102));
-        jbRegresar.setText("Regresar");
-        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
+        jbLimpiar2.setBackground(new java.awt.Color(98, 57, 179));
+        jbLimpiar2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbLimpiar2.setForeground(new java.awt.Color(255, 255, 255));
+        jbLimpiar2.setText("Buscar");
+        jbLimpiar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarActionPerformed(evt);
+                jbLimpiar2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jbLimpiar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 100, 35));
 
-        jbBuscar.setBackground(new java.awt.Color(204, 204, 255));
-        jbBuscar.setForeground(new java.awt.Color(51, 0, 102));
-        jbBuscar.setText("Buscar");
-        jbBuscar.addActionListener(new java.awt.event.ActionListener() {
+        jbLimpiar3.setBackground(new java.awt.Color(98, 57, 179));
+        jbLimpiar3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbLimpiar3.setForeground(new java.awt.Color(255, 255, 255));
+        jbLimpiar3.setText("Limpiar");
+        jbLimpiar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBuscarActionPerformed(evt);
+                jbLimpiar3ActionPerformed(evt);
             }
         });
-
-        jbLimpiar.setBackground(new java.awt.Color(204, 204, 255));
-        jbLimpiar.setForeground(new java.awt.Color(51, 0, 102));
-        jbLimpiar.setText("Limpiar");
-        jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLimpiarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        jPanel1.add(jbLimpiar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 100, 35));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,7 +102,7 @@ public class BuscadorStockIFrm extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
         );
 
         pack();
@@ -152,43 +115,13 @@ public class BuscadorStockIFrm extends javax.swing.JInternalFrame {
         listaCategorias.add(new CategoriaProductos("Accesorios", "Alta", "Accesorios de celular y computo.", 3, true));
     }
     
-    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        EscritorioFrm escritorio = new EscritorioFrm();
-        escritorio.setVisible(true);
-        escritorio.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_jbRegresarActionPerformed
+    private void jbLimpiar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbLimpiar2ActionPerformed
 
-    private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-        String categoriaBuscada = jTextField2.getText().trim();
-
-        if (!categoriaBuscada.isEmpty()) {
-            List<CategoriaProductos> productosEncontrados = listaCategorias.stream()
-            .filter(cat -> cat.getNombre().equalsIgnoreCase(categoriaBuscada))
-            .collect(Collectors.toList());
-
-            if (!productosEncontrados.isEmpty()) {
-                StockCategoriaIFrm stockGeneroFrm = new StockCategoriaIFrm();
-                stockGeneroFrm.setVisible(true);
-
-                javax.swing.table.DefaultTableModel modelo = (javax.swing.table.DefaultTableModel) stockGeneroFrm.getTabla().getModel();
-
-                modelo.setRowCount(0);
-
-                for (CategoriaProductos producto : productosEncontrados) {
-                    modelo.addRow(new Object[]{producto.getDemanda(), producto.getNombre(), producto.getDescripcion(), producto.getIDCategoria(), producto.getDisponibilidad()});
-                }
-            } else {
-                System.out.println("No se encontraron productos para la categoría ingresada.");
-            }
-        } else {
-            System.out.println("Ingrese una categoría para buscar productos.");
-        }
-    }//GEN-LAST:event_jbBuscarActionPerformed
-
-    private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        jTextField2.setText("");
-    }//GEN-LAST:event_jbLimpiarActionPerformed
+    private void jbLimpiar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbLimpiar3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -196,9 +129,9 @@ public class BuscadorStockIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JButton jbBuscar;
-    private javax.swing.JButton jbLimpiar;
-    private javax.swing.JButton jbRegresar;
+    private javax.swing.JButton jbLimpiar2;
+    private javax.swing.JButton jbLimpiar3;
     // End of variables declaration//GEN-END:variables
 }

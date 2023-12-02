@@ -133,7 +133,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbLogin.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin.setText("Ingresar");
-        jbLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 186, 255), 1, true));
+        jbLogin.setBorder(new javax.swing.border.MatteBorder(null));
         jbLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLoginActionPerformed(evt);
@@ -160,7 +160,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbLogin1.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin1.setText("Salir");
-        jbLogin1.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(51, 0, 102)));
+        jbLogin1.setBorder(new javax.swing.border.MatteBorder(null));
         jbLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLogin1ActionPerformed(evt);

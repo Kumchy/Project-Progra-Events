@@ -98,7 +98,7 @@ public class LoginAdministradorFrm extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(101, 59, 146));
-        jLabel1.setText("INICIAR SESION");
+        jLabel1.setText("Iniciar sesión");
 
         jtfUsuario.setBackground(new java.awt.Color(209, 186, 255));
         jtfUsuario.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -186,7 +186,7 @@ public class LoginAdministradorFrm extends javax.swing.JFrame {
         LeftLayout.setHorizontalGroup(
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(121, Short.MAX_VALUE)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel7)
                     .addComponent(jLabel1))

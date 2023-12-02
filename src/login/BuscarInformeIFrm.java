@@ -78,7 +78,7 @@ public class BuscarInformeIFrm extends javax.swing.JInternalFrame {
                 jbLimpiarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 130, 33));
+        jPanel2.add(jbLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 100, 35));
 
         jTextField2.setBackground(new java.awt.Color(51, 51, 51));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -122,7 +122,7 @@ public class BuscarInformeIFrm extends javax.swing.JInternalFrame {
                 jbRegresarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 130, 33));
+        jPanel2.add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 100, 35));
 
         jbBuscar.setBackground(new java.awt.Color(98, 57, 179));
         jbBuscar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -133,7 +133,7 @@ public class BuscarInformeIFrm extends javax.swing.JInternalFrame {
                 jbBuscarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 130, 33));
+        jPanel2.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 100, 35));
 
         jTextArea2.setBackground(new java.awt.Color(51, 51, 51));
         jTextArea2.setColumns(20);

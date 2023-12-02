@@ -55,7 +55,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
                 jbLimpiarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 130, 33));
+        jPanel2.add(jbLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 100, 35));
 
         jtfFecha.setBackground(new java.awt.Color(51, 51, 51));
         jtfFecha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -105,7 +105,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
                 jbRegistrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 130, 33));
+        jPanel2.add(jbRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 100, 35));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

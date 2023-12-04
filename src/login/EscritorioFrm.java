@@ -31,7 +31,8 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jdpEscritorio.setBackground(new java.awt.Color(41, 52, 128));
+        jdpEscritorio.setBackground(new java.awt.Color(52, 17, 87));
+        jdpEscritorio.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jdpEscritorioLayout = new javax.swing.GroupLayout(jdpEscritorio);
         jdpEscritorio.setLayout(jdpEscritorioLayout);
@@ -44,10 +45,11 @@ public class EscritorioFrm extends javax.swing.JFrame {
             .addGap(0, 605, Short.MAX_VALUE)
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(238, 240, 255));
-        jMenuBar1.setForeground(new java.awt.Color(98, 57, 179));
+        jMenuBar1.setBackground(new java.awt.Color(133, 77, 191));
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("Cuenta");
 
         jmiCerrarSesion.setText("Cerrar Sesion");
@@ -76,6 +78,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("Gestion");
 
         jmiStockPorCategoria.setText("Stock por Categoria");
@@ -128,6 +131,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
         jMenu3.setText("Productos");
 
         jmiConsultar.setText("Consultar");
@@ -174,7 +178,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpEscritorio)
+            .addComponent(jdpEscritorio, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();

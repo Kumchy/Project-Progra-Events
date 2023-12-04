@@ -3,7 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/crist/OneDrive/Documentos/GutHub/Project-Progra-Events/src/login/BuscarInformeFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/ListaProveedoresIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/ModificarIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/EscritorioFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/BuscarInformeIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/AdministradorUsuariosIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/StockCategoriaIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/BuscarProductoModificacionIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/BuscarProductoEliminarIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/CrearInformeIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/Proveedor.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/InventarioTotalIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/ListaProductos.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/CategoriaProductos.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/ControlUsuariosIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/LoginFrame.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/ConsultarIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/AgregarProveedorIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/Login.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/RegistrarIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/BuscadorStockIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/EliminarIFrm.java</file>
+            <file>file:/C:/Users/edson/Documents/NetBeansProjects/Project-Progra-Events/src/login/LoginAdministradorFrm.java</file>
         </group>
     </open-files>
 </project-private>

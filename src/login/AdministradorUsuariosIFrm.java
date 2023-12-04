@@ -79,6 +79,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
         jtfPassword.setBackground(new java.awt.Color(51, 51, 51));
         jtfPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfPassword.setForeground(new java.awt.Color(255, 255, 255));
         jtfPassword.setBorder(null);
         jtfPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
@@ -88,11 +89,13 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
         jtfCorreo.setBackground(new java.awt.Color(51, 51, 51));
         jtfCorreo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCorreo.setForeground(new java.awt.Color(255, 255, 255));
         jtfCorreo.setBorder(null);
         jtfCorreo.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
         jtfNombre.setBorder(null);
         jtfNombre.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
@@ -133,11 +136,13 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
         jtfEdad.setBackground(new java.awt.Color(51, 51, 51));
         jtfEdad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfEdad.setForeground(new java.awt.Color(255, 255, 255));
         jtfEdad.setBorder(null);
         jtfEdad.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jtfRol.setBackground(new java.awt.Color(51, 51, 51));
         jtfRol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfRol.setForeground(new java.awt.Color(255, 255, 255));
         jtfRol.setBorder(null);
         jtfRol.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
@@ -157,37 +162,41 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addGap(47, 47, 47)
-                .addComponent(jtfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
-                .addGap(40, 40, 40)
-                .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel5)
-                .addGap(17, 17, 17)
-                .addComponent(jtfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel4)
-                .addGap(57, 57, 57)
-                .addComponent(jtfEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel6)
-                .addGap(68, 68, 68)
-                .addComponent(jtfRol, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(jLabel2)
+                            .addGap(47, 47, 47)
+                            .addComponent(jtfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(jLabel3)
+                            .addGap(40, 40, 40)
+                            .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(jLabel5)
+                            .addGap(17, 17, 17)
+                            .addComponent(jtfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(jLabel4)
+                            .addGap(57, 57, 57)
+                            .addComponent(jtfEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(jLabel6)
+                            .addGap(68, 68, 68)
+                            .addComponent(jtfRol, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,11 +221,12 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(jtfRol, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -224,9 +234,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,35 +250,6 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
-
-    private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
-        if (!jtfNombre.getText().isEmpty()){
-
-            if(UsuarioLogic.eliminar(jtfNombre.getText())){
-                JOptionPane.showMessageDialog(this, "Usuario Eliminado");
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuario no encontrado");
-            }
-        }
-    }//GEN-LAST:event_jbEliminarActionPerformed
-
-    private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        if (!jtfNombre.getText().isEmpty()&&
-            !jtfPassword.getText().isEmpty()&&
-            !jtfCorreo.getText().isEmpty()&&
-            !jtfEdad.getText().isEmpty()&&
-            !jtfRol.getText().isEmpty()){
-
-            Usuario usuario = new Usuario(jtfNombre.getText(),
-                jtfPassword.getText(), jtfCorreo.getText(), jtfEdad.getText(), jtfRol.getText());
-            if(UsuarioLogic.insertar(usuario)){
-                JOptionPane.showMessageDialog(this, "Usuario registrado");
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuario ya existente");
-            }
-        }
-
-    }//GEN-LAST:event_jbRegistrarActionPerformed
 
     private void jbModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarActionPerformed
         if (!jtfNombre.getText().isEmpty()&&
@@ -288,6 +267,34 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_jbModificarActionPerformed
+
+    private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
+        if (!jtfNombre.getText().isEmpty()&&
+            !jtfPassword.getText().isEmpty()&&
+            !jtfCorreo.getText().isEmpty()&&
+            !jtfEdad.getText().isEmpty()&&
+            !jtfRol.getText().isEmpty()){
+
+            Usuario usuario = new Usuario(jtfNombre.getText(),
+                jtfPassword.getText(), jtfCorreo.getText(), jtfEdad.getText(), jtfRol.getText());
+            if(UsuarioLogic.insertar(usuario)){
+                JOptionPane.showMessageDialog(this, "Usuario registrado");
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario ya existente");
+            }
+        }
+    }//GEN-LAST:event_jbRegistrarActionPerformed
+
+    private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
+        if (!jtfNombre.getText().isEmpty()){
+
+            if(UsuarioLogic.eliminar(jtfNombre.getText())){
+                JOptionPane.showMessageDialog(this, "Usuario Eliminado");
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario no encontrado");
+            }
+        }
+    }//GEN-LAST:event_jbEliminarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

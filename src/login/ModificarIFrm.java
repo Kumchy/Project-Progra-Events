@@ -96,7 +96,7 @@ public class ModificarIFrm extends javax.swing.JInternalFrame {
                 jbBuscarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 303, 100, 35));
+        jPanel2.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 100, 35));
 
         jLabel8.setBackground(new java.awt.Color(98, 57, 179));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -119,7 +119,7 @@ public class ModificarIFrm extends javax.swing.JInternalFrame {
                 jbModificarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 303, 100, 35));
+        jPanel2.add(jbModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 100, 35));
 
         jTextField6.setBackground(new java.awt.Color(51, 51, 51));
         jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

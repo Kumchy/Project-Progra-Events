@@ -82,6 +82,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jtfPassword.setBackground(new java.awt.Color(51, 51, 51));
         jtfPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfPassword.setBorder(null);
+        jtfPassword.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPanel2.add(jtfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 250, 25));
 
@@ -92,13 +93,16 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
         jtfCorreo.setBackground(new java.awt.Color(51, 51, 51));
         jtfCorreo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCorreo.setForeground(new java.awt.Color(255, 255, 255));
         jtfCorreo.setBorder(null);
+        jtfCorreo.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfCorreo.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPanel2.add(jtfCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 250, 25));
 
         jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfNombre.setBorder(null);
+        jtfNombre.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfNombre.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPanel2.add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 250, 25));
 
@@ -145,12 +149,14 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jtfEdad.setBackground(new java.awt.Color(51, 51, 51));
         jtfEdad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfEdad.setBorder(null);
+        jtfEdad.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfEdad.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPanel2.add(jtfEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 250, 25));
 
         jtfRol.setBackground(new java.awt.Color(51, 51, 51));
         jtfRol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfRol.setBorder(null);
+        jtfRol.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfRol.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPanel2.add(jtfRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 250, 25));
 

@@ -75,60 +75,50 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(52, 17, 87));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
         jtfNombre.setBorder(null);
-        jPanel2.add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 250, 25));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contacto:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         jcbContacto.setBackground(new java.awt.Color(51, 51, 51));
         jcbContacto.setForeground(new java.awt.Color(255, 255, 255));
         jcbContacto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Persona Moral", "Persona física" }));
         jcbContacto.setBorder(null);
-        jPanel2.add(jcbContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 250, 28));
 
         jLabel8.setBackground(new java.awt.Color(98, 57, 179));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Teléfono:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jtfTelefono.setBackground(new java.awt.Color(51, 51, 51));
         jtfTelefono.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfTelefono.setForeground(new java.awt.Color(255, 255, 255));
         jtfTelefono.setBorder(null);
-        jPanel2.add(jtfTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 250, 25));
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Correo electrónico:");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jtfCorreoElectronico.setBackground(new java.awt.Color(51, 51, 51));
         jtfCorreoElectronico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfCorreoElectronico.setForeground(new java.awt.Color(255, 255, 255));
         jtfCorreoElectronico.setBorder(null);
-        jPanel2.add(jtfCorreoElectronico, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 250, 25));
 
         jLabel10.setBackground(new java.awt.Color(98, 57, 179));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tipo de producto:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         c.setForeground(new java.awt.Color(255, 255, 255));
         c.setText("Smartphones");
@@ -137,15 +127,12 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 cActionPerformed(evt);
             }
         });
-        jPanel2.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, -1, -1));
 
         jrbOpcion2.setForeground(new java.awt.Color(255, 255, 255));
         jrbOpcion2.setText("Laptops");
-        jPanel2.add(jrbOpcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
         jrbOpcion3.setForeground(new java.awt.Color(255, 255, 255));
         jrbOpcion3.setText("Accesorios");
-        jPanel2.add(jrbOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, -1));
 
         jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
         jbLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -156,7 +143,6 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 jbLimpiarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 100, 35));
 
         jbRegistrar.setBackground(new java.awt.Color(98, 57, 179));
         jbRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -167,7 +153,6 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 jbRegistrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 100, 35));
 
         jbCancelar.setBackground(new java.awt.Color(98, 57, 179));
         jbCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -178,7 +163,83 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 jbCancelarActionPerformed(evt);
             }
         });
-        jPanel2.add(jbCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 100, 35));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addGap(77, 77, 77)
+                .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel4)
+                .addGap(71, 71, 71)
+                .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel8)
+                .addGap(75, 75, 75)
+                .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel9)
+                .addGap(15, 15, 15)
+                .addComponent(jtfCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(c))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel10)
+                .addGap(42, 42, 42)
+                .addComponent(jrbOpcion2))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(jrbOpcion3))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jtfCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addComponent(c)
+                .addGap(9, 9, 9)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jrbOpcion2))
+                .addGap(9, 9, 9)
+                .addComponent(jrbOpcion3)
+                .addGap(39, 39, 39)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,7 +247,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -194,7 +255,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

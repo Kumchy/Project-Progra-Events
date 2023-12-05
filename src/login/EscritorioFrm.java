@@ -24,7 +24,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jmiListaDeProveedores = new javax.swing.JMenuItem();
         jmiAgregarProveedores = new javax.swing.JMenuItem();
         jmiCrearInforme = new javax.swing.JMenuItem();
-        jmiBuscarInformes = new javax.swing.JMenuItem();
+        jmiTablaInformes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmiConsultar = new javax.swing.JMenuItem();
         jmiRegistrar = new javax.swing.JMenuItem();
@@ -123,13 +123,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiCrearInforme);
 
-        jmiBuscarInformes.setText("Tablón de Informes");
-        jmiBuscarInformes.addActionListener(new java.awt.event.ActionListener() {
+        jmiTablaInformes.setText("Tablón de Informes");
+        jmiTablaInformes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiBuscarInformesActionPerformed(evt);
+                jmiTablaInformesActionPerformed(evt);
             }
         });
-        jMenu2.add(jmiBuscarInformes);
+        jMenu2.add(jmiTablaInformes);
 
         jMenuBar1.add(jMenu2);
 
@@ -228,11 +228,11 @@ public class EscritorioFrm extends javax.swing.JFrame {
         listaProveedores.show();
     }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
 
-    private void jmiBuscarInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBuscarInformesActionPerformed
+    private void jmiTablaInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTablaInformesActionPerformed
         InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
         jdpEscritorio.add(mostrarInformes);
         mostrarInformes.show();
-    }//GEN-LAST:event_jmiBuscarInformesActionPerformed
+    }//GEN-LAST:event_jmiTablaInformesActionPerformed
 
     private void jmiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultarActionPerformed
         ConsultarIFrm consultar = new ConsultarIFrm();
@@ -312,7 +312,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     public static javax.swing.JDesktopPane jdpEscritorio;
     private javax.swing.JMenuItem jmiAgregarProveedores;
-    private javax.swing.JMenuItem jmiBuscarInformes;
     private javax.swing.JMenuItem jmiCerrarSesion;
     private javax.swing.JMenuItem jmiConsultar;
     private javax.swing.JMenuItem jmiControlDeUsuarios;
@@ -323,5 +322,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiModificar;
     private javax.swing.JMenuItem jmiRegistrar;
     private javax.swing.JMenuItem jmiStockPorCategoria;
+    private javax.swing.JMenuItem jmiTablaInformes;
     // End of variables declaration//GEN-END:variables
 }

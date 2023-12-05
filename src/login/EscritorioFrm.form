@@ -97,12 +97,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiCrearInformeActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jmiBuscarInformes">
+            <MenuItem class="javax.swing.JMenuItem" name="jmiTablaInformes">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tabl&#xf3;n de Informes"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiBuscarInformesActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiTablaInformesActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

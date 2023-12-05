@@ -1,20 +1,22 @@
 package login;
 
-
-
 public class NodoReportes {
     private String fecha; 
     private int codigo; 
-    private String contenido; 
+    private String producto; 
+    private String proveedor;
+    private String descripcion;
     public NodoReportes aptSiguiente;
     
-    public NodoReportes(String w, int x, String z){
-        this(w, x, z, null);
+    public NodoReportes(String w, int x, String z, String y, String c){
+        this(w, x, z, y, c, null);
     }
-    public NodoReportes(String f, int c, String cn, NodoReportes N){
+    public NodoReportes(String f, int c, String p, String pe, String d, NodoReportes N){
         this.fecha = f;
         this.codigo = c; 
-        this.contenido = cn; 
+        this.producto = p; 
+        this.proveedor = pe;
+        this.descripcion = d;
         this.aptSiguiente = N;
     }
 
@@ -34,12 +36,28 @@ public class NodoReportes {
         this.codigo = valor3;
     }
 
-    public String getContenido() {
-        return contenido;
+    public String getProducto() {
+        return producto;
     }
 
-    public void setContenido(String valor4) {
-        this.contenido = valor4;
+    public void setProducto(String valor4) {
+        this.producto = valor4;
+    }
+
+    public String getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(String proveedor) {
+        this.proveedor = proveedor;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public NodoReportes getAptSiguiente() {

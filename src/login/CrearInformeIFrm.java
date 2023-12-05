@@ -255,6 +255,8 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     private void jbnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnLimpiarActionPerformed
         jtfFecha.setText("");
         jtfCodigo.setText("");
+        jtfProducto.setText("");
+        jtfProveedor.setText("");
         jtfInforme.setText("");
     }//GEN-LAST:event_jbnLimpiarActionPerformed
 

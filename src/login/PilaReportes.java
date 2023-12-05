@@ -9,8 +9,8 @@ public class PilaReportes {
     public PilaReportes(){
         PilaReportes = null; 
     } 
-    public void push(String f,int c, String p, String pe, String d){
-        NodoReportes nuevo = new NodoReportes(f,c,p,pe,d );
+    public void push(String fecha,int codigo, String producto, String proveedor, String descripcion){
+        NodoReportes nuevo = new NodoReportes(fecha,codigo,producto,proveedor,descripcion );
         if(PilaReportes == null){
             PilaReportes = nuevo; 
         }

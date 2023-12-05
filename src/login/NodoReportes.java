@@ -8,16 +8,16 @@ public class NodoReportes {
     private String descripcion;
     public NodoReportes aptSiguiente;
     
-    public NodoReportes(String w, int x, String z, String y, String c){
-        this(w, x, z, y, c, null);
+    public NodoReportes(String fecha, int codigo, String producto, String proveedor, String descripcion){
+        this(fecha, codigo, producto, proveedor, descripcion, null);
     }
-    public NodoReportes(String f, int c, String p, String pe, String d, NodoReportes N){
-        this.fecha = f;
-        this.codigo = c; 
-        this.producto = p; 
-        this.proveedor = pe;
-        this.descripcion = d;
-        this.aptSiguiente = N;
+    public NodoReportes(String fecha, int codigo, String producto, String proveedor, String descripcion, NodoReportes siguiente){
+        this.fecha = fecha;
+        this.codigo = codigo; 
+        this.producto = producto; 
+        this.proveedor = proveedor;
+        this.descripcion = descripcion;
+        this.aptSiguiente = siguiente;
     }
 
     public String getFecha() {

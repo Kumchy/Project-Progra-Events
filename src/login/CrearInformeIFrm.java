@@ -5,9 +5,11 @@ import javax.swing.JOptionPane;
 
 public class CrearInformeIFrm extends javax.swing.JInternalFrame {
 
-    private PilaReportes pilaReportes = new PilaReportes();
-    public CrearInformeIFrm() {
+    //private PilaReportes pilaReportes = new PilaReportes();
+    PilaReportes pila;
+    public CrearInformeIFrm(PilaReportes pila) {
         initComponents();
+        this.pila = pila;
     }
 
     @SuppressWarnings("unchecked")
@@ -237,7 +239,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
 
         NodoReportes nuevoReporte = new NodoReportes(fecha, codigo, producto, proveedor, descripcion);
 
-        pilaReportes.push(fecha, codigo, producto, proveedor, descripcion);
+        pila.push(fecha, codigo, producto, proveedor, descripcion);
         System.out.println("registro terminado");
         System.out.println(nuevoReporte.getFecha());
         System.out.println(nuevoReporte.getCodigo());

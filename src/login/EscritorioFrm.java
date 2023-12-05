@@ -2,8 +2,10 @@ package login;
 //NEPE PRIETO
 public class EscritorioFrm extends javax.swing.JFrame {
 
+    PilaReportes reportes;
     public EscritorioFrm() {
         initComponents();
+        this.reportes = new PilaReportes();
     }
 
     @SuppressWarnings("unchecked")
@@ -121,7 +123,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiCrearInforme);
 
-        jmiBuscarInformes.setText("Buscar Informes");
+        jmiBuscarInformes.setText("Tablón de Informes");
         jmiBuscarInformes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiBuscarInformesActionPerformed(evt);
@@ -215,7 +217,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
-        CrearInformeIFrm crearInforme = new CrearInformeIFrm();
+        CrearInformeIFrm crearInforme = new CrearInformeIFrm(reportes);
         jdpEscritorio.add(crearInforme);
         crearInforme.show();
     }//GEN-LAST:event_jmiCrearInformeActionPerformed
@@ -227,9 +229,9 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
 
     private void jmiBuscarInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBuscarInformesActionPerformed
-        BuscarInformeIFrm buscarInforme = new BuscarInformeIFrm();
-        jdpEscritorio.add(buscarInforme);
-        buscarInforme.show();
+        InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
+        jdpEscritorio.add(mostrarInformes);
+        mostrarInformes.show();
     }//GEN-LAST:event_jmiBuscarInformesActionPerformed
 
     private void jmiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultarActionPerformed

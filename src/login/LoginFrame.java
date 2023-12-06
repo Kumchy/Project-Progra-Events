@@ -178,7 +178,7 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-20.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-masculino-en-círculo-20.png"))); // NOI18N
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-contraseña-20.png"))); // NOI18N
 

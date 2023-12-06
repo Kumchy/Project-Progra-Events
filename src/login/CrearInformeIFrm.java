@@ -1,6 +1,7 @@
 package login;
 
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class CrearInformeIFrm extends javax.swing.JInternalFrame {
@@ -9,6 +10,8 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     public CrearInformeIFrm(PilaReportes pila) {
         initComponents();
         this.pila = pila;
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/icons8-salida-20.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")
@@ -251,6 +254,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegistrarActionPerformed
+        if(jtfFecha.getText().isEmpty() || jtfCodigo.getText().isEmpty() || jtfProducto.getText().isEmpty() || jtfProveedor.getText().isEmpty() || jtfInforme.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Rellena todos los espacios por favor");
+        } else {
         String fecha = jtfFecha.getText();
         int codigo = Integer.parseInt(jtfCodigo.getText());
         String producto = jtfProducto.getText();
@@ -260,18 +266,13 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         NodoReportes nuevoReporte = new NodoReportes(fecha, codigo, producto, proveedor, descripcion);
 
         pila.push(fecha, codigo, producto, proveedor, descripcion);
-        System.out.println("registro terminado");
+        JOptionPane.showMessageDialog(this, "Registro exitoso");
         System.out.println(nuevoReporte.getFecha());
         System.out.println(nuevoReporte.getCodigo());
         System.out.println(nuevoReporte.getProducto());
         System.out.println(nuevoReporte.getProveedor());
         System.out.println(nuevoReporte.getDescripcion());
-
-        jtfFecha.setText("");
-        jtfCodigo.setText("");
-        jtfProducto.setText("");
-        jtfProveedor.setText("");
-        jtfInforme.setText("");
+        }
     }//GEN-LAST:event_jbnRegistrarActionPerformed
 
     private void jbnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnLimpiarActionPerformed
@@ -299,6 +300,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbnBorrarActionPerformed
 
     private void jbnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnModificarActionPerformed
+        if(jtfFecha.getText().isEmpty() || jtfCodigo.getText().isEmpty() || jtfProducto.getText().isEmpty() || jtfProveedor.getText().isEmpty() || jtfInforme.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Rellena todos los espacios por favor");
+        } else{
         String nuevaFecha = jtfInforme.getText();
         int nuevoCodigo = Integer.parseInt(jtfInforme.getText());
         String nuevoProducto = jtfInforme.getText();
@@ -306,6 +310,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         String nuevaDescripcion = jtfInforme.getText();
         pila.modificarUltimo(nuevaFecha, nuevoCodigo, nuevoProducto, nuevoProveedor, nuevaDescripcion);
         JOptionPane.showMessageDialog(this, "Ultimo reporte Modificado");
+        }
     }//GEN-LAST:event_jbnModificarActionPerformed
 
 

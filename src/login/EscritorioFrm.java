@@ -74,7 +74,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu1.setBackground(new java.awt.Color(220, 191, 255));
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-contraseña-20.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-masculino-en-círculo-20.png"))); // NOI18N
         jMenu1.setText("Cuenta");
 
         jmiCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
@@ -113,6 +113,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-administración-20 (1).png"))); // NOI18N
         jMenu2.setText("Gestion");
         jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -169,6 +170,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-producto-20 (1).png"))); // NOI18N
         jMenu3.setText("Productos");
         jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 

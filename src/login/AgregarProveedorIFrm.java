@@ -1,13 +1,19 @@
 package login;
 
+import javax.swing.JOptionPane;
+
 public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
 
-    private ListaEnlazadaProveedor listaProveedores;
+    private ListaEnlazadaProveedor listaProveedores = new ListaEnlazadaProveedor();
     
     public AgregarProveedorIFrm() {
         initComponents();
-        listaProveedores = new ListaEnlazadaProveedor();
     }
+    
+    public void setListaProveedores(ListaEnlazadaProveedor listaProveedores) {
+        this.listaProveedores = listaProveedores;
+    }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -30,9 +36,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         c = new javax.swing.JRadioButton();
         jrbOpcion2 = new javax.swing.JRadioButton();
         jrbOpcion3 = new javax.swing.JRadioButton();
-        jbLimpiar = new javax.swing.JButton();
         jbRegistrar = new javax.swing.JButton();
-        jbCancelar = new javax.swing.JButton();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -137,16 +141,6 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jrbOpcion3.setForeground(new java.awt.Color(255, 255, 255));
         jrbOpcion3.setText("Accesorios");
 
-        jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
-        jbLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jbLimpiar.setForeground(new java.awt.Color(255, 255, 255));
-        jbLimpiar.setText("Limpiar");
-        jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLimpiarActionPerformed(evt);
-            }
-        });
-
         jbRegistrar.setBackground(new java.awt.Color(98, 57, 179));
         jbRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbRegistrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,26 +151,12 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
             }
         });
 
-        jbCancelar.setBackground(new java.awt.Color(98, 57, 179));
-        jbCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jbCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        jbCancelar.setText("Cancelar");
-        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCancelarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -212,7 +192,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(180, 180, 180)
                         .addComponent(jrbOpcion3)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,10 +222,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jrbOpcion3)
                 .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -268,24 +245,8 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        EscritorioFrm Escritorio = new EscritorioFrm();
-        Escritorio.setVisible(true);
-        Escritorio.pack();
-        Escritorio.setLocationRelativeTo(null);
-        this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
-    private String obtenerProductosSeleccionados() {
-        if (c.isSelected()) {
-            return "Smartphones";
-        } else if (jrbOpcion2.isSelected()) {
-            return "Laptops";
-        } else if (jrbOpcion3.isSelected()) {
-            return "Accesorios";
-        } else {
-            return ""; // Manejar el caso en que no se haya seleccionado nada
-        }
-    }
     
     private void limpiarCampos() {
         jtfNombre.setText("");
@@ -301,30 +262,35 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cActionPerformed
 
-    private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbLimpiarActionPerformed
-
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
         String nombreProveedor = jtfNombre.getText();
         String contacto = jcbContacto.getSelectedItem().toString();
         int telefono = Integer.parseInt(jtfTelefono.getText());
         String correoElectronico = jtfCorreoElectronico.getText();
-        String productosSuministrados = obtenerProductosSeleccionados();
 
-        // Crear un nuevo proveedor
+        String productosSuministrados = "";
+        if (c.isSelected()) {
+            productosSuministrados = "Smartphones";
+        } else if (jrbOpcion2.isSelected()) {
+            productosSuministrados = "Laptops";
+        } else if (jrbOpcion3.isSelected()) {
+            productosSuministrados = "Accesorios";
+        }
+        
         Proveedor nuevoProveedor = new Proveedor(nombreProveedor, contacto, telefono, correoElectronico, productosSuministrados);
-
-        // Agregar el proveedor a la lista enlazada
+        
         listaProveedores.agregarProveedor(nuevoProveedor);
-
-        // Limpiar los campos después de registrar
-        limpiarCampos();
+        
+        String detallesProveedor= "Proveedor registrado:\n" +
+            "Proveedor: " + nuevoProveedor.getNombreProveedor() + "\n" +
+            "Contacto: " + nuevoProveedor.getContacto() + "\n" +
+            "Teléfono: " + nuevoProveedor.getTelefono() + "\n" +
+            "Correo: " + nuevoProveedor.getCorreoElectronico() + "\n" +
+            "Productos Suministrados: " + nuevoProveedor.getProductosSuministrados();
+        
+        JOptionPane.showMessageDialog(this, detallesProveedor, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_jbRegistrarActionPerformed
-
-    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -339,8 +305,6 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JButton jbCancelar;
-    private javax.swing.JButton jbLimpiar;
     private javax.swing.JButton jbRegistrar;
     private javax.swing.JComboBox<String> jcbContacto;
     private javax.swing.JRadioButton jrbOpcion2;

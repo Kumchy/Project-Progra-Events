@@ -260,11 +260,6 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
-    
-    if (listaProductos.buscarProductoPorCodigo(codigo) != null) {
-        JOptionPane.showMessageDialog(this, "El código ingresado ya existe. Ingrese un código único.", "Error", JOptionPane.ERROR_MESSAGE);
-        return;
-    }
 
     String categoria = "";
     if (jrbSmart.isSelected()) {

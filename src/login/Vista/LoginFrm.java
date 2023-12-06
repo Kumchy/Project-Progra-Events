@@ -294,26 +294,24 @@ public class LoginFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfPasswordActionPerformed
 
     private void jbLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLoginActionPerformed
-    if (jtfUsuario.getText().equals("")){
-        JOptionPane.showMessageDialog(null,"Porfavor agrega el usuario");
-    }
-    else if (jtfPassword.getText().equals("")){
-        JOptionPane.showMessageDialog(null,"Porfavor agrega la contraseña");
-    }
-    else if(jtfUsuario.getText().contains("admin")&& jtfPassword.getText().contains("123")){
-        EscritorioFrm Escritorio = new EscritorioFrm();
-        Escritorio.setVisible(true);
-        Escritorio.pack();
-        Escritorio.setLocationRelativeTo(null);
-        this.dispose();
-    }
-    if (UsuarioLogic.autentificar(jtfUsuario.getText(), jtfPassword.getText())){
+    if (jtfUsuario.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Por favor ingresa el usuario");
+    } else if (jtfPassword.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Por favor ingresa la contraseña");
+    } else {
+        String usuario = jtfUsuario.getText();
+        String password = jtfPassword.getText();
+
+        if (UsuarioLogic.autentificar(usuario, password)) {
             EscritorioFrm Escritorio = new EscritorioFrm();
-            Escritorio.setVisible(true); 
+            Escritorio.setVisible(true);
             Escritorio.pack();
             Escritorio.setLocationRelativeTo(null);
             this.dispose();
-            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+        }
+    }
     }//GEN-LAST:event_jbLoginActionPerformed
 
     private void jcbMostrarContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMostrarContraActionPerformed

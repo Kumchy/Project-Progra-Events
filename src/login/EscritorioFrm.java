@@ -1,11 +1,16 @@
 package login;
+import java.util.List;
+
 public class EscritorioFrm extends javax.swing.JFrame {
 
-private InventarioTotalIFrm inventarioTotal;
-private ListaProductos listaProductos = new ListaProductos();
+    private InventarioTotalIFrm inventarioTotal;
+    private ListaProductos listaProductos = new ListaProductos();
+    PilaReportes reportes;
     
     public EscritorioFrm() {
         initComponents();
+        this.reportes = new PilaReportes();
+        listaProductos = new ListaProductos();
     }
 
     @SuppressWarnings("unchecked")
@@ -24,7 +29,7 @@ private ListaProductos listaProductos = new ListaProductos();
         jmiListaDeProveedores = new javax.swing.JMenuItem();
         jmiAgregarProveedores = new javax.swing.JMenuItem();
         jmiCrearInforme = new javax.swing.JMenuItem();
-        jmiBuscarInformes = new javax.swing.JMenuItem();
+        jmiTablaInforme = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmiConsultar = new javax.swing.JMenuItem();
         jmiRegistrar = new javax.swing.JMenuItem();
@@ -48,7 +53,7 @@ private ListaProductos listaProductos = new ListaProductos();
         );
 
         jMenuBar1.setBackground(new java.awt.Color(133, 77, 191));
-        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenuBar1.setForeground(new java.awt.Color(0, 0, 0));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,13 +128,13 @@ private ListaProductos listaProductos = new ListaProductos();
         });
         jMenu2.add(jmiCrearInforme);
 
-        jmiBuscarInformes.setText("Buscar Informes");
-        jmiBuscarInformes.addActionListener(new java.awt.event.ActionListener() {
+        jmiTablaInforme.setText("Tabla de Informe");
+        jmiTablaInforme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiBuscarInformesActionPerformed(evt);
+                jmiTablaInformeActionPerformed(evt);
             }
         });
-        jMenu2.add(jmiBuscarInformes);
+        jMenu2.add(jmiTablaInforme);
 
         jMenuBar1.add(jMenu2);
 
@@ -194,12 +199,6 @@ private ListaProductos listaProductos = new ListaProductos();
         this.dispose();
     }//GEN-LAST:event_jmiCerrarSesionActionPerformed
 
-    private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
-        AgregarProveedorIFrm agregarProveedor = new AgregarProveedorIFrm();
-        jdpEscritorio.add(agregarProveedor);
-        agregarProveedor.show();
-    }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
-
     private void jmiControlDeUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiControlDeUsuariosActionPerformed
         AdministradorUsuariosIFrm administrarUsuarios = new AdministradorUsuariosIFrm();
         jdpEscritorio.add(administrarUsuarios);
@@ -207,7 +206,7 @@ private ListaProductos listaProductos = new ListaProductos();
     }//GEN-LAST:event_jmiControlDeUsuariosActionPerformed
 
     private void jmiEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiEliminarActionPerformed
-        BuscarProductoEliminarIFrm eliminar = new BuscarProductoEliminarIFrm();
+        BuscarProductoEliminarIFrm eliminar = new BuscarProductoEliminarIFrm(listaProductos);
         jdpEscritorio.add(eliminar);
         eliminar.show();
     }//GEN-LAST:event_jmiEliminarActionPerformed
@@ -216,28 +215,17 @@ private ListaProductos listaProductos = new ListaProductos();
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
-        //CrearInformeIFrm crearInforme = new CrearInformeIFrm();
-       // jdpEscritorio.add(crearInforme);
-        //crearInforme.show();
-    }//GEN-LAST:event_jmiCrearInformeActionPerformed
-
-    private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed
-        ListaProveedoresIFrm listaProveedores = new ListaProveedoresIFrm();
-        jdpEscritorio.add(listaProveedores);
-        listaProveedores.show();
-    }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
-
     private void jmiBuscarInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBuscarInformesActionPerformed
-        BuscarInformeIFrm buscarInforme = new BuscarInformeIFrm();
-        jdpEscritorio.add(buscarInforme);
-        buscarInforme.show();
+        InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
+        jdpEscritorio.add(mostrarInformes);
+        mostrarInformes.show();
     }//GEN-LAST:event_jmiBuscarInformesActionPerformed
 
     private void jmiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultarActionPerformed
         ConsultarIFrm consultar = new ConsultarIFrm();
+        consultar.setListaProductos(listaProductos);
         jdpEscritorio.add(consultar);
-        consultar.show();
+        consultar.setVisible(true);
     }//GEN-LAST:event_jmiConsultarActionPerformed
 
     private void jmiModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiModificarActionPerformed
@@ -245,21 +233,6 @@ private ListaProductos listaProductos = new ListaProductos();
         jdpEscritorio.add(modificar);
         modificar.show();
     }//GEN-LAST:event_jmiModificarActionPerformed
-
-    private void jmiStockPorCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiStockPorCategoriaActionPerformed
-        BuscadorStockIFrm stockCategorias = new BuscadorStockIFrm();
-        jdpEscritorio.add(stockCategorias);
-        stockCategorias.show();
-    }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
-
-    private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
-    if (inventarioTotal == null) {
-        inventarioTotal = new InventarioTotalIFrm(listaProductos);
-    }
-    inventarioTotal.setListaProductos(listaProductos);
-    inventarioTotal.setVisible(true);
-    jdpEscritorio.add(inventarioTotal);
-    }//GEN-LAST:event_jmiInventarioTotalActionPerformed
 
     private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
     RegistrarIFrm registrar = new RegistrarIFrm();
@@ -274,6 +247,45 @@ private ListaProductos listaProductos = new ListaProductos();
         jdpEscritorio.add(control);
         control.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
+        CrearInformeIFrm crearInforme = new CrearInformeIFrm(reportes);
+        jdpEscritorio.add(crearInforme);
+        crearInforme.show();
+    }//GEN-LAST:event_jmiCrearInformeActionPerformed
+
+    private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
+        AgregarProveedorIFrm agregarProveedor = new AgregarProveedorIFrm();
+        jdpEscritorio.add(agregarProveedor);
+        agregarProveedor.show();
+    }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
+
+    private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed
+        ListaProveedoresIFrm listaProveedores = new ListaProveedoresIFrm();
+        jdpEscritorio.add(listaProveedores);
+        listaProveedores.show();
+    }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
+
+    private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
+        if (inventarioTotal == null) {
+            inventarioTotal = new InventarioTotalIFrm(listaProductos);
+        }
+        inventarioTotal.setListaProductos(listaProductos);
+        inventarioTotal.setVisible(true);
+        jdpEscritorio.add(inventarioTotal);
+    }//GEN-LAST:event_jmiInventarioTotalActionPerformed
+
+    private void jmiStockPorCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiStockPorCategoriaActionPerformed
+        BuscadorStockIFrm stockCategorias = new BuscadorStockIFrm();
+        jdpEscritorio.add(stockCategorias);
+        stockCategorias.show();
+    }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
+
+    private void jmiTablaInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTablaInformeActionPerformed
+        InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
+        jdpEscritorio.add(mostrarInformes);
+        mostrarInformes.show();
+    }//GEN-LAST:event_jmiTablaInformeActionPerformed
 
 
     public static void main(String args[]) {
@@ -317,7 +329,6 @@ private ListaProductos listaProductos = new ListaProductos();
     private javax.swing.JMenuItem jMenuItem1;
     public static javax.swing.JDesktopPane jdpEscritorio;
     private javax.swing.JMenuItem jmiAgregarProveedores;
-    private javax.swing.JMenuItem jmiBuscarInformes;
     private javax.swing.JMenuItem jmiCerrarSesion;
     private javax.swing.JMenuItem jmiConsultar;
     private javax.swing.JMenuItem jmiControlDeUsuarios;
@@ -328,5 +339,6 @@ private ListaProductos listaProductos = new ListaProductos();
     private javax.swing.JMenuItem jmiModificar;
     private javax.swing.JMenuItem jmiRegistrar;
     private javax.swing.JMenuItem jmiStockPorCategoria;
+    private javax.swing.JMenuItem jmiTablaInforme;
     // End of variables declaration//GEN-END:variables
 }

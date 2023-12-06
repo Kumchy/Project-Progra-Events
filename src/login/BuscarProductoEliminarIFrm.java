@@ -7,10 +7,9 @@ public class BuscarProductoEliminarIFrm extends javax.swing.JInternalFrame {
     private ListaProductos listaProductos;
     private InventarioTotalIFrm inventarioTotalFrame;
     
-    public BuscarProductoEliminarIFrm() {
+    public BuscarProductoEliminarIFrm(ListaProductos listaProductos) {
         initComponents();
-        listaProductos = new ListaProductos();
-        this.inventarioTotalFrame = inventarioTotalFrame;
+        this.listaProductos = listaProductos;
     }
 
     
@@ -134,13 +133,67 @@ public class BuscarProductoEliminarIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
+    String codigo = jTextField2.getText();
 
+    if (codigo.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Ingrese un código válido", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    int codigoProducto = Integer.parseInt(codigo);
+
+    ProductoElectrónico productoEncontrado = listaProductos.buscarProductoPorCodigo(codigoProducto);
+
+    if (productoEncontrado != null) {
+        String detallesProducto = "Detalles del Producto:" +
+                "\nCódigo: " + productoEncontrado.getCodigo() +
+                "\nNombre: " + productoEncontrado.getNombre() +
+                "\nProveedor: " + productoEncontrado.getProveedor() +
+                "\nPrecio: " + productoEncontrado.getPrecio() +
+                "\nCategoria: " + productoEncontrado.getCategoria();
+
+        int opcion = JOptionPane.showConfirmDialog(this, detallesProducto + "\n\n¿Desea eliminar este producto?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+        
+        if (opcion == JOptionPane.YES_OPTION) {
+            boolean eliminado = eliminarProducto(productoEncontrado);
+            if (eliminado) {
+                JOptionPane.showMessageDialog(this, "Producto eliminado con éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                jTextField2.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al eliminar el producto", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Producto no eliminado", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jbBuscarActionPerformed
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
         jTextField2.setText("");
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
+    private boolean eliminarProducto(ProductoElectrónico producto) {
+    NodoProducto nodoAnterior = null;
+    NodoProducto nodoActual = listaProductos.getCabeza();
+
+    while (nodoActual != null) {
+        if (nodoActual.producto.equals(producto)) {
+            if (nodoAnterior != null) {
+                nodoAnterior.siguiente = nodoActual.siguiente;
+            } else {
+                listaProductos.setCabeza(nodoActual.siguiente);
+            }
+            return true;
+        }
+        nodoAnterior = nodoActual;
+        nodoActual = nodoActual.siguiente;
+    }
+
+    return false;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

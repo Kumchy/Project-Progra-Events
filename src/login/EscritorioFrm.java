@@ -31,7 +31,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jmiControlDeUsuarios = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jmiStockPorCategoria = new javax.swing.JMenuItem();
         jmiInventarioTotal = new javax.swing.JMenuItem();
         jmiListaDeProveedores = new javax.swing.JMenuItem();
         jmiAgregarProveedores = new javax.swing.JMenuItem();
@@ -104,14 +103,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("Gestion");
-
-        jmiStockPorCategoria.setText("Stock por Categoria");
-        jmiStockPorCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiStockPorCategoriaActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmiStockPorCategoria);
 
         jmiInventarioTotal.setText("Inventario Total");
         jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
@@ -301,12 +292,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jdpEscritorio.add(inventarioTotal);
     }//GEN-LAST:event_jmiInventarioTotalActionPerformed
 
-    private void jmiStockPorCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiStockPorCategoriaActionPerformed
-        BuscadorStockIFrm stockCategorias = new BuscadorStockIFrm();
-        jdpEscritorio.add(stockCategorias);
-        stockCategorias.show();
-    }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
-
     private void jmiTablaInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTablaInformeActionPerformed
         InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
         jdpEscritorio.add(mostrarInformes);
@@ -365,7 +350,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiListaDeProveedores;
     private javax.swing.JMenuItem jmiModificar;
     private javax.swing.JMenuItem jmiRegistrar;
-    private javax.swing.JMenuItem jmiStockPorCategoria;
     private javax.swing.JMenuItem jmiTablaInforme;
     // End of variables declaration//GEN-END:variables
 }

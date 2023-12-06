@@ -52,9 +52,9 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jtfCodigo.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
         jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
         jtfCodigo.setBorder(null);
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));

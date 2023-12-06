@@ -14,7 +14,6 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
         reportes = pila;
         NodoReportes aux = reportes.PilaReportes;
         
-        //configuracion de la tabla
         DefaultTableModel modelo = new DefaultTableModel();
         String[] cabecera  = {"Codigo", "Fecha", "Producto", "Proveedor", "Descripcion"};
         modelo.setColumnIdentifiers(cabecera);

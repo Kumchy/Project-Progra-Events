@@ -19,8 +19,8 @@ public class PilaReportes {
             }
             aux.setAptSiguiente(nuevo);
             
-        }//else 
-    } // push
+        }
+    }
     
     public void pop(){
         NodoReportes aux = PilaReportes; 
@@ -33,7 +33,7 @@ public class PilaReportes {
                 PilaReportes = aux.getAptSiguiente(); 
             }
             System.out.println("Primer elemento eliminado. "); 
-        }//else 
+        }
     }
     
 }

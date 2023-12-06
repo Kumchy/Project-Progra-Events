@@ -101,6 +101,8 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                     .addContainerGap(14, Short.MAX_VALUE)))
         );
 
+        jTableProveedores.setBackground(new java.awt.Color(255, 255, 255));
+        jTableProveedores.setForeground(new java.awt.Color(0, 0, 0));
         jTableProveedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},

@@ -1,5 +1,4 @@
 package login;
-
 import javax.swing.JOptionPane;
 import java.util.List;
 
@@ -67,9 +66,9 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo:");
 
-        jtfCodigo.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
         jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
         jtfCodigo.setBorder(null);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -91,9 +90,9 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Categoria:");
 
-        jtfCategoria.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCategoria.setBackground(new java.awt.Color(255, 255, 255));
         jtfCategoria.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCategoria.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCategoria.setForeground(new java.awt.Color(0, 0, 0));
         jtfCategoria.setBorder(null);
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
@@ -101,9 +100,9 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Proveedor:");
 
-        jtfProveedor.setBackground(new java.awt.Color(51, 51, 51));
+        jtfProveedor.setBackground(new java.awt.Color(255, 255, 255));
         jtfProveedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
         jtfProveedor.setBorder(null);
 
         jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
@@ -116,9 +115,9 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
             }
         });
 
-        jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
         jtfNombre.setBorder(null);
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));
@@ -126,9 +125,9 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Precio:");
 
-        jtfPrecio.setBackground(new java.awt.Color(51, 51, 51));
+        jtfPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jtfPrecio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfPrecio.setForeground(new java.awt.Color(255, 255, 255));
+        jtfPrecio.setForeground(new java.awt.Color(0, 0, 0));
         jtfPrecio.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -244,13 +243,11 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         ProductoElectrónico productoEncontrado = listaProductos.buscarProductoPorCodigo(codigoProducto);
 
         if (productoEncontrado != null) {
-            // Mostrar los detalles del producto en los campos correspondientes
             jtfNombre.setText(productoEncontrado.getNombre());
             jtfCategoria.setText(String.valueOf(productoEncontrado.getCategoria()));
             jtfProveedor.setText(productoEncontrado.getProveedor());
             jtfPrecio.setText(String.valueOf(productoEncontrado.getPrecio()));
         } else {
-            // Producto no encontrado
             JOptionPane.showMessageDialog(this, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jbBuscarActionPerformed

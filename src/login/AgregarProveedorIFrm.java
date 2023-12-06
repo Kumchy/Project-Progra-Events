@@ -85,17 +85,17 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre:");
 
-        jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
         jtfNombre.setBorder(null);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contacto:");
 
-        jcbContacto.setBackground(new java.awt.Color(51, 51, 51));
-        jcbContacto.setForeground(new java.awt.Color(255, 255, 255));
+        jcbContacto.setBackground(new java.awt.Color(255, 255, 255));
+        jcbContacto.setForeground(new java.awt.Color(0, 0, 0));
         jcbContacto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Persona Moral", "Persona física" }));
         jcbContacto.setBorder(null);
 
@@ -104,9 +104,9 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Teléfono:");
 
-        jtfTelefono.setBackground(new java.awt.Color(51, 51, 51));
+        jtfTelefono.setBackground(new java.awt.Color(255, 255, 255));
         jtfTelefono.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfTelefono.setForeground(new java.awt.Color(255, 255, 255));
+        jtfTelefono.setForeground(new java.awt.Color(0, 0, 0));
         jtfTelefono.setBorder(null);
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
@@ -114,9 +114,9 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Correo electrónico:");
 
-        jtfCorreoElectronico.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCorreoElectronico.setBackground(new java.awt.Color(255, 255, 255));
         jtfCorreoElectronico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCorreoElectronico.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCorreoElectronico.setForeground(new java.awt.Color(0, 0, 0));
         jtfCorreoElectronico.setBorder(null);
 
         jLabel10.setBackground(new java.awt.Color(98, 57, 179));
@@ -252,7 +252,7 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jtfNombre.setText("");
         jtfTelefono.setText("");
         jtfCorreoElectronico.setText("");
-        jcbContacto.setSelectedIndex(0); // Puedes ajustar esto según tus necesidades
+        jcbContacto.setSelectedIndex(0);
         c.setSelected(false);
         jrbOpcion2.setSelected(false);
         jrbOpcion3.setSelected(false);

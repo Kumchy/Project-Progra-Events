@@ -3,7 +3,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 import javax.swing.JScrollPane;
-//PRUEBA
+
 public class InventarioTotalIFrm extends javax.swing.JInternalFrame {
 
     private ListaProductos listaProductos;
@@ -130,6 +130,7 @@ public class InventarioTotalIFrm extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(52, 17, 87));
 
         jTableProductos.setBackground(new java.awt.Color(255, 255, 255));
+        jTableProductos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTableProductos.setForeground(new java.awt.Color(0, 0, 0));
         jTableProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

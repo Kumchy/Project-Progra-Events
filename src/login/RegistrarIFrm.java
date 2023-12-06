@@ -51,9 +51,9 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo:");
 
-        jtfCodigo.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
         jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
         jtfCodigo.setBorder(null);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -65,9 +65,9 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Proveedor:");
 
-        jtfProveedor.setBackground(new java.awt.Color(51, 51, 51));
+        jtfProveedor.setBackground(new java.awt.Color(255, 255, 255));
         jtfProveedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
         jtfProveedor.setBorder(null);
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
@@ -75,9 +75,9 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Precio:");
 
-        jtfPrecio.setBackground(new java.awt.Color(51, 51, 51));
+        jtfPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jtfPrecio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfPrecio.setForeground(new java.awt.Color(255, 255, 255));
+        jtfPrecio.setForeground(new java.awt.Color(0, 0, 0));
         jtfPrecio.setBorder(null);
 
         jbRegistrar.setBackground(new java.awt.Color(98, 57, 179));
@@ -90,9 +90,9 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
             }
         });
 
-        jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
         jtfNombre.setBorder(null);
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));

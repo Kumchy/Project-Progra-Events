@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package login;
 
-// Clase Proveedor
 public class Proveedor {
     private String nombreProveedor;
     private String contacto;
@@ -12,7 +8,6 @@ public class Proveedor {
     private String correoElectronico;
     private String productosSuministrados;
 
-    // Constructor
     public Proveedor(String nombreProveedor, String contacto, int telefono, String correoElectronico, String productosSuministrados) {
         this.nombreProveedor = nombreProveedor;
         this.contacto = contacto;

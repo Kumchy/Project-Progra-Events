@@ -40,7 +40,6 @@ public class UsuarioReg {
     }
     
     public boolean modificar(Usuario usuario){
-        //-1 significa que si se ha encontrado el usuario
         if (buscar(usuario.getUsuario())!=-1){
             Usuario usuarioaux= obtener (usuario.getUsuario());
             

@@ -1,5 +1,5 @@
 package login.Vista;
-
+import javax.swing.ImageIcon;
 import login.Modelo.Usuario;
 import javax.swing.JOptionPane;
 import login.Modelo.UsuarioLogic;
@@ -8,6 +8,8 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
     public AdministradorUsuariosIFrm() {
         initComponents();
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")

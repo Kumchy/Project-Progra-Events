@@ -3,6 +3,7 @@ package login.Vista;
 import login.Modelo.ListaProveedor;
 import login.Modelo.Proveedor;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 
 public class TablaProveedoresIFrm extends javax.swing.JInternalFrame {
@@ -13,6 +14,8 @@ public class TablaProveedoresIFrm extends javax.swing.JInternalFrame {
         initComponents();
         this.listaProveedores = listaProveedores;
         actualizarTabla();
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
     
     public void actualizarTabla() {

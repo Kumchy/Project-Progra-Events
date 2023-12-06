@@ -16,7 +16,7 @@ public class TablaInformesTablaIFrm extends javax.swing.JInternalFrame {
         initComponents();
         this.reportes = pila;
         actualizarTabla();
-        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/icons8-panel-de-control-20.png"));
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
         this.setFrameIcon(icon);
     }
 

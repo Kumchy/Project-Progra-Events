@@ -3,6 +3,7 @@ import login.Modelo.ProductoElectrónico;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 
 public class TablaInventarioTotalIFrm extends javax.swing.JInternalFrame {
@@ -13,6 +14,8 @@ public class TablaInventarioTotalIFrm extends javax.swing.JInternalFrame {
     initComponents();
     this.listaProductos = listaProductos;
     actualizarTabla();
+    ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+    this.setFrameIcon(icon);
     }
     
     public void actualizarTabla() {

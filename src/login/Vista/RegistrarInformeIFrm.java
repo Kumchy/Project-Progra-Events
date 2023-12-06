@@ -12,7 +12,7 @@ public class RegistrarInformeIFrm extends javax.swing.JInternalFrame {
     public RegistrarInformeIFrm(PilaReportes pila) {
         initComponents();
         this.pila = pila;
-        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/icons8-salida-20.png"));
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
         this.setFrameIcon(icon);
     }
 

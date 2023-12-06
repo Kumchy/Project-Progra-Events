@@ -1,4 +1,5 @@
 package login.Vista;
+import javax.swing.ImageIcon;
 import login.Modelo.ProductoElectrónico;
 import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
@@ -9,6 +10,8 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
     public BuscarProductoModificacionIFrm(ModeloListaProducto listaProductos) {
         initComponents();
         this.listaProductos = listaProductos;
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")

@@ -3,8 +3,8 @@ import login.Modelo.ListaProveedor;
 import login.Modelo.PilaReportes;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.List;
-import javax.swing.ImageIcon;
+import java.util.HashMap;
+import javax.swing.JInternalFrame;
 
 public class EscritorioFrm extends javax.swing.JFrame {
 
@@ -12,6 +12,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private TablaProveedoresIFrm proveedores;
     private ModeloListaProducto listaProductos = new ModeloListaProducto();
     private ListaProveedor listaProveedores = new ListaProveedor();
+    private HashMap<String, JInternalFrame> ventanasInternas;
     PilaReportes reportes;
     
     public EscritorioFrm() {
@@ -19,6 +20,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         this.reportes = new PilaReportes();
         listaProductos = new ModeloListaProducto();
         listaProveedores = new ListaProveedor();
+        ventanasInternas = new HashMap<>();
     }
 
     @SuppressWarnings("unchecked")
@@ -227,6 +229,24 @@ public class EscritorioFrm extends javax.swing.JFrame {
         return valorRetorno;
     }
     
+    private void mostrarVentanaInterna(String identificador, JInternalFrame ventana) {
+    if (ventanasInternas.containsKey(identificador)) {
+        JInternalFrame ventanaExistente = ventanasInternas.get(identificador);
+        if (!ventanaExistente.isVisible()) {
+            ventanaExistente.setVisible(true);
+            if (!jdpEscritorio.isAncestorOf(ventanaExistente)) {
+                jdpEscritorio.add(ventanaExistente);
+            }
+        }
+        ventanaExistente.moveToFront();
+    } else {
+        ventanasInternas.put(identificador, ventana);
+        ventana.setVisible(true);
+        jdpEscritorio.add(ventana);
+    }
+    ventana.moveToFront();
+    }
+    
     private void jmiCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCerrarSesionActionPerformed
         LoginFrm Login = new LoginFrm();
         Login.setVisible(true);
@@ -271,11 +291,11 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiModificarActionPerformed
 
     private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
-        RegistrarProductoIFrm registrar = new RegistrarProductoIFrm();
-        registrar.setListaProductos(listaProductos);
-        registrar.setInventarioTotal(inventarioTotal);
-        registrar.setVisible(true);
-        jdpEscritorio.add(registrar);
+    RegistrarProductoIFrm registrar = new RegistrarProductoIFrm();
+    registrar.setListaProductos(listaProductos);
+    registrar.setInventarioTotal(inventarioTotal);
+    registrar.setVisible(true);
+    mostrarVentanaInterna("RegistrarProducto", registrar);
     }//GEN-LAST:event_jmiRegistrarActionPerformed
 
     private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
@@ -285,10 +305,10 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiCrearInformeActionPerformed
 
     private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
-        RegistrarProveedorIFrm agregarProveedor = new RegistrarProveedorIFrm();
-        agregarProveedor.setListaProveedores(listaProveedores);
-        agregarProveedor.setVisible(true);
-        jdpEscritorio.add(agregarProveedor);
+    RegistrarProveedorIFrm agregarProveedor = new RegistrarProveedorIFrm();
+    agregarProveedor.setListaProveedores(listaProveedores);
+    agregarProveedor.setVisible(true);
+    mostrarVentanaInterna("AgregarProveedores", agregarProveedor);
     }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
 
     private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed
@@ -296,8 +316,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
             proveedores = new TablaProveedoresIFrm(listaProveedores);
         }
         proveedores.setListaProveedores(listaProveedores);
-        proveedores.setVisible(true);
-        jdpEscritorio.add(proveedores);
+        mostrarVentanaInterna("ListaProveedores", proveedores);
     }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
 
     private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
@@ -305,8 +324,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
             inventarioTotal = new TablaInventarioTotalIFrm(listaProductos);
         }
         inventarioTotal.setListaProductos(listaProductos);
-        inventarioTotal.setVisible(true);
-        jdpEscritorio.add(inventarioTotal);
+        mostrarVentanaInterna("InventarioTotal", inventarioTotal);
     }//GEN-LAST:event_jmiInventarioTotalActionPerformed
 
     private void jmiTablaInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTablaInformeActionPerformed

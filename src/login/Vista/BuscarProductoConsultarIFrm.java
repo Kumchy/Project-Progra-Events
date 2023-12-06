@@ -2,6 +2,7 @@ package login.Vista;
 import login.Modelo.ProductoElectrónico;
 import javax.swing.JOptionPane;
 import java.util.List;
+import javax.swing.ImageIcon;
 
 public class BuscarProductoConsultarIFrm extends javax.swing.JInternalFrame {
 
@@ -9,6 +10,8 @@ public class BuscarProductoConsultarIFrm extends javax.swing.JInternalFrame {
 
     public BuscarProductoConsultarIFrm() {
         initComponents();
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")

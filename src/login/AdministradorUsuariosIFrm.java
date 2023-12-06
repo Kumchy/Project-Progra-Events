@@ -1,7 +1,6 @@
 package login;
 
 import javax.swing.JOptionPane;
-import login.login_logic.UsuarioLogic;
 
 public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
 
@@ -30,6 +29,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jtfEdad = new javax.swing.JTextField();
         jtfRol = new javax.swing.JTextField();
         jbModificar = new javax.swing.JButton();
+        jbBuscar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(52, 17, 87));
         setClosable(true);
@@ -77,9 +77,9 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Correo:");
 
-        jtfPassword.setBackground(new java.awt.Color(51, 51, 51));
+        jtfPassword.setBackground(new java.awt.Color(255, 255, 255));
         jtfPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jtfPassword.setForeground(new java.awt.Color(0, 0, 0));
         jtfPassword.setBorder(null);
         jtfPassword.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
@@ -88,16 +88,16 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Usuario:");
 
-        jtfCorreo.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCorreo.setBackground(new java.awt.Color(255, 255, 255));
         jtfCorreo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCorreo.setForeground(new java.awt.Color(0, 0, 0));
         jtfCorreo.setBorder(null);
         jtfCorreo.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfCorreo.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
-        jtfNombre.setBackground(new java.awt.Color(51, 51, 51));
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
         jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
         jtfNombre.setBorder(null);
         jtfNombre.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfNombre.setDisabledTextColor(new java.awt.Color(255, 255, 255));
@@ -117,7 +117,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         jbEliminar.setBackground(new java.awt.Color(98, 57, 179));
         jbEliminar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jbEliminar.setText("Eliminiar");
+        jbEliminar.setText("Eliminar");
         jbEliminar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(45, 45, 45)));
         jbEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,16 +137,16 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
             }
         });
 
-        jtfEdad.setBackground(new java.awt.Color(51, 51, 51));
+        jtfEdad.setBackground(new java.awt.Color(255, 255, 255));
         jtfEdad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfEdad.setForeground(new java.awt.Color(255, 255, 255));
+        jtfEdad.setForeground(new java.awt.Color(0, 0, 0));
         jtfEdad.setBorder(null);
         jtfEdad.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfEdad.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
-        jtfRol.setBackground(new java.awt.Color(51, 51, 51));
+        jtfRol.setBackground(new java.awt.Color(255, 255, 255));
         jtfRol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfRol.setForeground(new java.awt.Color(255, 255, 255));
+        jtfRol.setForeground(new java.awt.Color(0, 0, 0));
         jtfRol.setBorder(null);
         jtfRol.setCaretColor(new java.awt.Color(255, 255, 255));
         jtfRol.setDisabledTextColor(new java.awt.Color(255, 255, 255));
@@ -162,46 +162,59 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
             }
         });
 
+        jbBuscar.setBackground(new java.awt.Color(98, 57, 179));
+        jbBuscar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        jbBuscar.setText("Buscar");
+        jbBuscar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(45, 45, 45)));
+        jbBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel2)
+                        .addGap(47, 47, 47)
+                        .addComponent(jtfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(28, 28, 28)
-                            .addComponent(jLabel2)
-                            .addGap(47, 47, 47)
-                            .addComponent(jtfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel3)
-                            .addGap(40, 40, 40)
-                            .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel5)
-                            .addGap(17, 17, 17)
-                            .addComponent(jtfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel4)
-                            .addGap(57, 57, 57)
-                            .addComponent(jtfEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel6)
-                            .addGap(68, 68, 68)
-                            .addComponent(jtfRol, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(68, 68, 68)
+                                .addComponent(jtfRol, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(40, 40, 40)
+                                .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(17, 17, 17)
+                                .addComponent(jtfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(57, 57, 57)
+                                .addComponent(jtfEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(10, 18, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +243,8 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
 
@@ -288,6 +302,13 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "Usuario ya existente");
             }
         }
+        
+        jtfNombre.setText("");
+        jtfPassword.setText("");
+        jtfCorreo.setText("");
+        jtfEdad.setText(""); 
+        jtfRol.setText(""); 
+
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
@@ -301,6 +322,20 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jbEliminarActionPerformed
 
+    private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
+    if (!jtfNombre.getText().isEmpty()){
+         Usuario usuario = UsuarioLogic.buscar(jtfNombre.getText());
+        if (usuario != null) {
+            jtfCorreo.setText(usuario.getCorreo());
+            jtfPassword.setText(usuario.getPassword());
+            jtfEdad.setText(usuario.getEdad());
+            jtfRol.setText(usuario.getRol());
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario no encontrado");
+            }
+        }
+    }//GEN-LAST:event_jbBuscarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -312,6 +347,7 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton jbBuscar;
     private javax.swing.JButton jbEliminar;
     private javax.swing.JButton jbModificar;
     private javax.swing.JButton jbRegistrar;

@@ -1,6 +1,6 @@
-package login.login_logic;
+package login;
 
-import login.Reg_Elimi.UsuarioReg;
+import login.UsuarioReg;
 import login.Usuario;
 
 public class UsuarioLogic {
@@ -38,4 +38,7 @@ public class UsuarioLogic {
         return usuarioReg.obtener(usuario);
         
     }
+    public static Usuario buscar(String usuario){
+        return usuarioReg.buscarlo(usuario);
+}
 }

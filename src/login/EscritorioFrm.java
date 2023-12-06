@@ -29,7 +29,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jmiCerrarSesion = new javax.swing.JMenuItem();
         jmiControlDeUsuarios = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmiInventarioTotal = new javax.swing.JMenuItem();
         jmiListaDeProveedores = new javax.swing.JMenuItem();
@@ -98,17 +97,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jmiControlDeUsuarios);
-
-        jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
-        jMenuItem1.setText("Control de Usuarios");
-        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
 
@@ -288,12 +276,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jdpEscritorio.add(registrar);
     }//GEN-LAST:event_jmiRegistrarActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        ControlUsuariosIFrm control = new ControlUsuariosIFrm();
-        jdpEscritorio.add(control);
-        control.show();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
         CrearInformeIFrm crearInforme = new CrearInformeIFrm(reportes);
         jdpEscritorio.add(crearInforme);
@@ -371,7 +353,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     public static javax.swing.JDesktopPane jdpEscritorio;
     private javax.swing.JMenuItem jmiAgregarProveedores;
     private javax.swing.JMenuItem jmiCerrarSesion;

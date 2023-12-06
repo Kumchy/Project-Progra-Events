@@ -1,4 +1,4 @@
-package login.Reg_Elimi;
+package login;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,15 @@ public class UsuarioReg {
             }
         }
         return n;
+    }
+    
+    public Usuario buscarlo(String nombre) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getUsuario().equals(nombre)) {
+                return usuario;
+            }
+        }
+        return null;
     }
     
     public boolean insertar(Usuario usuario){

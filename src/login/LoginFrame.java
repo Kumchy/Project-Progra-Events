@@ -4,7 +4,6 @@ package login;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
-import login.login_logic.UsuarioLogic;
 
 public class LoginFrame extends javax.swing.JFrame {
 

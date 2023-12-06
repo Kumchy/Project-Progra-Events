@@ -4,55 +4,10 @@ import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
-    
     private ListaEnlazadaProveedor listaProveedores;
 
-    public ListaProveedoresIFrm(ListaEnlazadaProveedor listaProveedores) {
+    public ListaProveedoresIFrm() {
         initComponents();
-        this.listaProveedores = listaProveedores;
-        actualizarTabla();
-    }
-    
-    public void actualizarTabla() {
-        DefaultTableModel modelo = new DefaultTableModel();
-        modelo.addColumn("Nombre");
-        modelo.addColumn("Contacto");
-        modelo.addColumn("Telefono");
-        modelo.addColumn("Correo");
-        modelo.addColumn("Productos suministrados");
-
-        List<Proveedor> proveedores = listaProveedores.getProveedores();
-
-        for (Proveedor proveedor : proveedores) {
-            Object[] fila = {
-                proveedor.getNombreProveedor(),
-                proveedor.getContacto(),
-                proveedor.getTelefono(),
-                proveedor.getCorreoElectronico(),
-                proveedor.getProductosSuministrados()
-            };
-            modelo.addRow(fila);
-        }
-
-        jTableProveedores.setModel(modelo);
-    }
-    
-    public void mostrarProveedoresRegistrados(List<Proveedor> proveedores) {
-        DefaultTableModel model = (DefaultTableModel) jTableProveedores.getModel();
-        model.setRowCount(0);
-
-        for (Proveedor proveedor : proveedores) {
-            model.addRow(new Object[]{
-                proveedor.getNombreProveedor(),
-                proveedor.getContacto(),
-                proveedor.getTelefono(),
-                proveedor.getCorreoElectronico(),
-                proveedor.getProductosSuministrados()
-            });
-        }
-    }
-
-        public void setListaProveedores(ListaEnlazadaProveedor listaProveedores) {
         this.listaProveedores = listaProveedores;
     }
 
@@ -64,7 +19,7 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTableProveedores = new javax.swing.JTable();
+        jTable2 = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -100,7 +55,7 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                     .addContainerGap(14, Short.MAX_VALUE)))
         );
 
-        jTableProveedores.setModel(new javax.swing.table.DefaultTableModel(
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -111,7 +66,7 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                 "Nombre:", "Contacto:", "Télefono:", "Correo electrónico:", "Tipo de producto:"
             }
         ));
-        jScrollPane2.setViewportView(jTableProveedores);
+        jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -152,6 +107,6 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableProveedores;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

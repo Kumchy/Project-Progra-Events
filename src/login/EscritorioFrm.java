@@ -7,9 +7,7 @@ import javax.swing.ImageIcon;
 public class EscritorioFrm extends javax.swing.JFrame {
 
     private InventarioTotalIFrm inventarioTotal;
-    private ListaProveedoresIFrm proveedores;
     private ListaProductos listaProductos = new ListaProductos();
-    private ListaEnlazadaProveedor listaProveedores = new ListaEnlazadaProveedor();
     PilaReportes reportes;
     
     public EscritorioFrm() {
@@ -17,7 +15,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         
         this.reportes = new PilaReportes();
         listaProductos = new ListaProductos();
-        listaProveedores = new ListaEnlazadaProveedor();
     }
 
     @SuppressWarnings("unchecked")
@@ -279,18 +276,14 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
     private void jmiAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarProveedoresActionPerformed
         AgregarProveedorIFrm agregarProveedor = new AgregarProveedorIFrm();
-        agregarProveedor.setListaProveedores(listaProveedores);
-        agregarProveedor.setVisible(true);
         jdpEscritorio.add(agregarProveedor);
+        agregarProveedor.show();
     }//GEN-LAST:event_jmiAgregarProveedoresActionPerformed
 
     private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed
-        if (proveedores == null) {
-            proveedores = new ListaProveedoresIFrm(listaProveedores);
-        }
-        proveedores.setListaProveedores(listaProveedores);
-        proveedores.setVisible(true);
-        jdpEscritorio.add(proveedores);
+        ListaProveedoresIFrm listaProveedores = new ListaProveedoresIFrm();
+        jdpEscritorio.add(listaProveedores);
+        listaProveedores.show();
     }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
 
     private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed

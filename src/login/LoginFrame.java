@@ -143,6 +143,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin.setText("Ingresar");
         jbLogin.setBorder(new javax.swing.border.MatteBorder(null));
+        jbLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLoginActionPerformed(evt);
@@ -170,6 +171,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin1.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin1.setText("Salir");
         jbLogin1.setBorder(new javax.swing.border.MatteBorder(null));
+        jbLogin1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLogin1ActionPerformed(evt);

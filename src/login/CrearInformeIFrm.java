@@ -49,6 +49,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jbnLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jbnLimpiar.setText("Limpiar");
+        jbnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbnLimpiarActionPerformed(evt);
@@ -97,6 +98,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jbnRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         jbnRegistrar.setText("Registrar");
+        jbnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbnRegistrarActionPerformed(evt);

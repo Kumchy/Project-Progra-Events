@@ -76,6 +76,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu1.setText("Cuenta");
 
         jmiCerrarSesion.setText("Cerrar Sesion");
+        jmiCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiCerrarSesionActionPerformed(evt);
@@ -84,6 +85,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu1.add(jmiCerrarSesion);
 
         jmiControlDeUsuarios.setText("Administrador de usuarios");
+        jmiControlDeUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiControlDeUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiControlDeUsuariosActionPerformed(evt);
@@ -92,6 +94,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu1.add(jmiControlDeUsuarios);
 
         jMenuItem1.setText("Control de Usuarios");
+        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -103,8 +106,10 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("Gestion");
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiInventarioTotal.setText("Inventario Total");
+        jmiInventarioTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiInventarioTotalActionPerformed(evt);
@@ -113,6 +118,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu2.add(jmiInventarioTotal);
 
         jmiListaDeProveedores.setText("Lista de Proveedores");
+        jmiListaDeProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiListaDeProveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiListaDeProveedoresActionPerformed(evt);
@@ -121,6 +127,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu2.add(jmiListaDeProveedores);
 
         jmiAgregarProveedores.setText("Agregar Proveedores");
+        jmiAgregarProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiAgregarProveedoresActionPerformed(evt);
@@ -129,6 +136,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu2.add(jmiAgregarProveedores);
 
         jmiCrearInforme.setText("Crear Informe");
+        jmiCrearInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiCrearInforme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiCrearInformeActionPerformed(evt);
@@ -137,6 +145,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu2.add(jmiCrearInforme);
 
         jmiTablaInforme.setText("Tabla de Informe");
+        jmiTablaInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiTablaInforme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiTablaInformeActionPerformed(evt);
@@ -148,8 +157,10 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu3.setForeground(new java.awt.Color(255, 255, 255));
         jMenu3.setText("Productos");
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiConsultar.setText("Consultar");
+        jmiConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiConsultarActionPerformed(evt);
@@ -158,6 +169,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu3.add(jmiConsultar);
 
         jmiRegistrar.setText("Registrar");
+        jmiRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiRegistrarActionPerformed(evt);
@@ -166,6 +178,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu3.add(jmiRegistrar);
 
         jmiModificar.setText("Modificar");
+        jmiModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiModificarActionPerformed(evt);
@@ -174,6 +187,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu3.add(jmiModificar);
 
         jmiEliminar.setText("Eliminar");
+        jmiEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiEliminarActionPerformed(evt);

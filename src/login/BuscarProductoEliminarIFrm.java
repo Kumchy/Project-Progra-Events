@@ -69,6 +69,7 @@ public class BuscarProductoEliminarIFrm extends javax.swing.JInternalFrame {
         jbBuscar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbBuscar.setForeground(new java.awt.Color(255, 255, 255));
         jbBuscar.setText("Buscar");
+        jbBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBuscarActionPerformed(evt);
@@ -79,6 +80,7 @@ public class BuscarProductoEliminarIFrm extends javax.swing.JInternalFrame {
         jbLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jbLimpiar.setText("Limpiar");
+        jbLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLimpiarActionPerformed(evt);

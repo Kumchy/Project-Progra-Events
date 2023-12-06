@@ -120,6 +120,7 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
         jbActualizar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbActualizar.setForeground(new java.awt.Color(255, 255, 255));
         jbActualizar.setText("Actualizar");
+        jbActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbActualizarActionPerformed(evt);

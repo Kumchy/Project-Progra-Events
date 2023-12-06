@@ -1,6 +1,11 @@
 package login;
 
+import javax.swing.JOptionPane;
+import java.util.List;
+
 public class ConsultarIFrm extends javax.swing.JInternalFrame {
+
+    private ListaProductos listaProductos;
 
     public ConsultarIFrm() {
         initComponents();
@@ -12,7 +17,6 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -39,24 +43,13 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Consultar");
 
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(140, 140, 140)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -64,8 +57,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(52, 17, 87));
@@ -97,7 +89,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel8.setBackground(new java.awt.Color(98, 57, 179));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Cant stock:");
+        jLabel8.setText("Categoria:");
 
         jTextField4.setBackground(new java.awt.Color(51, 51, 51));
         jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -211,7 +203,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
                         .addComponent(jLabel11))
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9))
@@ -235,18 +227,34 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        EscritorioFrm Escritorio = new EscritorioFrm();
-        Escritorio.setVisible(true);
-        Escritorio.pack();
-        Escritorio.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_jLabel7MouseClicked
-
+        public void setListaProductos(ListaProductos listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+    
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbBuscarActionPerformed
+         String codigo = jTextField2.getText();
 
+        if (codigo.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese un código válido", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        int codigoProducto = Integer.parseInt(codigo);
+
+        ProductoElectrónico productoEncontrado = listaProductos.buscarProductoPorCodigo(codigoProducto);
+
+        if (productoEncontrado != null) {
+            // Mostrar los detalles del producto en los campos correspondientes
+            jTextField6.setText(productoEncontrado.getNombre());
+            jTextField4.setText(String.valueOf(productoEncontrado.getCategoria()));
+            jTextField5.setText(productoEncontrado.getProveedor());
+            jTextField7.setText(String.valueOf(productoEncontrado.getPrecio()));
+        } else {
+            // Producto no encontrado
+            JOptionPane.showMessageDialog(this, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jbBuscarActionPerformed
+  
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbLimpiarActionPerformed
@@ -257,7 +265,6 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

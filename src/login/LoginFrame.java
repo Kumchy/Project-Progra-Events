@@ -98,7 +98,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(98, 57, 179));
-        jLabel1.setText("Iniciar sesión");
+        jLabel1.setText("Iniciar Sesión");
 
         jtfUsuario.setBackground(new java.awt.Color(209, 186, 255));
         jtfUsuario.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N

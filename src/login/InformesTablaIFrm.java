@@ -39,7 +39,6 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jbRegresar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableInformes = new javax.swing.JTable();
 
@@ -84,19 +83,9 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(52, 17, 87));
 
-        jbRegresar.setBackground(new java.awt.Color(98, 57, 179));
-        jbRegresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jbRegresar.setForeground(new java.awt.Color(255, 255, 255));
-        jbRegresar.setText("Regresar");
-        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarActionPerformed(evt);
-            }
-        });
-
         jTableInformes.setBackground(new java.awt.Color(255, 255, 255));
         jTableInformes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTableInformes.setForeground(new java.awt.Color(204, 204, 255));
+        jTableInformes.setForeground(new java.awt.Color(0, 0, 0));
         jTableInformes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, ""},
@@ -136,21 +125,15 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,10 +158,6 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
-    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jbRegresarActionPerformed
-
     private void jTableInformesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableInformesMouseClicked
         JTable source = (JTable)evt.getSource();
             int row = source.rowAtPoint( evt.getPoint() );
@@ -196,6 +175,5 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableInformes;
-    private javax.swing.JButton jbRegresar;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,19 +23,17 @@ public class ListaProductos {
         }
     }
     
-    public int buscarProductoPorCodigo(int codigo) {
-        NodoProducto nodoActual = cabeza;
-        int indice = 0;
+    public ProductoElectrónico buscarProductoPorCodigo(int codigo) {
+    NodoProducto nodoActual = cabeza;
 
-        while (nodoActual != null) {
-            if (nodoActual.producto.getCodigo() == codigo) {
-                return indice; 
-            }
-            nodoActual = nodoActual.siguiente; 
-            indice++;
+    while (nodoActual != null) {
+        if (nodoActual.producto.getCodigo() == codigo) {
+            return nodoActual.producto;
         }
+        nodoActual = nodoActual.siguiente;
+    }
 
-        return -1; 
+    return null; // Si no se encuentra el producto con el código especificado
     }
     
         public ProductoElectrónico obtenerProductoPorIndice(int indiceProducto) {

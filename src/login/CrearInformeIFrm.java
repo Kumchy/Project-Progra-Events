@@ -17,7 +17,6 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jlbRegresar = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jbnLimpiar = new javax.swing.JButton();
@@ -39,13 +38,6 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         setTitle("Informe [crear]");
 
         jPanel1.setBackground(new java.awt.Color(133, 77, 191));
-
-        jlbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-volver-35.png"))); // NOI18N
-        jlbRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jlbRegresarMouseClicked(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -199,9 +191,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbRegresar)
-                .addGap(132, 132, 132)
+                .addGap(138, 138, 138)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -209,9 +199,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jlbRegresar)
-                    .addComponent(jLabel1))
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -262,10 +250,6 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jtfInforme.setText("");
     }//GEN-LAST:event_jbnLimpiarActionPerformed
 
-    private void jlbRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbRegresarMouseClicked
-        this.dispose();
-    }//GEN-LAST:event_jlbRegresarMouseClicked
-
     private void jtfCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCodigoKeyTyped
     char caracter = evt.getKeyChar();   //obtener el caracter presionando
     
@@ -290,7 +274,6 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbnLimpiar;
     private javax.swing.JButton jbnRegistrar;
-    private javax.swing.JLabel jlbRegresar;
     private javax.swing.JTextField jtfCodigo;
     private javax.swing.JTextField jtfFecha;
     private javax.swing.JTextArea jtfInforme;

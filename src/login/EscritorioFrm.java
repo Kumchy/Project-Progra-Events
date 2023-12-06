@@ -74,6 +74,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("Cuenta");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiCerrarSesion.setText("Cerrar Sesion");
         jmiCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

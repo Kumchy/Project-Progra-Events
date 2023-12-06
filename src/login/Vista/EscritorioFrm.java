@@ -45,8 +45,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jmiAgregarProveedores = new javax.swing.JMenuItem();
         jmiListaDeProveedores = new javax.swing.JMenuItem();
-        jmiModificarProveedores = new javax.swing.JMenuItem();
-        jmiEliminarProveedores = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -215,24 +213,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu4.add(jmiListaDeProveedores);
 
-        jmiModificarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-editar-archivo-20.png"))); // NOI18N
-        jmiModificarProveedores.setText("Modificar Proveedores");
-        jmiModificarProveedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiModificarProveedoresActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jmiModificarProveedores);
-
-        jmiEliminarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpiar.png"))); // NOI18N
-        jmiEliminarProveedores.setText("Eliminar Proveedores");
-        jmiEliminarProveedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiEliminarProveedoresActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jmiEliminarProveedores);
-
         jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
@@ -360,16 +340,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         mostrarInformes.show();
     }//GEN-LAST:event_jmiTablaInformeActionPerformed
 
-    private void jmiModificarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiModificarProveedoresActionPerformed
-        ListaProveedor listaProveedor = new ListaProveedor();
-        BuscarProveedorModificacionIFrm modificarProveedor = new BuscarProveedorModificacionIFrm(listaProveedor);
-        jdpEscritorio.add(modificarProveedor);
-        modificarProveedor.setVisible(true);
-    }//GEN-LAST:event_jmiModificarProveedoresActionPerformed
-
-    private void jmiEliminarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiEliminarProveedoresActionPerformed
-    }//GEN-LAST:event_jmiEliminarProveedoresActionPerformed
-
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -418,11 +388,9 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiControlDeUsuarios;
     private javax.swing.JMenuItem jmiCrearInforme;
     private javax.swing.JMenuItem jmiEliminar;
-    private javax.swing.JMenuItem jmiEliminarProveedores;
     private javax.swing.JMenuItem jmiInventarioTotal;
     private javax.swing.JMenuItem jmiListaDeProveedores;
     private javax.swing.JMenuItem jmiModificar;
-    private javax.swing.JMenuItem jmiModificarProveedores;
     private javax.swing.JMenuItem jmiRegistrar;
     private javax.swing.JMenuItem jmiTablaInforme;
     // End of variables declaration//GEN-END:variables

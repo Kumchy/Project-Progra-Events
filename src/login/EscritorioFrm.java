@@ -72,9 +72,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenuBar1.setForeground(new java.awt.Color(0, 0, 0));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jMenu1.setBackground(new java.awt.Color(220, 191, 255));
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-contraseña-20.png"))); // NOI18N
         jMenu1.setText("Cuenta");
 
+        jmiCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        jmiCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-eliminar-de-la-nube-20 (1).png"))); // NOI18N
         jmiCerrarSesion.setText("Cerrar Sesion");
         jmiCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +88,8 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu1.add(jmiCerrarSesion);
 
+        jmiControlDeUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        jmiControlDeUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-20.png"))); // NOI18N
         jmiControlDeUsuarios.setText("Administrador de usuarios");
         jmiControlDeUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiControlDeUsuarios.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +99,8 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu1.add(jmiControlDeUsuarios);
 
+        jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
         jMenuItem1.setText("Control de Usuarios");
         jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +116,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu2.setText("Gestion");
         jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jmiInventarioTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-informe-gráfico-20.png"))); // NOI18N
         jmiInventarioTotal.setText("Inventario Total");
         jmiInventarioTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +126,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiInventarioTotal);
 
+        jmiListaDeProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
         jmiListaDeProveedores.setText("Lista de Proveedores");
         jmiListaDeProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiListaDeProveedores.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +136,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiListaDeProveedores);
 
+        jmiAgregarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-20.png"))); // NOI18N
         jmiAgregarProveedores.setText("Agregar Proveedores");
         jmiAgregarProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
@@ -135,6 +146,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiAgregarProveedores);
 
+        jmiCrearInforme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-salida-20.png"))); // NOI18N
         jmiCrearInforme.setText("Crear Informe");
         jmiCrearInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiCrearInforme.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +156,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiCrearInforme);
 
+        jmiTablaInforme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-panel-de-control-20.png"))); // NOI18N
         jmiTablaInforme.setText("Tabla de Informe");
         jmiTablaInforme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiTablaInforme.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +172,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu3.setText("Productos");
         jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jmiConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
         jmiConsultar.setText("Consultar");
         jmiConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +182,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu3.add(jmiConsultar);
 
+        jmiRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-panel-de-control-20.png"))); // NOI18N
         jmiRegistrar.setText("Registrar");
         jmiRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +192,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu3.add(jmiRegistrar);
 
+        jmiModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-editar-archivo-20.png"))); // NOI18N
         jmiModificar.setText("Modificar");
         jmiModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -186,6 +202,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu3.add(jmiModificar);
 
+        jmiEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpiar.png"))); // NOI18N
         jmiEliminar.setText("Eliminar");
         jmiEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmiEliminar.addActionListener(new java.awt.event.ActionListener() {

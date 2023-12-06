@@ -313,10 +313,13 @@ public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
             "Productos Suministrados: " + nuevoProveedor.getProductosSuministrados();
 
     JOptionPane.showMessageDialog(this, detallesProveedor, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
-
+    enviarDatosProveedorRegistrado(nuevoProveedor);
     limpiarCampos();
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
+        private void enviarDatosProveedorRegistrado(Proveedor proveedor) {
+    } 
+    
     private void jtfTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfTelefonoKeyTyped
         char caracter = evt.getKeyChar();
     

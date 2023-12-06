@@ -276,57 +276,67 @@ public class AdministradorUsuariosIFrm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jbModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarActionPerformed
-        if (!jtfNombre.getText().isEmpty()&&
-            !jtfPassword.getText().isEmpty()&&
-            !jtfCorreo.getText().isEmpty()&&
-            !jtfEdad.getText().isEmpty()&&
-            !jtfRol.getText().isEmpty()){
+    if (!jtfNombre.getText().isEmpty() &&
+        !jtfPassword.getText().isEmpty() &&
+        !jtfCorreo.getText().isEmpty() &&
+        !jtfEdad.getText().isEmpty() &&
+        !jtfRol.getText().isEmpty()) {
 
-            Usuario usuario = new Usuario(jtfNombre.getText(),
+        Usuario usuario = new Usuario(jtfNombre.getText(),
                 jtfPassword.getText(), jtfCorreo.getText(), jtfEdad.getText(), jtfRol.getText());
-            if(UsuarioLogic.modificar(usuario)){
-                JOptionPane.showMessageDialog(this, "Usuario modificado");
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuario no encontrado");
-            }
+        if (UsuarioLogic.modificar(usuario)) {
+            JOptionPane.showMessageDialog(this, "Usuario modificado");
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario no encontrado");
         }
+    } else {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos");
+    }
+    limpiarCampos();
     }//GEN-LAST:event_jbModificarActionPerformed
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        if (!jtfNombre.getText().isEmpty()&&
-            !jtfPassword.getText().isEmpty()&&
-            !jtfCorreo.getText().isEmpty()&&
-            !jtfEdad.getText().isEmpty()&&
-            !jtfRol.getText().isEmpty()){
+    if (!jtfNombre.getText().isEmpty() &&
+        !jtfPassword.getText().isEmpty() &&
+        !jtfCorreo.getText().isEmpty() &&
+        !jtfEdad.getText().isEmpty() &&
+        !jtfRol.getText().isEmpty()) {
 
-            Usuario usuario = new Usuario(jtfNombre.getText(),
+        Usuario usuario = new Usuario(jtfNombre.getText(),
                 jtfPassword.getText(), jtfCorreo.getText(), jtfEdad.getText(), jtfRol.getText());
-            if(UsuarioLogic.insertar(usuario)){
-                JOptionPane.showMessageDialog(this, "Usuario registrado");
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuario ya existente");
-            }
+        if (UsuarioLogic.insertar(usuario)) {
+            JOptionPane.showMessageDialog(this, "Usuario registrado");
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario ya existente");
         }
-        
-        jtfNombre.setText("");
-        jtfPassword.setText("");
-        jtfCorreo.setText("");
-        jtfEdad.setText(""); 
-        jtfRol.setText(""); 
+    } else {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos");
+    }
+    limpiarCampos();
 
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
-        if (!jtfNombre.getText().isEmpty()){
-
-            if(UsuarioLogic.eliminar(jtfNombre.getText())){
-                JOptionPane.showMessageDialog(this, "Usuario Eliminado");
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuario no encontrado");
-            }
+    if (!jtfNombre.getText().isEmpty()) {
+        if (UsuarioLogic.eliminar(jtfNombre.getText())) {
+            JOptionPane.showMessageDialog(this, "Usuario eliminado");
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario no encontrado");
         }
+    } else {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un nombre de usuario");
+    }
+    limpiarCampos();
     }//GEN-LAST:event_jbEliminarActionPerformed
 
+    private void limpiarCampos() {
+    jtfNombre.setText("");
+    jtfPassword.setText("");
+    jtfCorreo.setText("");
+    jtfEdad.setText("");
+    jtfRol.setText("");
+    }
+    
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
     if (!jtfNombre.getText().isEmpty()){
          Usuario usuario = UsuarioLogic.buscar(jtfNombre.getText());

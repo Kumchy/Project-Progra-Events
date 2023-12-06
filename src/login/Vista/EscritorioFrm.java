@@ -34,16 +34,17 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jmiCerrarSesion = new javax.swing.JMenuItem();
         jmiControlDeUsuarios = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jmiInventarioTotal = new javax.swing.JMenuItem();
-        jmiListaDeProveedores = new javax.swing.JMenuItem();
-        jmiAgregarProveedores = new javax.swing.JMenuItem();
         jmiCrearInforme = new javax.swing.JMenuItem();
         jmiTablaInforme = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jmiConsultar = new javax.swing.JMenuItem();
         jmiRegistrar = new javax.swing.JMenuItem();
         jmiModificar = new javax.swing.JMenuItem();
+        jmiConsultar = new javax.swing.JMenuItem();
         jmiEliminar = new javax.swing.JMenuItem();
+        jmiInventarioTotal = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jmiAgregarProveedores = new javax.swing.JMenuItem();
+        jmiListaDeProveedores = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -76,7 +77,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu1.setBackground(new java.awt.Color(220, 191, 255));
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-masculino-en-círculo-20.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-contraseña-20 - copia.png"))); // NOI18N
         jMenu1.setText("Cuenta");
         jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -106,38 +107,8 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-administración-20 (1).png"))); // NOI18N
-        jMenu2.setText("Gestion");
+        jMenu2.setText("Informes");
         jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jmiInventarioTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-informe-gráfico-20.png"))); // NOI18N
-        jmiInventarioTotal.setText("Inventario Total");
-        jmiInventarioTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiInventarioTotalActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmiInventarioTotal);
-
-        jmiListaDeProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
-        jmiListaDeProveedores.setText("Lista de Proveedores");
-        jmiListaDeProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmiListaDeProveedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiListaDeProveedoresActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmiListaDeProveedores);
-
-        jmiAgregarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-20.png"))); // NOI18N
-        jmiAgregarProveedores.setText("Agregar Proveedores");
-        jmiAgregarProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiAgregarProveedoresActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmiAgregarProveedores);
 
         jmiCrearInforme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-salida-20.png"))); // NOI18N
         jmiCrearInforme.setText("Crear Informe");
@@ -166,16 +137,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu3.setText("Productos");
         jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jmiConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
-        jmiConsultar.setText("Consultar");
-        jmiConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmiConsultar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiConsultarActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jmiConsultar);
-
         jmiRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-panel-de-control-20.png"))); // NOI18N
         jmiRegistrar.setText("Registrar");
         jmiRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -196,6 +157,16 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu3.add(jmiModificar);
 
+        jmiConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
+        jmiConsultar.setText("Consultar");
+        jmiConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jmiConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiConsultarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiConsultar);
+
         jmiEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpiar.png"))); // NOI18N
         jmiEliminar.setText("Eliminar");
         jmiEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -206,7 +177,43 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu3.add(jmiEliminar);
 
+        jmiInventarioTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-informe-gráfico-20.png"))); // NOI18N
+        jmiInventarioTotal.setText("Inventario Total");
+        jmiInventarioTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jmiInventarioTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiInventarioTotalActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmiInventarioTotal);
+
         jMenuBar1.add(jMenu3);
+
+        jMenu4.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-masculino-en-círculo-20.png"))); // NOI18N
+        jMenu4.setText("Proveedores");
+
+        jmiAgregarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-20.png"))); // NOI18N
+        jmiAgregarProveedores.setText("Agregar Proveedores");
+        jmiAgregarProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jmiAgregarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiAgregarProveedoresActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmiAgregarProveedores);
+
+        jmiListaDeProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-en-inventario-20 (1).png"))); // NOI18N
+        jmiListaDeProveedores.setText("Lista de Proveedores");
+        jmiListaDeProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jmiListaDeProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiListaDeProveedoresActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmiListaDeProveedores);
+
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -372,6 +379,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     public static javax.swing.JDesktopPane jdpEscritorio;
     private javax.swing.JMenuItem jmiAgregarProveedores;

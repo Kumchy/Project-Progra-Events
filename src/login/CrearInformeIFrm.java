@@ -303,10 +303,10 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         if(jtfFecha.getText().isEmpty() || jtfCodigo.getText().isEmpty() || jtfProducto.getText().isEmpty() || jtfProveedor.getText().isEmpty() || jtfInforme.getText().isEmpty()){
             JOptionPane.showMessageDialog(this, "Rellena todos los espacios por favor");
         } else{
-        String nuevaFecha = jtfInforme.getText();
-        int nuevoCodigo = Integer.parseInt(jtfInforme.getText());
-        String nuevoProducto = jtfInforme.getText();
-        String nuevoProveedor = jtfInforme.getText();
+        String nuevaFecha = jtfFecha.getText();
+        int nuevoCodigo = Integer.parseInt(jtfCodigo.getText());
+        String nuevoProducto = jtfProducto.getText();
+        String nuevoProveedor = jtfProveedor.getText();
         String nuevaDescripcion = jtfInforme.getText();
         pila.modificarUltimo(nuevaFecha, nuevoCodigo, nuevoProducto, nuevoProveedor, nuevaDescripcion);
         JOptionPane.showMessageDialog(this, "Ultimo reporte Modificado");

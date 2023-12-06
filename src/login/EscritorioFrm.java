@@ -76,6 +76,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-usuario-masculino-en-círculo-20.png"))); // NOI18N
         jMenu1.setText("Cuenta");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         jmiCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-eliminar-de-la-nube-20 (1).png"))); // NOI18N

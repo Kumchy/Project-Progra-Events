@@ -239,17 +239,17 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiConsultarActionPerformed
 
     private void jmiModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiModificarActionPerformed
-        BuscarProductoModificacionIFrm modificar = new BuscarProductoModificacionIFrm();
+        BuscarProductoModificacionIFrm modificar = new BuscarProductoModificacionIFrm(listaProductos);
         jdpEscritorio.add(modificar);
         modificar.show();
     }//GEN-LAST:event_jmiModificarActionPerformed
 
     private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
-    RegistrarIFrm registrar = new RegistrarIFrm();
-    registrar.setListaProductos(listaProductos);
-    registrar.setInventarioTotal(inventarioTotal);
-    registrar.setVisible(true);
-    jdpEscritorio.add(registrar);
+        RegistrarIFrm registrar = new RegistrarIFrm();
+        registrar.setListaProductos(listaProductos);
+        registrar.setInventarioTotal(inventarioTotal);
+        registrar.setVisible(true);
+        jdpEscritorio.add(registrar);
     }//GEN-LAST:event_jmiRegistrarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

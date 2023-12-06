@@ -55,7 +55,4 @@ public class ProductoElectrónico {
         this.proveedor = proveedor;
     }
     
-    public String toString() {
-        return "Nombre: " + nombre + ", Proveedor: " + proveedor + ", Código: " + codigo + ", Precio: " + precio + ", Categoría: " + categoria;
-    }
 }

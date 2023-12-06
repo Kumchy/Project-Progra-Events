@@ -1,5 +1,7 @@
 package login;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 public class RegistrarIFrm extends javax.swing.JInternalFrame {
@@ -9,6 +11,8 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
     
     public RegistrarIFrm() {
         initComponents();
+        addNumericValidator(jtfCodigo);
+        addNumericValidator(jtfPrecio);
     }
 
     public void setListaProductos(ListaProductos listaProductos) {
@@ -17,6 +21,24 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
 
     public void setInventarioTotal(InventarioTotalIFrm inventarioTotal) {
         this.inventarioTotal = inventarioTotal;
+    }
+    
+    private void addNumericValidator(JTextField textField) {
+    textField.addKeyListener(new java.awt.event.KeyAdapter() {
+        public void keyTyped(java.awt.event.KeyEvent evt) {
+            char c = evt.getKeyChar();
+            if (!(Character.isDigit(c) || c == KeyEvent.VK_BACK_SPACE || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
+                getToolkit().beep();
+                evt.consume();
+                JOptionPane.showMessageDialog(null, "Por favor, ingrese solo números.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            if (c == KeyEvent.VK_PERIOD && textField.getText().contains(".")) {
+                getToolkit().beep();
+                evt.consume();
+                JOptionPane.showMessageDialog(null, "El precio solo puede contener un punto decimal.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    });
     }
     
     @SuppressWarnings("unchecked")

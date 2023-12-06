@@ -1,5 +1,6 @@
 package login.Vista;
 
+import javax.swing.ImageIcon;
 import login.Modelo.ProductoElectrónico;
 import javax.swing.JOptionPane;
 
@@ -10,6 +11,8 @@ public class ModificarProductoIFrm extends javax.swing.JInternalFrame {
         this.producto = producto;
         initComponents();
         mostrarDatosProducto();
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")
@@ -127,6 +130,8 @@ public class ModificarProductoIFrm extends javax.swing.JInternalFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Categoría:");
 
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Smartphones", "Laptops", "Accesorios", " " }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

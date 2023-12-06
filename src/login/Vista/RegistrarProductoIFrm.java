@@ -1,6 +1,7 @@
 package login.Vista;
 import login.Modelo.ProductoElectrónico;
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -14,6 +15,8 @@ public class RegistrarProductoIFrm extends javax.swing.JInternalFrame {
         initComponents();
         addNumericValidator(jtfCodigo);
         addNumericValidator(jtfPrecio);
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
 
     public void setListaProductos(ModeloListaProducto listaProductos) {

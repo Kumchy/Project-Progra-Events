@@ -1,13 +1,8 @@
 package login.Vista;
-
+import javax.swing.ImageIcon;
 import login.Modelo.ListaProveedor;
 import login.Modelo.Proveedor;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
 
 public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
 
@@ -15,6 +10,8 @@ public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
     
     public RegistrarProveedorIFrm() {
         initComponents();
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/logito.png"));
+        this.setFrameIcon(icon);
     }
     
     public void setListaProveedores(ListaProveedor listaProveedores) {
@@ -274,29 +271,25 @@ public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cActionPerformed
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        // Obtener los valores de los campos
     String nombreProveedor = jtfNombre.getText();
     String contacto = jcbContacto.getSelectedItem().toString();
     String telefonoStr = jtfTelefono.getText();
     String correoElectronico = jtfCorreoElectronico.getText();
     String productosSuministrados = "";
 
-    // Verificar si algún campo está vacío
     if (nombreProveedor.isEmpty() || telefonoStr.isEmpty() || correoElectronico.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Campos incompletos", JOptionPane.WARNING_MESSAGE);
-        return; // Detener la ejecución si hay campos vacíos
+        return;
     }
 
-    // Verificar y obtener el valor del campo de teléfono
     int telefono = 0;
     try {
         telefono = Integer.parseInt(telefonoStr);
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "Por favor, ingrese un número válido en el campo de teléfono.", "Número inválido", JOptionPane.WARNING_MESSAGE);
-        return; // Detener la ejecución si el teléfono no es un número válido
+        return;
     }
 
-    // Verificar qué opción de productos suministrados está seleccionada
     if (c.isSelected()) {
         productosSuministrados = "Smartphones";
     } else if (jrbOpcion2.isSelected()) {
@@ -305,16 +298,13 @@ public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
         productosSuministrados = "Accesorios";
     } else {
         JOptionPane.showMessageDialog(this, "Por favor, seleccione al menos un tipo de producto suministrado.", "Campo vacío", JOptionPane.WARNING_MESSAGE);
-        return; // Detener la ejecución si no se seleccionó ningún tipo de producto
+        return;
     }
 
-    // Crear el nuevo proveedor
     Proveedor nuevoProveedor = new Proveedor(nombreProveedor, contacto, telefono, correoElectronico, productosSuministrados);
 
-    // Agregar el proveedor a la lista
     listaProveedores.agregarProveedor(nuevoProveedor);
 
-    // Mostrar detalles del proveedor registrado
     String detallesProveedor = "Proveedor registrado:\n" +
             "Proveedor: " + nuevoProveedor.getNombreProveedor() + "\n" +
             "Contacto: " + nuevoProveedor.getContacto() + "\n" +
@@ -324,7 +314,6 @@ public class RegistrarProveedorIFrm extends javax.swing.JInternalFrame {
 
     JOptionPane.showMessageDialog(this, detallesProveedor, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
-    // Limpiar los campos después de un registro exitoso
     limpiarCampos();
     }//GEN-LAST:event_jbRegistrarActionPerformed
 

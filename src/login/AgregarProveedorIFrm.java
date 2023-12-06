@@ -1,6 +1,11 @@
 package login;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
 
 public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
 
@@ -8,6 +13,33 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
     
     public AgregarProveedorIFrm() {
         initComponents();
+        addTelefonoFilter(jtfTelefono);
+    }
+    
+    private void addTelefonoFilter(JTextField textField) {
+        ((AbstractDocument) textField.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                if (isNumeric(text)) {
+                    super.replace(fb, offset, length, text, attrs);
+                } else {
+                    mostrarAlerta("Por favor, ingrese solo números en el campo de teléfono.");
+                }
+            }
+
+            private boolean isNumeric(String text) {
+                try {
+                    Integer.parseInt(text);
+                    return true;
+                } catch (NumberFormatException e) {
+                    return false;
+                }
+            }
+        });
+    }
+    
+    private void mostrarAlerta(String mensaje) {
+        JOptionPane.showMessageDialog(this, mensaje, "Alerta", JOptionPane.WARNING_MESSAGE);
     }
     
     public void setListaProveedores(ListaEnlazadaProveedor listaProveedores) {

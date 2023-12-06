@@ -1,5 +1,9 @@
 package login;
 //NEPE PRIETO
+
+import java.awt.Image;
+import java.awt.Toolkit;
+
 public class EscritorioFrm extends javax.swing.JFrame {
 
     PilaReportes reportes;
@@ -263,7 +267,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jdpEscritorio.add(registrar);
         registrar.show();
     }//GEN-LAST:event_jmiRegistrarActionPerformed
-
+   /////////fdsfasf
+    public Image getIconImage(){
+        //Se elige de los recursos de imgenes, la que se utilizará como ícono
+        Image valorRetorno = Toolkit.getDefaultToolkit().getImage("src/pictures/Logo2.jpg");
+        return valorRetorno;
+    }
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         ControlUsuariosIFrm control = new ControlUsuariosIFrm();
         jdpEscritorio.add(control);
@@ -303,6 +313,8 @@ public class EscritorioFrm extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;

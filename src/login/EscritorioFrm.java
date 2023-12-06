@@ -217,9 +217,9 @@ private ListaProductos listaProductos = new ListaProductos();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
-        CrearInformeIFrm crearInforme = new CrearInformeIFrm();
-        jdpEscritorio.add(crearInforme);
-        crearInforme.show();
+        //CrearInformeIFrm crearInforme = new CrearInformeIFrm();
+       // jdpEscritorio.add(crearInforme);
+        //crearInforme.show();
     }//GEN-LAST:event_jmiCrearInformeActionPerformed
 
     private void jmiListaDeProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiListaDeProveedoresActionPerformed

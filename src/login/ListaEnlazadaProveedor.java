@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ListaEnlazadaProveedor {
+    private NodoProveedor inicio;
     private NodoProveedor cabeza;
 
     // Constructor
@@ -23,29 +24,32 @@ public class ListaEnlazadaProveedor {
         if (cabeza == null) {
             cabeza = nuevoNodo;
         } else {
-            NodoProveedor temp = cabeza;
-            while (temp.siguiente != null) {
-                temp = temp.siguiente;
+            NodoProveedor actual = cabeza;
+            while (actual.getSiguiente() != null) {
+                actual = actual.getSiguiente();
             }
-            temp.siguiente = nuevoNodo;
+            actual.setSiguiente(nuevoNodo);
         }
     }
 
-    public NodoProveedor getCabeza() {
-        return cabeza;
-    }
-
-    public void setCabeza(NodoProveedor cabeza) {
-        this.cabeza = cabeza;
+    // Método para imprimir la lista de proveedores
+    public void imprimirLista() {
+        NodoProveedor actual = cabeza;
+        while (actual != null) {
+            System.out.println("Nombre del proveedor: " + actual.getProveedor().getNombreProveedor());
+            System.out.println("Teléfono: " + actual.getProveedor().getTelefono());
+            // Imprimir otros detalles del proveedor si es necesario
+            actual = actual.getSiguiente();
+        }
     }
     
-    public List<Proveedor> getProveedores() {
-        List<Proveedor> proveedores = new ArrayList<>();
-        NodoProveedor temp = cabeza;
-        while (temp != null) {
-            proveedores.add(temp.proveedor);
-            temp = temp.siguiente;
+    public List<Proveedor> obtenerListaProveedores() {
+        List<Proveedor> listaProveedores = new ArrayList<>();
+        NodoProveedor actual = inicio;
+        while (actual != null) {
+            listaProveedores.add(actual.getProveedor());
+            actual = actual.getSiguiente();
         }
-        return proveedores;
+        return listaProveedores;
     }
 }

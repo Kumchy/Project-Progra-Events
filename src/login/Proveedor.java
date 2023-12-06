@@ -21,6 +21,7 @@ public class Proveedor {
         this.productosSuministrados = productosSuministrados;
     }
 
+    // Métodos getter y setter para el atributo "telefono"
     public int getTelefono() {
         return telefono;
     }
@@ -29,6 +30,7 @@ public class Proveedor {
         this.telefono = telefono;
     }
 
+    // Métodos getter y setter para el atributo "nombreProveedor"
     public String getNombreProveedor() {
         return nombreProveedor;
     }
@@ -37,29 +39,5 @@ public class Proveedor {
         this.nombreProveedor = nombreProveedor;
     }
 
-    public String getContacto() {
-        return contacto;
-    }
-
-    public void setContacto(String contacto) {
-        this.contacto = contacto;
-    }
-
-    public String getCorreoElectronico() {
-        return correoElectronico;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
-    }
-
-    public String getProductosSuministrados() {
-        return productosSuministrados;
-    }
-
-    public void setProductosSuministrados(String productosSuministrados) {
-        this.productosSuministrados = productosSuministrados;
-    }
-
-    
+    // Otros métodos getter y setter para los atributos restantes si es necesario
 }

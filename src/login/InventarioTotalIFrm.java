@@ -3,7 +3,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 import javax.swing.JScrollPane;
-
+//PRUEBA
 public class InventarioTotalIFrm extends javax.swing.JInternalFrame {
 
     private ListaProductos listaProductos;

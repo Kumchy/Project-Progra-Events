@@ -143,6 +143,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin.setText("Ingresar");
         jbLogin.setBorder(new javax.swing.border.MatteBorder(null));
+        jbLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLoginActionPerformed(evt);
@@ -170,6 +171,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jbLogin1.setForeground(new java.awt.Color(255, 255, 255));
         jbLogin1.setText("Salir");
         jbLogin1.setBorder(new javax.swing.border.MatteBorder(null));
+        jbLogin1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLogin1ActionPerformed(evt);
@@ -298,7 +300,7 @@ public class LoginFrame extends javax.swing.JFrame {
     else if (jtfPassword.getText().equals("")){
         JOptionPane.showMessageDialog(null,"Porfavor agrega la contraseña");
     }
-    else if(jtfUsuario.getText().contains("sexo")&& jtfPassword.getText().contains("12345")){
+    else if(jtfUsuario.getText().contains("admin")&& jtfPassword.getText().contains("123")){
         EscritorioFrm Escritorio = new EscritorioFrm();
         Escritorio.setVisible(true);
         Escritorio.pack();
@@ -316,7 +318,7 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void jcbMostrarContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMostrarContraActionPerformed
     if (jcbMostrarContra.isSelected()){
-        jtfPassword.setEchoChar((char)0);//cambia la caracteristica de los char a null para que se vean
+        jtfPassword.setEchoChar((char)0);
     }
     else {
         jtfPassword.setEchoChar(('*'));
@@ -328,7 +330,6 @@ public class LoginFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbLogin1ActionPerformed
 
     private void jtfUsuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfUsuarioFocusLost
-        // TODO add your handling code here:
     }//GEN-LAST:event_jtfUsuarioFocusLost
 
     private void jtfUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfUsuarioFocusGained

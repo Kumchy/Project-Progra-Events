@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
 
 public class CrearInformeIFrm extends javax.swing.JInternalFrame {
 
-    //private PilaReportes pilaReportes = new PilaReportes();
     PilaReportes pila;
     public CrearInformeIFrm(PilaReportes pila) {
         initComponents();
@@ -50,15 +49,16 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jbnLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jbnLimpiar.setText("Limpiar");
+        jbnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbnLimpiarActionPerformed(evt);
             }
         });
 
-        jtfFecha.setBackground(new java.awt.Color(51, 51, 51));
+        jtfFecha.setBackground(new java.awt.Color(255, 255, 255));
         jtfFecha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfFecha.setForeground(new java.awt.Color(255, 255, 255));
+        jtfFecha.setForeground(new java.awt.Color(0, 0, 0));
         jtfFecha.setBorder(null);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,9 +66,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fecha:");
 
-        jtfCodigo.setBackground(new java.awt.Color(51, 51, 51));
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
         jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
         jtfCodigo.setBorder(null);
         jtfCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -86,9 +86,10 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Descripcion:");
 
-        jtfInforme.setBackground(new java.awt.Color(51, 51, 51));
+        jtfInforme.setBackground(new java.awt.Color(255, 255, 255));
         jtfInforme.setColumns(20);
-        jtfInforme.setForeground(new java.awt.Color(255, 255, 255));
+        jtfInforme.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfInforme.setForeground(new java.awt.Color(0, 0, 0));
         jtfInforme.setRows(5);
         jtfInforme.setBorder(null);
         jScrollPane1.setViewportView(jtfInforme);
@@ -97,6 +98,7 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jbnRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         jbnRegistrar.setText("Registrar");
+        jbnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbnRegistrarActionPerformed(evt);
@@ -108,9 +110,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Producto:");
 
-        jtfProducto.setBackground(new java.awt.Color(51, 51, 51));
+        jtfProducto.setBackground(new java.awt.Color(255, 255, 255));
         jtfProducto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jtfProducto.setForeground(new java.awt.Color(0, 0, 0));
         jtfProducto.setBorder(null);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -118,9 +120,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Proveedor:");
 
-        jtfProveedor.setBackground(new java.awt.Color(51, 51, 51));
+        jtfProveedor.setBackground(new java.awt.Color(255, 255, 255));
         jtfProveedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jtfProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
         jtfProveedor.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -251,14 +253,14 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbnLimpiarActionPerformed
 
     private void jtfCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCodigoKeyTyped
-    char caracter = evt.getKeyChar();   //obtener el caracter presionando
+    char caracter = evt.getKeyChar();
     
-        //validar que permita solo numeros
+
         if(!Character.isDigit(caracter)){
-            getToolkit().beep();    //emite un sonido de alerta
-            evt.consume();  //evita que el caracter se muestre
+            getToolkit().beep();
+            evt.consume();
             JOptionPane.showMessageDialog(this, "Solo ingresar numeros");
-        }//if
+        }
     }//GEN-LAST:event_jtfCodigoKeyTyped
 
 

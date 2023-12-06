@@ -5,6 +5,6 @@ public class Login {
         LoginFrame Login = new LoginFrame();
         Login.setVisible(true);
         Login.pack();
-        Login.setLocationRelativeTo(null); //centrar pagina
+        Login.setLocationRelativeTo(null);
     }    
 }

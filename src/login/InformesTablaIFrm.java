@@ -14,7 +14,6 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
         reportes = pila;
         NodoReportes aux = reportes.PilaReportes;
         
-        //configuracion de la tabla
         DefaultTableModel modelo = new DefaultTableModel();
         String[] cabecera  = {"Codigo", "Fecha", "Producto", "Proveedor", "Descripcion"};
         modelo.setColumnIdentifiers(cabecera);
@@ -45,6 +44,7 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Tablón de informes");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jPanel1.setBackground(new java.awt.Color(133, 77, 191));
 

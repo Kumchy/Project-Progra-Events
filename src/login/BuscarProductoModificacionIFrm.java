@@ -1,9 +1,13 @@
 package login;
-
+import javax.swing.JDesktopPane;
+import javax.swing.JOptionPane;
+import javax.swing.JInternalFrame;
 public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
-
-    public BuscarProductoModificacionIFrm() {
+    private ListaProductos listaProductos;
+    
+    public BuscarProductoModificacionIFrm(ListaProductos listaProductos) {
         initComponents();
+        this.listaProductos = listaProductos;
     }
 
     @SuppressWarnings("unchecked")
@@ -13,7 +17,7 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtfCodigo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jbLimpiar = new javax.swing.JButton();
         jbBuscar1 = new javax.swing.JButton();
@@ -48,10 +52,10 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTextField2.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(null);
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        jtfCodigo.setBorder(null);
 
         jLabel2.setBackground(new java.awt.Color(98, 57, 179));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -62,6 +66,7 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
         jbLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jbLimpiar.setText("Limpiar");
+        jbLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLimpiarActionPerformed(evt);
@@ -72,6 +77,7 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
         jbBuscar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jbBuscar1.setForeground(new java.awt.Color(255, 255, 255));
         jbBuscar1.setText("Buscar");
+        jbBuscar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbBuscar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBuscar1ActionPerformed(evt);
@@ -87,7 +93,7 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel2)
                 .addGap(41, 41, 41)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jbBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -103,7 +109,7 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(jLabel2))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -128,11 +134,40 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        // TODO add your handling code here:
+    jtfCodigo.setText("");
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
     private void jbBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscar1ActionPerformed
-        // TODO add your handling code here:
+        int codigo = Integer.parseInt(jtfCodigo.getText());
+        ProductoElectrónico productoEncontrado = listaProductos.buscarProductoPorCodigo(codigo);
+
+        if (productoEncontrado != null) {
+            mostrarDatosProducto(productoEncontrado);
+        } else {
+            JOptionPane.showMessageDialog(null, "Producto no encontrado. Intente con otro código.");
+        }
+    }
+
+    private void mostrarDatosProducto(ProductoElectrónico producto) {
+        String mensaje = "Código: " + producto.getCodigo() + "\n" +
+                         "Nombre: " + producto.getNombre() + "\n" +
+                         "Proveedor: " + producto.getProveedor() + "\n" +
+                         "Precio: " + producto.getPrecio() + "\n" +
+                         "Categoría: " + producto.getCategoria();
+
+        int opcion = JOptionPane.showConfirmDialog(null, mensaje, "Datos del Producto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+
+        if (opcion == JOptionPane.OK_OPTION) {
+            abrirModificarIFrm(producto);
+        }
+    }
+
+    private void abrirModificarIFrm(ProductoElectrónico producto) {
+    ModificarIFrm modificarIFrm = new ModificarIFrm(producto);
+    
+    JDesktopPane escritorio = this.getDesktopPane();
+    escritorio.add(modificarIFrm);
+    modificarIFrm.setVisible(true);
     }//GEN-LAST:event_jbBuscar1ActionPerformed
 
 
@@ -141,8 +176,8 @@ public class BuscarProductoModificacionIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JButton jbBuscar1;
     private javax.swing.JButton jbLimpiar;
+    private javax.swing.JTextField jtfCodigo;
     // End of variables declaration//GEN-END:variables
 }

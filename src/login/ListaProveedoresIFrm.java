@@ -65,6 +65,7 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableProveedores = new javax.swing.JTable();
+        jbActualizar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -100,6 +101,8 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                     .addContainerGap(14, Short.MAX_VALUE)))
         );
 
+        jTableProveedores.setBackground(new java.awt.Color(255, 255, 255));
+        jTableProveedores.setForeground(new java.awt.Color(0, 0, 0));
         jTableProveedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -113,6 +116,17 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
         ));
         jScrollPane2.setViewportView(jTableProveedores);
 
+        jbActualizar.setBackground(new java.awt.Color(98, 57, 179));
+        jbActualizar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        jbActualizar.setText("Actualizar");
+        jbActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbActualizarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -122,6 +136,10 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(225, 225, 225)
+                .addComponent(jbActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,6 +147,8 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
@@ -146,6 +166,10 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarActionPerformed
+        actualizarTabla();
+    }//GEN-LAST:event_jbActualizarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -153,5 +177,6 @@ public class ListaProveedoresIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableProveedores;
+    private javax.swing.JButton jbActualizar;
     // End of variables declaration//GEN-END:variables
 }

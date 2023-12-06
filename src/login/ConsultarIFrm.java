@@ -1,5 +1,4 @@
 package login;
-
 import javax.swing.JOptionPane;
 import java.util.List;
 
@@ -19,17 +18,17 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtfCodigo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jbBuscar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfCategoria = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jtfProveedor = new javax.swing.JTextField();
         jbLimpiar = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
+        jtfNombre = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jtfPrecio = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -67,10 +66,10 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo:");
 
-        jTextField2.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(null);
+        jtfCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        jtfCodigo.setBorder(null);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,6 +79,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jbBuscar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbBuscar.setForeground(new java.awt.Color(255, 255, 255));
         jbBuscar.setText("Buscar");
+        jbBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBuscarActionPerformed(evt);
@@ -91,45 +91,46 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Categoria:");
 
-        jTextField4.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setBorder(null);
+        jtfCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCategoria.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfCategoria.setForeground(new java.awt.Color(0, 0, 0));
+        jtfCategoria.setBorder(null);
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Proveedor:");
 
-        jTextField5.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setBorder(null);
+        jtfProveedor.setBackground(new java.awt.Color(255, 255, 255));
+        jtfProveedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
+        jtfProveedor.setBorder(null);
 
         jbLimpiar.setBackground(new java.awt.Color(98, 57, 179));
         jbLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jbLimpiar.setText("Limpiar");
+        jbLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLimpiarActionPerformed(evt);
             }
         });
 
-        jTextField6.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setBorder(null);
+        jtfNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfNombre.setForeground(new java.awt.Color(0, 0, 0));
+        jtfNombre.setBorder(null);
 
         jLabel11.setBackground(new java.awt.Color(98, 57, 179));
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Precio:");
 
-        jTextField7.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setBorder(null);
+        jtfPrecio.setBackground(new java.awt.Color(255, 255, 255));
+        jtfPrecio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtfPrecio.setForeground(new java.awt.Color(0, 0, 0));
+        jtfPrecio.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -141,27 +142,27 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
                         .addGap(22, 22, 22)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel9)
                         .addGap(56, 56, 56)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel11)
                         .addGap(82, 82, 82)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,31 +178,31 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel2))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel4))
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel8))
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel9))
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel11))
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -232,7 +233,7 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
     }
     
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-         String codigo = jTextField2.getText();
+         String codigo = jtfCodigo.getText();
 
         if (codigo.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese un código válido", "Error", JOptionPane.ERROR_MESSAGE);
@@ -244,19 +245,21 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
         ProductoElectrónico productoEncontrado = listaProductos.buscarProductoPorCodigo(codigoProducto);
 
         if (productoEncontrado != null) {
-            // Mostrar los detalles del producto en los campos correspondientes
-            jTextField6.setText(productoEncontrado.getNombre());
-            jTextField4.setText(String.valueOf(productoEncontrado.getCategoria()));
-            jTextField5.setText(productoEncontrado.getProveedor());
-            jTextField7.setText(String.valueOf(productoEncontrado.getPrecio()));
+            jtfNombre.setText(productoEncontrado.getNombre());
+            jtfCategoria.setText(String.valueOf(productoEncontrado.getCategoria()));
+            jtfProveedor.setText(productoEncontrado.getProveedor());
+            jtfPrecio.setText(String.valueOf(productoEncontrado.getPrecio()));
         } else {
-            // Producto no encontrado
             JOptionPane.showMessageDialog(this, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jbBuscarActionPerformed
   
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-        // TODO add your handling code here:
+    jtfNombre.setText("");
+    jtfProveedor.setText("");
+    jtfCodigo.setText("");
+    jtfPrecio.setText("");
+    jtfCategoria.setText("");
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
 
@@ -269,12 +272,12 @@ public class ConsultarIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JButton jbBuscar;
     private javax.swing.JButton jbLimpiar;
+    private javax.swing.JTextField jtfCategoria;
+    private javax.swing.JTextField jtfCodigo;
+    private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtfPrecio;
+    private javax.swing.JTextField jtfProveedor;
     // End of variables declaration//GEN-END:variables
 }

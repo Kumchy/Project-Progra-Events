@@ -32,7 +32,7 @@ public class ListaProductos {
         nodoActual = nodoActual.siguiente;
     }
 
-    return null; // Si no se encuentra el producto con el código especificado
+    return null;
     }
     
         public ProductoElectrónico obtenerProductoPorIndice(int indiceProducto) {

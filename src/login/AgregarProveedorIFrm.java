@@ -13,40 +13,12 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
     
     public AgregarProveedorIFrm() {
         initComponents();
-        addTelefonoFilter(jtfTelefono);
-    }
-    
-    private void addTelefonoFilter(JTextField textField) {
-        ((AbstractDocument) textField.getDocument()).setDocumentFilter(new DocumentFilter() {
-            @Override
-            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
-                if (isNumeric(text)) {
-                    super.replace(fb, offset, length, text, attrs);
-                } else {
-                    mostrarAlerta("Por favor, ingrese solo números en el campo de teléfono.");
-                }
-            }
-
-            private boolean isNumeric(String text) {
-                try {
-                    Integer.parseInt(text);
-                    return true;
-                } catch (NumberFormatException e) {
-                    return false;
-                }
-            }
-        });
-    }
-    
-    private void mostrarAlerta(String mensaje) {
-        JOptionPane.showMessageDialog(this, mensaje, "Alerta", JOptionPane.WARNING_MESSAGE);
     }
     
     public void setListaProveedores(ListaEnlazadaProveedor listaProveedores) {
         this.listaProveedores = listaProveedores;
     }
-
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -140,6 +112,11 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
         jtfTelefono.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfTelefono.setForeground(new java.awt.Color(0, 0, 0));
         jtfTelefono.setBorder(null);
+        jtfTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfTelefonoKeyTyped(evt);
+            }
+        });
 
         jLabel9.setBackground(new java.awt.Color(98, 57, 179));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -196,16 +173,6 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLabel2)
-                        .addGap(77, 77, 77)
-                        .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel4)
-                        .addGap(71, 71, 71)
-                        .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
                         .addComponent(jLabel8)
                         .addGap(75, 75, 75)
                         .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -224,7 +191,16 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                         .addComponent(jrbOpcion2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(180, 180, 180)
-                        .addComponent(jrbOpcion3)))
+                        .addComponent(jrbOpcion3))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4))
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 10, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -234,11 +210,11 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(22, 22, 22)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jcbContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -296,34 +272,70 @@ public class AgregarProveedorIFrm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cActionPerformed
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        String nombreProveedor = jtfNombre.getText();
-        String contacto = jcbContacto.getSelectedItem().toString();
-        int telefono = Integer.parseInt(jtfTelefono.getText());
-        String correoElectronico = jtfCorreoElectronico.getText();
+        // Obtener los valores de los campos
+    String nombreProveedor = jtfNombre.getText();
+    String contacto = jcbContacto.getSelectedItem().toString();
+    String telefonoStr = jtfTelefono.getText();
+    String correoElectronico = jtfCorreoElectronico.getText();
+    String productosSuministrados = "";
 
-        String productosSuministrados = "";
-        if (c.isSelected()) {
-            productosSuministrados = "Smartphones";
-        } else if (jrbOpcion2.isSelected()) {
-            productosSuministrados = "Laptops";
-        } else if (jrbOpcion3.isSelected()) {
-            productosSuministrados = "Accesorios";
-        }
-        
-        Proveedor nuevoProveedor = new Proveedor(nombreProveedor, contacto, telefono, correoElectronico, productosSuministrados);
-        
-        listaProveedores.agregarProveedor(nuevoProveedor);
-        
-        String detallesProveedor= "Proveedor registrado:\n" +
+    // Verificar si algún campo está vacío
+    if (nombreProveedor.isEmpty() || telefonoStr.isEmpty() || correoElectronico.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Campos incompletos", JOptionPane.WARNING_MESSAGE);
+        return; // Detener la ejecución si hay campos vacíos
+    }
+
+    // Verificar y obtener el valor del campo de teléfono
+    int telefono = 0;
+    try {
+        telefono = Integer.parseInt(telefonoStr);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un número válido en el campo de teléfono.", "Número inválido", JOptionPane.WARNING_MESSAGE);
+        return; // Detener la ejecución si el teléfono no es un número válido
+    }
+
+    // Verificar qué opción de productos suministrados está seleccionada
+    if (c.isSelected()) {
+        productosSuministrados = "Smartphones";
+    } else if (jrbOpcion2.isSelected()) {
+        productosSuministrados = "Laptops";
+    } else if (jrbOpcion3.isSelected()) {
+        productosSuministrados = "Accesorios";
+    } else {
+        JOptionPane.showMessageDialog(this, "Por favor, seleccione al menos un tipo de producto suministrado.", "Campo vacío", JOptionPane.WARNING_MESSAGE);
+        return; // Detener la ejecución si no se seleccionó ningún tipo de producto
+    }
+
+    // Crear el nuevo proveedor
+    Proveedor nuevoProveedor = new Proveedor(nombreProveedor, contacto, telefono, correoElectronico, productosSuministrados);
+
+    // Agregar el proveedor a la lista
+    listaProveedores.agregarProveedor(nuevoProveedor);
+
+    // Mostrar detalles del proveedor registrado
+    String detallesProveedor = "Proveedor registrado:\n" +
             "Proveedor: " + nuevoProveedor.getNombreProveedor() + "\n" +
             "Contacto: " + nuevoProveedor.getContacto() + "\n" +
             "Teléfono: " + nuevoProveedor.getTelefono() + "\n" +
             "Correo: " + nuevoProveedor.getCorreoElectronico() + "\n" +
             "Productos Suministrados: " + nuevoProveedor.getProductosSuministrados();
-        
-        JOptionPane.showMessageDialog(this, detallesProveedor, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
-        
+
+    JOptionPane.showMessageDialog(this, detallesProveedor, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
+
+    // Limpiar los campos después de un registro exitoso
+    limpiarCampos();
     }//GEN-LAST:event_jbRegistrarActionPerformed
+
+    private void jtfTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfTelefonoKeyTyped
+        char caracter = evt.getKeyChar();
+    
+
+        if(!Character.isDigit(caracter)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo ingresar numeros");
+        }
+    }//GEN-LAST:event_jtfTelefonoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

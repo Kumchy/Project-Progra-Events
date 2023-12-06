@@ -1,6 +1,7 @@
 package login;
 
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class CrearInformeIFrm extends javax.swing.JInternalFrame {
@@ -9,6 +10,8 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     public CrearInformeIFrm(PilaReportes pila) {
         initComponents();
         this.pila = pila;
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("img/icons8-salida-20.png"));
+        this.setFrameIcon(icon);
     }
 
     @SuppressWarnings("unchecked")
@@ -31,6 +34,8 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jtfProducto = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jtfProveedor = new javax.swing.JTextField();
+        jbnBorrar = new javax.swing.JButton();
+        jbnModificar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -125,16 +130,32 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         jtfProveedor.setForeground(new java.awt.Color(0, 0, 0));
         jtfProveedor.setBorder(null);
 
+        jbnBorrar.setBackground(new java.awt.Color(98, 57, 179));
+        jbnBorrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        jbnBorrar.setText("Borrar");
+        jbnBorrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbnBorrarActionPerformed(evt);
+            }
+        });
+
+        jbnModificar.setBackground(new java.awt.Color(98, 57, 179));
+        jbnModificar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jbnModificar.setForeground(new java.awt.Color(255, 255, 255));
+        jbnModificar.setText("Modificar");
+        jbnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbnModificarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
-                .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,6 +167,14 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
                         .addComponent(jLabel3)
                         .addGap(44, 44, 44)
                         .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jbnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
@@ -183,8 +212,12 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -221,6 +254,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegistrarActionPerformed
+        if(jtfFecha.getText().isEmpty() || jtfCodigo.getText().isEmpty() || jtfProducto.getText().isEmpty() || jtfProveedor.getText().isEmpty() || jtfInforme.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Rellena todos los espacios por favor");
+        } else {
         String fecha = jtfFecha.getText();
         int codigo = Integer.parseInt(jtfCodigo.getText());
         String producto = jtfProducto.getText();
@@ -230,18 +266,13 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         NodoReportes nuevoReporte = new NodoReportes(fecha, codigo, producto, proveedor, descripcion);
 
         pila.push(fecha, codigo, producto, proveedor, descripcion);
-        System.out.println("registro terminado");
+        JOptionPane.showMessageDialog(this, "Registro exitoso");
         System.out.println(nuevoReporte.getFecha());
         System.out.println(nuevoReporte.getCodigo());
         System.out.println(nuevoReporte.getProducto());
         System.out.println(nuevoReporte.getProveedor());
         System.out.println(nuevoReporte.getDescripcion());
-
-        jtfFecha.setText("");
-        jtfCodigo.setText("");
-        jtfProducto.setText("");
-        jtfProveedor.setText("");
-        jtfInforme.setText("");
+        }
     }//GEN-LAST:event_jbnRegistrarActionPerformed
 
     private void jbnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnLimpiarActionPerformed
@@ -263,6 +294,25 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jtfCodigoKeyTyped
 
+    private void jbnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnBorrarActionPerformed
+        pila.pop();
+        JOptionPane.showMessageDialog(this, "Ultimo reporte eliminado");
+    }//GEN-LAST:event_jbnBorrarActionPerformed
+
+    private void jbnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnModificarActionPerformed
+        if(jtfFecha.getText().isEmpty() || jtfCodigo.getText().isEmpty() || jtfProducto.getText().isEmpty() || jtfProveedor.getText().isEmpty() || jtfInforme.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Rellena todos los espacios por favor");
+        } else{
+        String nuevaFecha = jtfInforme.getText();
+        int nuevoCodigo = Integer.parseInt(jtfInforme.getText());
+        String nuevoProducto = jtfInforme.getText();
+        String nuevoProveedor = jtfInforme.getText();
+        String nuevaDescripcion = jtfInforme.getText();
+        pila.modificarUltimo(nuevaFecha, nuevoCodigo, nuevoProducto, nuevoProveedor, nuevaDescripcion);
+        JOptionPane.showMessageDialog(this, "Ultimo reporte Modificado");
+        }
+    }//GEN-LAST:event_jbnModificarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -274,7 +324,9 @@ public class CrearInformeIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbnBorrar;
     private javax.swing.JButton jbnLimpiar;
+    private javax.swing.JButton jbnModificar;
     private javax.swing.JButton jbnRegistrar;
     private javax.swing.JTextField jtfCodigo;
     private javax.swing.JTextField jtfFecha;

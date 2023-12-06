@@ -13,9 +13,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     PilaReportes reportes;
     
     public EscritorioFrm() {
-        initComponents();
-        
-        
+        initComponents();        
         this.reportes = new PilaReportes();
         listaProductos = new ListaProductos();
         listaProveedores = new ListaEnlazadaProveedor();

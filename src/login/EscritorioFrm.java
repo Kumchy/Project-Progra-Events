@@ -1,15 +1,11 @@
 package login;
-//NEPE PRIETO
-
-import java.awt.Image;
-import java.awt.Toolkit;
-
 public class EscritorioFrm extends javax.swing.JFrame {
 
-    PilaReportes reportes;
+private InventarioTotalIFrm inventarioTotal;
+private ListaProductos listaProductos = new ListaProductos();
+    
     public EscritorioFrm() {
         initComponents();
-        this.reportes = new PilaReportes();
     }
 
     @SuppressWarnings("unchecked")
@@ -28,7 +24,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jmiListaDeProveedores = new javax.swing.JMenuItem();
         jmiAgregarProveedores = new javax.swing.JMenuItem();
         jmiCrearInforme = new javax.swing.JMenuItem();
-        jmiTablaInformes = new javax.swing.JMenuItem();
+        jmiBuscarInformes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmiConsultar = new javax.swing.JMenuItem();
         jmiRegistrar = new javax.swing.JMenuItem();
@@ -127,13 +123,13 @@ public class EscritorioFrm extends javax.swing.JFrame {
         });
         jMenu2.add(jmiCrearInforme);
 
-        jmiTablaInformes.setText("Tablón de Informes");
-        jmiTablaInformes.addActionListener(new java.awt.event.ActionListener() {
+        jmiBuscarInformes.setText("Buscar Informes");
+        jmiBuscarInformes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiTablaInformesActionPerformed(evt);
+                jmiBuscarInformesActionPerformed(evt);
             }
         });
-        jMenu2.add(jmiTablaInformes);
+        jMenu2.add(jmiBuscarInformes);
 
         jMenuBar1.add(jMenu2);
 
@@ -221,7 +217,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jmiCrearInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCrearInformeActionPerformed
-        CrearInformeIFrm crearInforme = new CrearInformeIFrm(reportes);
+        CrearInformeIFrm crearInforme = new CrearInformeIFrm();
         jdpEscritorio.add(crearInforme);
         crearInforme.show();
     }//GEN-LAST:event_jmiCrearInformeActionPerformed
@@ -232,11 +228,11 @@ public class EscritorioFrm extends javax.swing.JFrame {
         listaProveedores.show();
     }//GEN-LAST:event_jmiListaDeProveedoresActionPerformed
 
-    private void jmiTablaInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTablaInformesActionPerformed
-        InformesTablaIFrm mostrarInformes = new InformesTablaIFrm(reportes);
-        jdpEscritorio.add(mostrarInformes);
-        mostrarInformes.show();
-    }//GEN-LAST:event_jmiTablaInformesActionPerformed
+    private void jmiBuscarInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBuscarInformesActionPerformed
+        BuscarInformeIFrm buscarInforme = new BuscarInformeIFrm();
+        jdpEscritorio.add(buscarInforme);
+        buscarInforme.show();
+    }//GEN-LAST:event_jmiBuscarInformesActionPerformed
 
     private void jmiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultarActionPerformed
         ConsultarIFrm consultar = new ConsultarIFrm();
@@ -257,23 +253,22 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
 
     private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
-        InventarioTotalIFrm inventarioTotal = new InventarioTotalIFrm();
-        jdpEscritorio.add(inventarioTotal);
-        inventarioTotal.show();
+    if (inventarioTotal == null) {
+        inventarioTotal = new InventarioTotalIFrm(listaProductos);
+    }
+    inventarioTotal.setListaProductos(listaProductos);
+    inventarioTotal.setVisible(true);
+    jdpEscritorio.add(inventarioTotal);
     }//GEN-LAST:event_jmiInventarioTotalActionPerformed
 
     private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
-        RegistrarIFrm registrar = new RegistrarIFrm();
-        jdpEscritorio.add(registrar);
-        registrar.show();
+    RegistrarIFrm registrar = new RegistrarIFrm();
+    registrar.setListaProductos(listaProductos);
+    registrar.setInventarioTotal(inventarioTotal);
+    registrar.setVisible(true);
+    jdpEscritorio.add(registrar);
     }//GEN-LAST:event_jmiRegistrarActionPerformed
-   /////////fdsfasf
-    public Image getIconImage(){
-        //Se elige de los recursos de imgenes, la que se utilizará como ícono
-        Image valorRetorno = Toolkit.getDefaultToolkit().getImage("src/pictures/Logo2.jpg");
-        return valorRetorno;
-    }
-    
+
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         ControlUsuariosIFrm control = new ControlUsuariosIFrm();
         jdpEscritorio.add(control);
@@ -313,8 +308,6 @@ public class EscritorioFrm extends javax.swing.JFrame {
             }
         });
     }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
@@ -324,6 +317,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     public static javax.swing.JDesktopPane jdpEscritorio;
     private javax.swing.JMenuItem jmiAgregarProveedores;
+    private javax.swing.JMenuItem jmiBuscarInformes;
     private javax.swing.JMenuItem jmiCerrarSesion;
     private javax.swing.JMenuItem jmiConsultar;
     private javax.swing.JMenuItem jmiControlDeUsuarios;
@@ -334,6 +328,5 @@ public class EscritorioFrm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiModificar;
     private javax.swing.JMenuItem jmiRegistrar;
     private javax.swing.JMenuItem jmiStockPorCategoria;
-    private javax.swing.JMenuItem jmiTablaInformes;
     // End of variables declaration//GEN-END:variables
 }

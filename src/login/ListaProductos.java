@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaProductos {
-        private NodoProducto cabeza;
+    private NodoProducto cabeza;
 
     public ListaProductos() {
         this.cabeza = null;
@@ -22,9 +22,43 @@ public class ListaProductos {
             temp.siguiente = nuevoNodo;
         }
     }
+    
+    public int buscarProductoPorCodigo(int codigo) {
+        NodoProducto nodoActual = cabeza;
+        int indice = 0;
+
+        while (nodoActual != null) {
+            if (nodoActual.producto.getCodigo() == codigo) {
+                return indice; 
+            }
+            nodoActual = nodoActual.siguiente; 
+            indice++;
+        }
+
+        return -1; 
+    }
+    
+        public ProductoElectrónico obtenerProductoPorIndice(int indiceProducto) {
+        NodoProducto nodoActual = cabeza;
+        int contador = 0;
+
+        while (nodoActual != null) {
+            if (contador == indiceProducto) {
+                return nodoActual.producto;
+            }
+            nodoActual = nodoActual.siguiente;
+            contador++;
+        }
+
+        return null;
+    }
  
-        public NodoProducto getCabeza() {
+    public NodoProducto getCabeza() {
         return cabeza;
+    }
+
+    public void setCabeza(NodoProducto cabeza) {
+        this.cabeza = cabeza;
     }
     
     public List<ProductoElectrónico> getProductos() {
@@ -36,4 +70,7 @@ public class ListaProductos {
         }
         return productos;
     }
+    
 }
+
+    

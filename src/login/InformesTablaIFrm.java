@@ -44,14 +44,14 @@ public class InformesTablaIFrm extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Inventario Total");
+        setTitle("Tablón de informes");
 
         jPanel1.setBackground(new java.awt.Color(133, 77, 191));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Inventario Total");
+        jLabel1.setText("Tablón de informes");
 
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

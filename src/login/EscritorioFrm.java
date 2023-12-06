@@ -1,5 +1,8 @@
 package login;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.List;
+import javax.swing.ImageIcon;
 
 public class EscritorioFrm extends javax.swing.JFrame {
 
@@ -9,6 +12,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
     
     public EscritorioFrm() {
         initComponents();
+        
         this.reportes = new PilaReportes();
         listaProductos = new ListaProductos();
     }
@@ -37,6 +41,7 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jmiEliminar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
 
         jdpEscritorio.setBackground(new java.awt.Color(52, 17, 87));
         jdpEscritorio.setForeground(new java.awt.Color(255, 255, 255));
@@ -191,6 +196,11 @@ public class EscritorioFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public Image getIconImage(){
+        Image valorRetorno = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/TechpsilonLogo.png"));
+        return valorRetorno;
+    }
+    
     private void jmiCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCerrarSesionActionPerformed
         LoginFrame Login = new LoginFrame();
         Login.setVisible(true);

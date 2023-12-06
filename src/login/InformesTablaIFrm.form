@@ -4,7 +4,7 @@
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
     <Property name="iconifiable" type="boolean" value="true"/>
-    <Property name="title" type="java.lang.String" value="Inventario Total"/>
+    <Property name="title" type="java.lang.String" value="Tabl&#xf3;n de informes"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -82,7 +82,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Inventario Total"/>
+            <Property name="text" type="java.lang.String" value="Tabl&#xf3;n de informes"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">

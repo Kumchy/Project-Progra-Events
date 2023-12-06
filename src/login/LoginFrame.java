@@ -1,9 +1,10 @@
 
 package login;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import login.login_logic.UsuarioLogic;
-
 
 public class LoginFrame extends javax.swing.JFrame {
 
@@ -37,6 +38,8 @@ public class LoginFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
+        setIconImage(getIconImage());
+        setIconImages(getIconImages());
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(209, 186, 255));
@@ -275,6 +278,11 @@ public class LoginFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public Image getIconImage(){
+        Image valorRetorno = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/TechpsilonLogo.png"));
+        return valorRetorno;
+    }
+    
     private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfUsuarioActionPerformed

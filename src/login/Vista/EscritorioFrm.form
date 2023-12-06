@@ -244,6 +244,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Proveedores"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiModificarProveedoresActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmiEliminarProveedores">
               <Properties>
@@ -252,6 +255,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Eliminar Proveedores"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiEliminarProveedoresActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

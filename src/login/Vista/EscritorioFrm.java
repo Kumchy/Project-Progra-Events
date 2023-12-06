@@ -217,10 +217,20 @@ public class EscritorioFrm extends javax.swing.JFrame {
 
         jmiModificarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-editar-archivo-20.png"))); // NOI18N
         jmiModificarProveedores.setText("Modificar Proveedores");
+        jmiModificarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiModificarProveedoresActionPerformed(evt);
+            }
+        });
         jMenu4.add(jmiModificarProveedores);
 
         jmiEliminarProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpiar.png"))); // NOI18N
         jmiEliminarProveedores.setText("Eliminar Proveedores");
+        jmiEliminarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiEliminarProveedoresActionPerformed(evt);
+            }
+        });
         jMenu4.add(jmiEliminarProveedores);
 
         jMenuBar1.add(jMenu4);
@@ -349,6 +359,16 @@ public class EscritorioFrm extends javax.swing.JFrame {
         jdpEscritorio.add(mostrarInformes);
         mostrarInformes.show();
     }//GEN-LAST:event_jmiTablaInformeActionPerformed
+
+    private void jmiModificarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiModificarProveedoresActionPerformed
+        ListaProveedor listaProveedor = new ListaProveedor();
+        BuscarProveedorModificacionIFrm modificarProveedor = new BuscarProveedorModificacionIFrm(listaProveedor);
+        jdpEscritorio.add(modificarProveedor);
+        modificarProveedor.setVisible(true);
+    }//GEN-LAST:event_jmiModificarProveedoresActionPerformed
+
+    private void jmiEliminarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiEliminarProveedoresActionPerformed
+    }//GEN-LAST:event_jmiEliminarProveedoresActionPerformed
 
 
     public static void main(String args[]) {

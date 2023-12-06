@@ -55,6 +55,5 @@ public class Proveedor {
     public void setProductosSuministrados(String productosSuministrados) {
         this.productosSuministrados = productosSuministrados;
     }
-
     
 }

@@ -6,25 +6,11 @@ package login;
 
 // Clase NodoProveedor
 public class NodoProveedor {
-    private Proveedor proveedor;
-    private NodoProveedor siguiente;
+    Proveedor proveedor;
+    NodoProveedor siguiente;
 
-    // Constructor que toma un proveedor como argumento
     public NodoProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
         this.siguiente = null;
-    }
-
-    // Métodos getter y setter
-    public Proveedor getProveedor() {
-        return proveedor;
-    }
-
-    public NodoProveedor getSiguiente() {
-        return siguiente;
-    }
-
-    public void setSiguiente(NodoProveedor siguiente) {
-        this.siguiente = siguiente;
     }
 }

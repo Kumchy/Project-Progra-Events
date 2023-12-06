@@ -1,7 +1,9 @@
 package login;
-//NEPE PRIETO
 public class EscritorioFrm extends javax.swing.JFrame {
 
+private InventarioTotalIFrm inventarioTotal;
+private ListaProductos listaProductos = new ListaProductos();
+    
     public EscritorioFrm() {
         initComponents();
     }
@@ -251,15 +253,20 @@ public class EscritorioFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiStockPorCategoriaActionPerformed
 
     private void jmiInventarioTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiInventarioTotalActionPerformed
-        InventarioTotalIFrm inventarioTotal = new InventarioTotalIFrm();
-        jdpEscritorio.add(inventarioTotal);
-        inventarioTotal.show();
+    if (inventarioTotal == null) {
+        inventarioTotal = new InventarioTotalIFrm(listaProductos);
+    }
+    inventarioTotal.setListaProductos(listaProductos);
+    inventarioTotal.setVisible(true);
+    jdpEscritorio.add(inventarioTotal);
     }//GEN-LAST:event_jmiInventarioTotalActionPerformed
 
     private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
-        RegistrarIFrm registrar = new RegistrarIFrm();
-        jdpEscritorio.add(registrar);
-        registrar.show();
+    RegistrarIFrm registrar = new RegistrarIFrm();
+    registrar.setListaProductos(listaProductos);
+    registrar.setInventarioTotal(inventarioTotal);
+    registrar.setVisible(true);
+    jdpEscritorio.add(registrar);
     }//GEN-LAST:event_jmiRegistrarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

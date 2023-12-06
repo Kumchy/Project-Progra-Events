@@ -46,7 +46,6 @@ public class ProductoElectrónico {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    
 
     public String getProveedor() {
         return proveedor;
@@ -56,4 +55,7 @@ public class ProductoElectrónico {
         this.proveedor = proveedor;
     }
     
+    public String toString() {
+        return "Nombre: " + nombre + ", Proveedor: " + proveedor + ", Código: " + codigo + ", Precio: " + precio + ", Categoría: " + categoria;
+    }
 }

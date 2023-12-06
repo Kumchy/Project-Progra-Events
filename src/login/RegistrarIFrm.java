@@ -1,5 +1,4 @@
 package login;
-
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -12,6 +11,14 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         initComponents();
     }
 
+    public void setListaProductos(ListaProductos listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
+    public void setInventarioTotal(InventarioTotalIFrm inventarioTotal) {
+        this.inventarioTotal = inventarioTotal;
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -20,12 +27,10 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jtfCodigo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jbRegresar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jtfProveedor = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jtfPrecio = new javax.swing.JTextField();
-        jbEliminar = new javax.swing.JButton();
         jbRegistrar = new javax.swing.JButton();
         jtfNombre = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -55,16 +60,6 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nombre:");
 
-        jbRegresar.setBackground(new java.awt.Color(98, 57, 179));
-        jbRegresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jbRegresar.setForeground(new java.awt.Color(255, 255, 255));
-        jbRegresar.setText("Regresar");
-        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarActionPerformed(evt);
-            }
-        });
-
         jLabel8.setBackground(new java.awt.Color(98, 57, 179));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,16 +79,6 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
         jtfPrecio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtfPrecio.setForeground(new java.awt.Color(255, 255, 255));
         jtfPrecio.setBorder(null);
-
-        jbEliminar.setBackground(new java.awt.Color(98, 57, 179));
-        jbEliminar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jbEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jbEliminar.setText("Eliminar");
-        jbEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbEliminarActionPerformed(evt);
-            }
-        });
 
         jbRegistrar.setBackground(new java.awt.Color(98, 57, 179));
         jbRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -178,25 +163,23 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
                 .addComponent(jLabel8)
                 .addGap(61, 61, 61)
                 .addComponent(jtfProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(jrbSmart))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jrbAccesorios, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGap(144, 144, 144)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jrbSmart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jrbLaptop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(20, 20, 20)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabel11)
-                            .addGap(62, 62, 62)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jrbLaptop)
-                                .addComponent(jrbAccesorios)))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(32, 32, 32)
-                            .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel11)
+                    .addGap(0, 0, Short.MAX_VALUE))
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(22, 22, 22)
                     .addComponent(jLabel9)
@@ -231,20 +214,23 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
                         .addGap(2, 2, 2)
                         .addComponent(jLabel9))
                     .addComponent(jtfPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jrbSmart)
-                .addGap(9, 9, 9)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jrbLaptop))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel11))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jrbSmart)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jrbLaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrbAccesorios)
-                .addGap(9, 9, 9)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jrbAccesorios)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,69 +248,52 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        String nombre = jtfNombre.getText();
-        String proveedor = jtfProveedor.getText();
-        int codigo = 0;
-        double precio = 0;
+    String nombre = jtfNombre.getText();
+    String proveedor = jtfProveedor.getText();
+    int codigo = 0;
+    double precio = 0;
 
-        try {
-            codigo = Integer.parseInt(jtfCodigo.getText());
-            precio = Double.parseDouble(jtfPrecio.getText());
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+    try {
+        codigo = Integer.parseInt(jtfCodigo.getText());
+        precio = Double.parseDouble(jtfPrecio.getText());
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un dato válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
-        String categoria = "";
-        if (jrbSmart.isSelected()) {
-            categoria = "Smartphones";
-        } else if (jrbLaptop.isSelected()) {
-            categoria = "Laptops";
-        } else if (jrbAccesorios.isSelected()) {
-            categoria = "Accesorios";
-        }
+    String categoria = "";
+    if (jrbSmart.isSelected()) {
+        categoria = "Smartphones";
+    } else if (jrbLaptop.isSelected()) {
+        categoria = "Laptops";
+    } else if (jrbAccesorios.isSelected()) {
+        categoria = "Accesorios";
+    }
 
-        ProductoElectrónico nuevoProducto = new ProductoElectrónico(nombre, proveedor, codigo, precio, categoria);
+    ProductoElectrónico nuevoProducto = new ProductoElectrónico(nombre, proveedor, codigo, precio, categoria);
 
-        // Agregar el producto a la lista de productos
-        listaProductos.agregarProducto(nuevoProducto);
+    listaProductos.agregarProducto(nuevoProducto);
 
-        // Actualizar la tabla en la interfaz InventarioTotalFrm
-        if (inventarioTotal != null) {
-            inventarioTotal.actualizarTabla();
-        }
+    if (inventarioTotal != null) {
+        inventarioTotal.actualizarTabla();
+        inventarioTotal.mostrarProductosRegistrados(listaProductos.getProductos());
+    }
 
-        listaProductos.agregarProducto(nuevoProducto);
+    String detallesProducto = "Producto registrado:\n" +
+            "Nombre: " + nuevoProducto.getNombre() + "\n" +
+            "Proveedor: " + nuevoProducto.getProveedor() + "\n" +
+            "Código: " + nuevoProducto.getCodigo() + "\n" +
+            "Precio: " + nuevoProducto.getPrecio() + "\n" +
+            "Categoría: " + nuevoProducto.getCategoria();
 
-        System.out.println("Producto registrado:");
-        System.out.println("Nombre: " + nuevoProducto.getNombre());
-        System.out.println("Proveedor: " + nuevoProducto.getProveedor());
-        System.out.println("Código: " + nuevoProducto.getCodigo());
-        System.out.println("Precio: " + nuevoProducto.getPrecio());
-        System.out.println("Categoría: " + nuevoProducto.getCategoria());
+    JOptionPane.showMessageDialog(this, detallesProducto, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
-        jtfNombre.setText("");
-        jtfProveedor.setText("");
-        jtfCodigo.setText("");
-        jtfPrecio.setText("");
-
-        JOptionPane.showMessageDialog(this, "Producto registrado exitosamente.", "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
+    jtfNombre.setText("");
+    jtfProveedor.setText("");
+    jtfCodigo.setText("");
+    jtfPrecio.setText("");  
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
-    private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbEliminarActionPerformed
-
-    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
-        EscritorioFrm escritorio = new EscritorioFrm();
-        escritorio.setVisible(true);
-        escritorio.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_jbRegresarActionPerformed
-
-    public void setInventarioTotal(InventarioTotalIFrm inventarioTotal) {
-        this.inventarioTotal = inventarioTotal;
-    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -336,9 +305,7 @@ public class RegistrarIFrm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JButton jbEliminar;
     private javax.swing.JButton jbRegistrar;
-    private javax.swing.JButton jbRegresar;
     private javax.swing.JRadioButton jrbAccesorios;
     private javax.swing.JRadioButton jrbLaptop;
     private javax.swing.JRadioButton jrbSmart;

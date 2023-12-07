@@ -1,4 +1,4 @@
-# Project-Progra-Events
+# Techpsilon
 Equipo #1 - Estructuras de datos:  Lista enlazada y Pila
 
 -ARRIAGA LOPEZ EDSON DANIEL-
